@@ -1,11 +1,5 @@
 {
-    "name": "txpmag",
-    "version": "3.0.0-alpha.1",
-    "author": "Destry Wion and The Textpattern Team",
-    "description": "TXP Magazine website",
     "directory": "bower_components",
-    "ignore": [
-    ],
     "dependencies": {
         "google-code-prettify": "latest",
         "jquery": "1.x",
