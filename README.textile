@@ -8,6 +8,7 @@ Building this repository requires:
 
 * "Node.js":http://nodejs.org/ >=0.8.0
 * "Ruby":http://www.ruby-lang.org/en/
+* "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
 * "Bower":http://bower.io/ >=0.10.0
 * "Sass":http://sass-lang.com/
