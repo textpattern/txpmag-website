@@ -1,10 +1,11 @@
 module.exports = function (grunt) {
+    'use strict';
 
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-compass");
-    grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
     // project configuration
@@ -78,15 +79,15 @@ module.exports = function (grunt) {
                         'bower_components/jquery-ui/ui/jquery.ui.effect-scale.js',
                         'bower_components/jquery-ui/ui/jquery.ui.effect-shake.js',
                         'bower_components/jquery-ui/ui/jquery.ui.effect-slide.js',
-                        'bower_components/jquery-ui/ui/jquery.ui.effect-transfer.js',
+                        'bower_components/jquery-ui/ui/jquery.ui.effect-transfer.js'
                     ],
 
                     // concatenate global scripts
                     'tmp/plugins.js': [
                         'src/js/ios-viewport-scaling-bug-fix.js',
                         'bower_components/jquery.cookie/jquery.cookie.js',
-                        'bower_components/responsive-nav/responsive-nav.js',
-                    ],
+                        'bower_components/responsive-nav/responsive-nav.js'
+                    ]
                 }
             }
         },
@@ -125,7 +126,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     mangle: false,
-                    preserveComments: 'some',
+                    preserveComments: 'some'
                 },
 
                 files: [
@@ -142,10 +143,10 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/google-code-prettify/src/',
                         src: 'lang-*.js',
                         dest: 'build/js/'
-                    },
+                    }
                 ]
             }
-        },
+        }
     });
 
     grunt.registerTask('test', ['jshint']);
