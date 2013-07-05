@@ -18,3 +18,20 @@ Environment must consist of:
 * PHP >=5.3
 * MySQL >=5
 * Textpattern CMS 4.6.0-dev
+
+h2. Building
+
+The project uses "Grunt":http://gruntjs.com/ to run tasks. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bunder with gem and rest with npm. Consult the tools' documentation for more instructions.
+
+After you have the base dependencies taken care of, you can install the project's Node and Ruby dependencies. Navigate to the project's directory, and run the dependency managers:
+
+bc. $ cd txpmag-website
+$ npm install
+$ bundle install
+$ bower install
+
+*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems (e.g. Saas) and *bower* manages client-side scripts. After you have installed all dependencies, you will be able to run tasks using Grunt:
+
+bc. $ grunt [task]
+
+Where the @[task]@ is either @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
