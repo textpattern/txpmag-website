@@ -11,9 +11,6 @@ Building this repository requires:
 * "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
 * "Bower":http://bower.io/ >=0.10.0
-* "Sass":http://sass-lang.com/
-* "Compass":http://compass-style.org/ >=0.12.2
-* "Singularity.gs":https://github.com/Team-Sass/Singularity
 
 Environment must consist of:
 
