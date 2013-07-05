@@ -29,7 +29,7 @@ $ npm install -g bower
 
 Consult the tools' documentation for more instructions.
 
-After you have the base dependencies taken care of, you can install the project's Node and Ruby dependencies. Navigate to the project's directory, and run the dependency managers:
+After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
 
 bc. $ cd txpmag-website
 $ npm install
