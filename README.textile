@@ -12,6 +12,7 @@ Building this repository requires:
 * "Bower":http://bower.io/ >=0.10.0
 * "Sass":http://sass-lang.com/
 * "Compass":http://compass-style.org/ >=0.12.2
+* "Singularity.gs":https://github.com/Team-Sass/Singularity
 
 Environment must consist of:
 
