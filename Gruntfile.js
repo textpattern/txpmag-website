@@ -32,8 +32,8 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true, cwd: 'src/', src: ['img/**', 'fonts/**'], dest: 'build/'},
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'build/', filter: 'isFile'},
-                    {src: ['src/js/vendor/modernizr/modernizr.js'], dest: 'build/js/modernizr.min.js'},
-                    {src: ['src/js/vendor/flowplayer'], dest: 'build/js/flowplayer'},
+                    {src: ['src/js/modernizr.js'], dest: 'build/js/modernizr.min.js'},
+                    {src: ['src/js/flowplayer'], dest: 'build/js/flowplayer'},
                     {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'build/js/selectivizr.min.js'},
                     {src: ['bower_components/jquery/jquery.min.js'], dest: 'build/js/jquery.min.js'}
                 ]
