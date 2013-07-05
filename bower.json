@@ -1,19 +1,19 @@
 {
-  "name": "txpmag",
-  "version": "3.0.0-alpha.1",
-  "author": "Destry Wion and The Textpattern Team",
-  "description": "TXP Magazine website",
-  "directory": "bower_components",
-  "ignore": [
-  ],
-  "dependencies": {
-    "google-code-prettify": "latest",
-    "jquery": "1.x",
-    "jquery-ui": "1.x",
-    "jquery.cookie": "~1.3",
-    "jquery-details": "latest",
-    "jquery-placeholder": "latest",
-    "responsive-nav": "latest",
-    "selectivizr": "latest"
-  }
+    "name": "txpmag",
+    "version": "3.0.0-alpha.1",
+    "author": "Destry Wion and The Textpattern Team",
+    "description": "TXP Magazine website",
+    "directory": "bower_components",
+    "ignore": [
+    ],
+    "dependencies": {
+        "google-code-prettify": "latest",
+        "jquery": "1.x",
+        "jquery-ui": "1.x",
+        "jquery.cookie": "~1.3",
+        "jquery-details": "latest",
+        "jquery-placeholder": "latest",
+        "responsive-nav": "latest",
+        "selectivizr": "latest"
+    }
 }
