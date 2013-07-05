@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>TXP | Formatting guidelines</title>
+	<meta name="description" content="Use this guide when formatting content for magazine publication.">
+	<meta name="generator" content="Textpattern CMS">
+	<meta name="robots" content="index, follow, noodp, noydir">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Windows 8 stuff specific to tiles -->
+	<meta name="msapplication-tilecolor" content="#ffffff">
+	<meta name="msapplication-tileimage" content="/img/style/site.png">
+
+<!-- Open Graph - required for Facebook API -->
+	<meta property="og:title" content="Formatting guidelines">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://txpmag.com">
+	<meta property="og:image" content="http://txpmag.com/img/style/site.png">
+	<meta property="og:site_name" content="TXP">
+	<meta property="og:description" content="Use this guide when formatting content for magazine publication.">
+
+<!-- CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+
+<!-- jQuery -->
+	<script src="/js/vendor/jquery/jquery.min.js"></script>
+
+<!-- jQuery UI -->
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+	<script src="/js/vendor/jquery-ui/jquery-ui.js"></script>
+
+<!-- Modernizr -->
+	<script src="/js/vendor/modernizr/modernizr.js"></script>
+
+<!-- Fix IE8 -->
+	<!--[if lt IE 9]>
+		<script src="/js/polyfills/selectivizr.min.js"></script>
+		<link rel="stylesheet" href="/css/ie8.css">
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+
+<!-- Old IE browsers -->
+		<!--[if lt IE 8]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" rel="external">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+
+<!-- Header -->
+		<header role="banner" itemscope itemtype="http://schema.org/Organization">
+			<h1 itemprop="name" class="accessibility">TXP</h1>
+			<p class="publication-masthead"><a itemprop="url" href="http://txpmag.com/" title="Go to the TXP Magazine homepage"><img itemprop="logo" src="/img/style/txp.png" alt="TXP"></a></p>
+			<p class="publication-issue">№ 5</p>
+		</header>
+
+
+<!-- Navigation -->
+		<div class="nav-container">
+			<nav role="navigation" id="nav" aria-label="Site navigation">
+				<ul>
+					<li><a href="#">Issues</a></li>
+					<li><a href="#">Columns</a></li>
+					<li><a href="#">Topics</a></li>
+					<li><a href="#">People</a></li>
+				</ul>
+			</nav>
+		</div>
+
+
+<!-- Main Content -->
+		<div class="container">
+			<main role="main" aria-label="Main content">
+
+				<p class="publication-column">Editorial</p>
+
+
+				<article role="article" itemscope itemtype="http://schema.org/Article">
+					<h1 itemprop="name">Presentation style guide for TXP Magazine article contributions</h1>
+					
+					<div itemprop="description">
+						<p>Use this guide when formatting content for magazine publication. We use Textile whenever possible (or at least convenient), so guides are written to demonstrate Textile use, along with the specific selectors and attributes, as needed. When Textile can’t be used (e.g. syntax doesn’t exist for a given style) we use straight HTML5, and also when it’s perhaps more intuitive to do so (complex tables, for example, can be confusing with Textile). <strong>Note:</strong> If you’re looking for guides about writing and editing copy, you want the <a href="https://docs.google.com/document/d/16Qwzg3YSQoOdrLMvnQvZQaSJ811wYKsb-ZZ7A9zwN8s/edit">Textpattern editorial style guide</a>.</p>
+					</div>
+
+					<p class="context"><span class="label">Context:</span> <span>TXP</span>, <span>authors</span>, <span>editors</span>, <span>Textile</span>, <span>formatting</span>, <span>markup</span>, <span>guide</span>, <span>elements</span>, <span>attributes</span></p>
+
+					<div itemprop="articleBody">
+						<p><strong>A-hem!</strong> This document is written with the assumption that you may not have used Textpattern before. Yes, we make allowances for that because not all magazine topics (e.g. reviews of other services/tools useful to freelancers) require Textpattern experience. So if you are experienced, thank you for tolerating the extra details given to make concepts like the admin-side layout and function more clear.</p>
+						<h2>Overview of article submission process</h2>
+						<p>Before you dive into this guide, make sure you even need to. The page you’re reading now is relevant at <strong>step 6</strong> below, so if you’re not at step 6, stop and go back to the beginning:</p>
+						<ol>
+							<li>Draft a short summary of the idea you'd like to publish in TXP Magazine.</li>
+							<li>Send it to magazine editors following the <a href="http://txpmag.com/contribute/write-for-us">article contribution instructions</a> (the only way we'll consider it).</li>
+							<li>Wait <em>patiently</em> for a reply.</li>
+							<li>If the idea is accepted, start a Google Document, <a href="https://docs.google.com/document/d/1SJmLzSSokDPeND8yPMn6kC3wFZqZWegCGQKNjATM_Vc/edit">using this template</a> (you can only access it when you've been given rights to), and share it with your assigned editor.</li>
+							<li>Outline your article, with summary statements at each point, and share with editor to ensure it's headed the right direction.</li>
+							<li>Finish your draft, including indication of any code samples, visuals, or other presentational elements to be added. <b>Begin (or finish) formatting your content with Textile using this guide.</b></li>
+							<li>The article will get scheduled in the editorial calendar. (Date depends on editorial planning and slot availability.)</li>
+							<li>You'll get an author account in the CMS to create and maintain your bio page. (Published at the same time as your article.)</li>
+						</ol>
+						<hr>
+						<h2>Article structure and the Textpattern <em>Write</em> panel</h2>
+						<p>Magazine website templates are created using HTML5. All presentation elements you will ever need are already defined and described in this guide. You only need to ensure that your article is formatted correctly by using the appropriate markup syntax and associated style attributes, as they are explained here. Everything corresponds to three editing fields in the <b>Write</b> panel of the CMS: <b>Title</b>, <b>Excerpt</b>, and <b>Body</b>.</p>
+						<h3>Title</h3>
+						<p>We use <strong>sentence-case on all titles</strong> (and body headers too). You just enter the title text, and that’s it. No Textile and regular markup is used.</p>
+						<h3>Excerpt</h3>
+						<p>Excerpts are the bold paragraphs that appear under the title (and author) of an article, like you see at top of this page. You may often need to italicise (<code>__italicise__</code>) or emphasise (<code>_emphasise_</code>) words, or add one or more links (<code>"link":url</code>). The following sentence, for example…</p>
+						<pre>This represents a _sentence_ in an excerpt, having "this link":URL.</pre>
+						<p>…would render as…</p>
+						<pre>This represents a <em>sentence</em> in an excerpt, having <a href="#">this link</a>.</pre>
+						<p>That’s how Textile rolls. Simple.</p>
+						<h3>Body</h3>
+						<p>The body is where the rest of your content will go. We’ll cover the elements that are likely to be used most often, and maybe some special situations we’d want to employ for semantic reasons.</p>
+						<h2>Block elements</h2>
+						<h3>Headers</h3>
+						<p>Magazine articles use markup headers <code>h1</code> to <code>h4</code>, and <code>h1</code> is only used on titles automatically, so you will only ever use headers <code>h2</code> through <code>h4</code> in your body copy. We avoid using <code>h5</code> and <code>h6</code> as an editorial rule.</p>
+						<h3>Paragraphs</h3>
+						<p>A nice thing about Textpattern’s use of Textile is you don’t have to explicitly use Textile’s paragraph syntax (<code>p.</code>); you simply write your text, and the CMS will add <code>p</code> tags automatically.</p> 
+						<p>There are two exceptions. First is when needing to use a selector on the paragraph (described next). The other time is when it follows a multi-paragraph blockquote (described later under Blockquotes).</p>
+						<h4>Custom paragraphs (via presentational selectors)</h4>
+						<p>If you’re not familiar with HTML markup, selectors are <code>id</code> and <code>class</code> attributes for HTML tags that can be used to tie presentational CSS styling to content with custom attribute values. For magazine articles, there are only a few situations requiring custom paragraph styles, and thus Textile paragraph notation at all.</p>
+						<h4 id="interviews">Question–answer interviews and other author–subject conversations</h4>  
+						<p>The <cite>W3C specs for HTML5</cite> make clear that <a href="http://www.w3.org/TR/html5/grouping-content.html#the-blockquote-element">blockquotes are not appropriate for marking up back-and-forth conversations</a>, which question–answer interviews are when the conversation directly alternates between interviewer and interviewee. The <cite>W3C specs for conversations</cite> <a href="http://www.w3.org/TR/html5/links.html#conversations">recommend using styled paragraphs instead</a>:</p>
+						<blockquote cite="http://www.w3.org/TR/html5/links.html#conversations">
+							<p>This specification does not define a specific element for marking up conversations, meeting minutes, chat transcripts, dialogues in screenplays, instant message logs, and other situations where different players take turns in discourse.</p>
+							<p>Instead, authors are encouraged to mark up conversations using <code>p</code> elements and punctuation. Authors who need to mark the speaker for styling purposes are encouraged to use <code>span</code> or <code>b</code>. Paragraphs with their text wrapped in the <code>i</code> element can be used for marking up stage directions.</p>
+						</blockquote>
+						<p>Since we often use question–answer and other conversational exchanges in the magazines <em>Community Spotlight</em> articles, we mark up the author’s dialogue in <b>bold</b> (<code>**bold**</code>) and the interviewee responses with <code>p(answer).</code>.</p>
+						<p>For example, this exchange marked-up with Textile…</p>
+						<pre><code>**We hear you're a rolling stone that still collects moss. How is that possible?**
+
+p(answer). I guess because I prefer to roll slowly in moist and shady ground.</code></pre>
+						<p>Renders as this…</p>
+						<pre class="prettyprint linenums"><code>&lt;p&gt;&lt;b&gt;We hear you’re a rolling stone that still collects moss. How is that possible?&lt;/b&gt;&lt;/p&gt;
+&lt;p class="answer"&gt;I guess because I prefer to roll slowly in moist and shady ground.&lt;/p&gt;</code></pre>
+						<p>Note that making <code>**bold**</code> text with Textile requires surrounding the copy with double asterisks, which is semantically different than using single asterisks to make <code>*strong*</code> text. Even though they produce the same visual result when rendered, they result in different HTML elements—<code>b</code> and <code>strong</code>, respectively—and thus communicate different meanings to (and thus responses from) text-reading technology that website visitors may rely on. In other words, this is an important accessibility factor, one authors need to be mindful of at all times. Ensure you use double asterisks when you just need bold text, like in this case, because we don’t want to emphasise author questions over subject responses.</p>
+						<h3>Blockquotes</h3>
+						<p>Blockquotes are paragraphs quoted from an external source. Blockquotes should ideally be cited with a URL to the source, but if no URL exists, blockquote markup is still valid if a reference to an original print publication of the source can be provided in it’s place.</p>
+						<p>Textile can be used for blockquotes easily, and there’s a convention for both single-paragraph blockquotes (<code>bq.</code>) and multi-paragraph blockquotes (<code>bq..</code>).</p>
+						<h4>Single-paragraph blockquotes</h4>
+						<p>A single-paragraph blockquote (<code>bq.</code>) used between two normal paragraphs would be marked up with Textile like this…</p>
+						<pre>A regular paragraph.
+
+bq. Start of the blockquote paragraph...
+
+Another regular paragraph.</pre>
+						<p>According to the HTML5 standards, you don't have to use <code>p</code> tags inside a blockquote, but Textpattern adds them anyway, so single-paragraphs will result in HTML markup like this...</p>
+						<pre class="prettyprint linenums"><code>&lt;blockquote&gt;
+	&lt;p&gt;Start of the blockquote paragraph...&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+						<p>And render as formatted content like…</p>
+						<blockquote><p>Start of the blockquote paragraph...</p></blockquote>
+						<p>Blockquotes are visually styled exactly like the custom paragraphs (<code>p(answer).</code>) described earlier. We want the uniformity in presentation while abiding by the W3C’s recommendations for distinguishing between blockquotes and regular non-cited conversations. The difference is under the surface—machine-readable semantics—and important for text-reading technology.</p> 
+						<h4>Multi-paragraph blockquotes</h4>
+						<p>For multi-paragraph blockquotes (<code>bq..</code>), you <em>do</em> need to use the <code>p.</code> on the paragraph immediately following the blockquote to escape the paragraph from the blockquote code. (This is the second situation when the Textile syntax for paragraphs must be used in Textpattern, as mentioned at the start of the Paragraphs section.)</p>
+						<p>Here’s a typical structure for a multi-paragraph blockquote using Textile…</p>
+						<pre>A regular paragraph...
+
+bq.. First blockquote paragraph...
+
+Second blockquote paragraph...
+
+Et cetera
+
+p. First regular paragraph following multi-paragraph blockquote.</pre>
+						<p>The above will result in HTML markup like this...</p>
+						<pre class="prettyprint linenums"><code>&lt;blockquote&gt;
+	&lt;p&gt;First blockquote paragraph...&lt;/p&gt;
+	&lt;p&gt;Second blockquote paragraph...&lt;/p&gt;
+	&lt;p&gt;Et cetera&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+						<h4>Cited blockquotes</h4>
+						<p>Citing the source from where the quote is being taken from should always be done if the source has a URI than can be used. This requires both the <code>cite</code> element and the <code>cite=""</code> attribute, used in relation to the <code>blockquote</code> element.</p>
+						<p>The Textile convention for the <code>cite</code> element is <code>??cite??</code>, where "cite" is the named source of the quote. The Textile convention for the <code>cite=""</code> attribute in relation to the blockquote is <code>bq.:url</code>, where "url" is the actual URL to the source. Using it all together, your Textile will look like this…</p>
+						<pre>Leading paragraph with ??cited reference??:
+
+bq.:url Blockquote paragraph...</pre>
+						<p>And this is the resulting markup...</p>
+						<pre class="prettyprint linenums"><code>&lt;p&gt;Leading paragraph with &lt;cite&gt;cited reference&lt;/cite&gt;:&lt;/p&gt;
+&lt;blockquote cite="url"&gt;
+	&lt;p&gt;Blockquote paragraph…&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+						<p>See the earlier section, <a href="http://txpmag.com/guide/index.html#interviews">Question–answer interviews</a>, which uses a cited blockquote to reference the W3C specs for HTML5, and demonstrates the rendered presentation.</p>
+						<p>The same is true for multi-paragraph blockquotes, just making sure to use <code>bq..:</code></p>
+						<pre>Leading paragraph with ??cited reference??:
+
+bq..:url First blockquote paragraph.
+
+Second blockquote paragraph.</pre>
+						<h3>Asides</h3>
+						<p>The <code>aside</code> element is what we use for pull quotes and Editor notes.</p>
+						<h4>Pull quote asides</h4>
+						<aside class="aright">
+							Queequeg, don’t eat me!
+						</aside>
+						<p>These can be used in articles as a way to make a series of paragraphs a little more interesting. Styles exist for left and right positions with paragraphs. The one you see here is right-aligned, and is done using <code>&lt;aside class="aright"&gt;</code>.</p>
+						<p>A pull quote can be positioned to the left too using <code>&lt;aside class="aleft"&gt;</code>.</p>
+						<h4>Editor note asides</h4>
+						<p>Editor notes are side notes that might be added by editors post publication if new (helpful and relevant) information comes to attention and seems worth adding. Editor notes are full-width and created using…</p>
+						<pre class="prettyprint linenums"><code>&lt;aside class="editor"&gt;
+	&lt;b&gt;Editor's note:&lt;/b&gt; Some of the above is true, and some isn't.
+&lt;/aside&gt;</code></pre>
+						<p>which renders…</p>
+						<aside class="editor">
+							<b>Editor’s note:</b> Some of the above is true, and some isn’t.
+						</aside>
+						<h2>Inline elements</h2>
+						<p>Inline elements (or text level elements), are essentially those used within block element copy. Out of all that exist, the ones you will probably use the most are:</p>
+						<ul>
+							<li><i>italic</i> <code>__italic__</code>)</li>
+							<li><em>emphasis</em> (<code>_emphasis_</code>)</li>
+							<li><b>bold</b> (<code>**bold**</code>)</li>
+							<li><strong>strong</strong> (<code>*strong*</code>), meaning important</li>
+							<li><a href="#">links</a> (<code>"links":url</code>)</li>
+						</ul>
+						<p>See the quick reference table in the sidecolumn of this page for Textile equivalents to many inline elements you might use.</p>
+						<h3>Notes on links</h3>
+						<p>Links are pretty straightforward, but there’s a couple of things to be aware.</p>
+						<h4>Links with title attributes</h4>
+						<p>If you want title hovers for our links, you can still do this with Textile by simply adding the title text in parenthesis after the link label: <code>"Textpattern(The Textpattern website)":http://textpattern.com</code>.</p>
+						<h4>Absolute and relative links</h4>
+						<p>Use a relative (local) URL if you’re linking to another page within TXP (e.g. <code>"Write for us":contribute/write-for-us</code>), which always begins with the section title.</p>
+						<p>Use an absolute URL when linking outside of TXP (e.g. <code>"Textpattern":http://textpattern.com</code>).</p>
+						<h4>Escaping links</h4>
+						<p>There are certain situations where links need to be escaped from associated punctuation for formatting to work properly.</p>
+						<p><strong>Escaping em dashes (before and after):</strong> TXP uses em dashes in sentence structure with no surrounding spaces. If your copy requires a link immediately next to an em dash, en dash, <i>etc.</i>, Textile syntax will simply display as non-rendered text. This is easily corrected by surrounding the Textile link syntax with straight brackets. For example, this…</p>
+						<pre>...tail end of a sentence—["this link":URL].</pre>
+						<p>will render correctly as…</p>
+						<pre><p>…tail end of a sentence—<a href="#">this link</a>.</pre>
+						<p>Without the straight brackets, the Textile syntax and associated URL would just appear as non-rendered text. You can markup the link using regular HTML, if you prefer, which also works as expected.</p>
+						<p><strong>Escaping quotation marks:</strong> If you ever need (or more likely want) to put a link on a quote, again use the straight brackets between the quotes marks of the quoted text and those of the Textile link syntax. So this…</p>
+						<pre>She said, "["Hey, mofo!":url]".</pre>
+						<p>turns out okay, like this…</p>
+						<pre>She said, "<a href="#">Hey, mofo!</a>".</pre>
+						<div class="tabular-data">
+							<table class="table--bordered">
+								<caption><b>Table 1:</b> HTML "phrase" (inline) elements, their rendered presentation, and their Textile equivalents, if they exist.</caption>
+								<colgroup>
+									<col class="t25">
+									<col class="t25">
+									<col class="t25">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Description</th>
+										<th scope="col">HTML element</th>
+										<th scope="col">CSS presentation</th>
+										<th scope="col">Textile syntax*</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<td colspan="4">*Where a Textile equivalent doesn’t exist, use the HTML version.</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">Link</th>
+										<td><code>a</code></td>
+										<td><a href="#">a</a></td>
+										<td>"a":url</td>
+									</tr>
+									<tr>
+										<th scope="row">Bold, but not semantically important</th>
+										<td><code>b</code></td>
+										<td><b>bold</b></td>
+										<td>**bold**</td>
+									</tr>
+									<tr>
+										<th scope="row">Abbreviation</th>
+										<td><code>abbr</code></td>
+										<td><abbr title="Title text">abbr</abbr></td>
+										<td>none</td>
+									</tr>
+									<tr>
+										<th scope="row">Citation</th>
+										<td><code>cite</code></td>
+										<td><cite>cite</cite></td>
+										<td>??cite??</td>
+									</tr>
+									<tr>
+										<th scope="row">Code</th>
+										<td><code>code</code></td>
+										<td><code>code</code></td>
+										<td>@code@</td>
+									</tr>
+									<tr>
+										<th scope="row">Deletion</th>
+										<td><code>del</code></td>
+										<td><del>del</del></td>
+										<td>-del-</td>
+									</tr>
+									<tr>
+										<th scope="row">Definition</th>
+										<td><code>dfn</code></td>
+										<td><dfn title="The define element.">dfn</dfn></td>
+										<td>none</td>
+									</tr>
+									<tr>
+										<th scope="row">Emphasis</th>
+										<td><code>em</code></td>
+										<td><em>em</em></td>
+										<td>_em_</td>
+									</tr>
+									<tr>
+										<th scope="row">Italic, but not semantically emphasised</th>
+										<td><code>i</code></td>
+										<td><i>i</i></td>
+										<td>__i__ (double underscores)</td>
+									</tr>
+									<tr>
+										<th scope="row">Insertion</th>
+										<td><code>ins</code></td>
+										<td><ins>ins</ins></td>
+										<td>+ins+</td>
+									</tr>
+									<tr>
+										<th scope="row">Keyboard input</th>
+										<td><code>kbd</code></td>
+										<td><kbd>kbd</kbd></td>
+										<td>none</td>
+									</tr>
+									<tr>
+										<th scope="row">Text marked for reference purpose</th>
+										<td><code>mark</code></td>
+										<td><mark>mark</mark></td>
+										<td>none</td>
+									</tr>
+									<tr>
+										<th scope="row">Quote</th>
+										<td><code>q</code></td>
+										<td><q>q</q></td>
+										<td>none</td>
+									</tr>
+								   	<tr>
+										<th scope="row">Sample output from a computer program</th>
+										<td><code>samp</code></td>
+										<td><samp>samp</samp></td>
+										<td>none</td>
+									</tr>
+								   	<tr>
+										<th scope="row">Small, semantically smallprint</th>
+										<td><code>small</code></td>
+										<td><small>small</small></td>
+										<td>none</td>
+									</tr>
+								   	<tr>
+										<th scope="row">Importantance</th>
+										<td><code>strong</code></td>
+										<td><strong>strong</strong></td>
+										<td>*strong*</td>
+									</tr>
+								   	<tr>
+										<th scope="row">Subscript</th>
+										<td><code>sub</code></td>
+										<td><sub>sub</sub></td>
+										<td>~sub~</td>
+									</tr>
+								   	<tr>
+										<th scope="row">Superscript</th>
+										<td><code>sup</code></td>
+										<td><sup>sup</sup></td>
+										<td>^sup^</td>
+									</tr>
+								   	<tr>
+										<th scope="row">A variable</th>
+										<td><code>var</code></td>
+										<td><var>var</var></td>
+										<td>none</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h2>Image</h2>
+						<p>Images will be used in two contexts in the magazine: alone (with or without link) or as figures (links, if used, in the figure’s caption only). Each context will share the same four predetermined sizes (widths as percentages) handled in the CSS: 25%, 35%, 55% and 100%. The 25, 35, and 55% widths will always be floated left or right. All images must be pre-processed accordingly before loaded into the CMS; meaning they should be cropped to a pixel width slightly greater than the targeted percentage width (Table 2).</p>
+						<div class="tabular-data">
+							<table class="table--bordered">
+								<caption><b>Table 2:</b> Image file width sizes in pixels for each percent width targeted.</caption>
+								<colgroup>
+									<col class="t20">
+									<col class="t20">
+									<col class="t20">
+									<col class="t20">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">Targeted width (%)</th>
+										<th scope="col">25</th>
+										<th scope="col">35</th>
+										<th scope="col">55</th>
+										<th scope="col">100</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<td colspan="5">*Images must be cropped to these widths, respectively, before loading into CMS.</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">Crop width (px)*</th>
+										<td>175</td>
+										<td>280</td>
+										<td>385</td>
+										<td>700</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3>Images alone</h3>
+						<p>Following is an image at full width (cropped at 700px wide). This is the default width in terms of CSS, so no classes are needed in the <code>img</code> tag.</p>
+						<img src="img/demo700.jpg" alt="Alt text">
+						<p>Next is an image targeted to 55% (cropped at 385px wide) and floated left. This requires two classes on the <code>img</code>; one for the specific width and one for the float direction (<code>class="w55 imgleft"</code>).</p>
+						<img class="w55 imgleft" src="img/demo385.jpg" alt="Alt text">
+						<p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). <strong>Images/video width and height attribute values should <em>never</em> be used.</strong></p>
+						<img class="w35 imgleft" src="img/demo280.jpg" alt="Alt text">
+						<p>Next is an image targeted to 35% (cropped at 280px wide) and floated left. It uses the same left float class, of course, but the width class changes accordingly (<code>class="w35 imgleft"</code>).</p>
+						<p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). Let’s say that again. All images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%).</p>
+						<a href="#" title="Title text"><img class="w25 imgright" src="img/demo175.jpg" alt="Alt text"></a>
+						<p>This last image is the smallest targeted width at 25% (cropped at 175px wide). To change things up and see the full range of class options, we’ll put <b>a link on it</b> and float it right (<code>class="w25 imgright"</code>).</p> 
+						<p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). <strong>Images/video width and height attribute values should <em>never</em> be used.</strong></p>
+						<h3>Figure</h3>
+						<figure class="w25 imgleft">
+							<img src="img/demo175.jpg" alt="Alt text">
+							<figcaption>Fig 1: Flower valley.</figcaption>
+						</figure>
+						<p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). Let’s say that again. All images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%).</p>
+						<hr>
+						<h2>Embedded content</h2>
+						<p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). <strong>Images/video width and height attribute values should <em>never</em> be used.</strong></p>
+						<p id="socialbutts">Grapevine:
+							<span><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
+							<span><g:plusone size="medium" annotation="none" width="32"></g:plusone></span>
+							<span><a href="http://pinterest.com/pin/create/button/" class="pin-it-button">Pin It</a>
+							<script src="http://assets.pinterest.com/js/pinit.js"></script></span>
+						</p>
+
+					</div><!-- /itemprop=articleBody -->
+
+				</article>
+
+
+
+				<!-- TO BE SORTED -->
+				<section role="region">
+					<h2>Textile quick-reference</h2>
+					<div class="tabular-data">
+						<table class="table--bordered">
+							<colgroup>
+								<col class="t50">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">For this</th>
+									<th scope="col">Use this</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">link</a></td>
+									<td>"link":url</td>
+								</tr>
+								<tr>
+									<td><b>bold</b></td>
+									<td>**bold**</td>
+								</tr>
+								<tr>
+									<td><cite>cite</cite></td>
+									<td>??cite??</td>
+								</tr>
+								<tr>
+									<td><code>code</code></td>
+									<td>@code@</td>
+								</tr>
+								<tr>
+									<td><s>s</s> or <del>del</del></td>
+									<td>-del- (stricken)</td>
+								</tr>
+								<tr>
+									<td><em>em</em></td>
+									<td>_em_ (<i>I.e.</i>, emphasis!)</td>
+								</tr>
+								<tr>
+									<td><i>italic</i></td>
+									<td>__i__ (double underscores)</td>
+								</tr>
+								<tr>
+									<td><ins>ins</ins></td>
+									<td>+ins+ (inserted)</td>
+								</tr>
+							   	<tr>
+									<td><strong>strong</strong></td>
+									<td>*strong* (<i>I.e.</i>, important!)</td>
+								</tr>
+							   	<tr>
+									<td><sup>sup</sup></td>
+									<td>^sup^ (<i>e.g.</i>, word^sup^)</td>
+								</tr>
+							   	<tr>
+									<td><sub>sub</sub></td>
+									<td>~sub~ (<i>e.g.</i>, word~sub~)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="g-plus" data-href="https://plus.google.com/102240548936231123918" data-width="250" data-height="69" data-theme="light"></div>
+			
+					<div class="slab u skyscraper">
+						<p>Advertisement</p>
+						<a href="#"><img src="img/txp-skyscraper-160x600.png"></a>
+					</div>
+					<div class="slab b quote">
+						<blockquote>“I put the bastards of this world on notice that I do not have their best interests at heart. I will try and speak for my reader. That is my promise. And it will be a voice of ink and rage.”</blockquote>
+						<p>- Hunter S. Thompson</p>
+					</div>
+				</section><!-- /complementary -->
+
+
+
+			</main>
+		</div><!-- /.container -->
+
+
+	</div><!-- /.wrapper -->
+
+
+<!-- Secondary Content -->
+	<div role="complementary" class="container">
+
+		<section role="region" class="layout--span-1-8">
+			<h4>About</h4>
+			<p>TXP Magazine is a publication of the Textpattern project. Content targets a range of interests within the web publishing and design arena. Article <a href="#">contributions</a> are welcome, as are enquiries about <a href="#">advertorials</a>. Editorial roles are often available too. <a href="#">Join the team!</a></p>
+
+			<nav role="navigation">
+				<h4>Social channels</h4>
+				<ul class="social-channels">
+					<li><a rel="external" class="twitter" href="https://twitter.com/txpmag" title="Follow us on Twitter">Twitter</a></li>
+					<li><a rel="external" class="googleplus" href="https://plus.google.com/u/0/b/102240548936231123918" title="Follow us on Google+">Google+</a></li>
+				</ul>
+			</nav>
+		</section>
+
+
+		<section role="region" class="layout--span-9-12 host-details">
+			<h4 class="accessibility">Host details</h4>
+			<p><img class="svg" src="/img/style/textpattern-network-white.png" alt="Textpattern Network"></p>
+			<p>
+				<small>
+					Kindly hosted by<br>
+					<a href="http://joyent.com/" rel="external" title="Go to the Joyent website"><img class="svg" src="/img/style/joyent-white.png" alt="Joyent"></a>
+				</small>
+			</p>
+		</section>
+
+	</div><!-- /role="complementary" -->
+
+	
+<!-- Footer -->
+	<footer role="contentinfo">
+		<p class="legal">
+			<small>
+				<a href="/terms/copyright-policy">Copyright</a> 2007-2013 TXP Magazine.
+				<a href="#">Credits</a>.
+				<a href="/terms/privacy-policy">Privacy</a>.
+				<a href="http://txpmag.com/humans.txt">Colophon</a>.
+			</small>
+		</p>
+		<p class="html5"><small><a href="http://www.w3.org/html/logo/" rel="external" title="HTML5 powered">HTML5 powered</a></small></p>
+	</footer>
+
+
+<!-- JavaScript at the bottom for fast page loading -->
+	<script src="/js/main.min.js"></script>
+
+<!-- Google Universal Analytics -->
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-26074605-2');ga('send','pageview');
+	</script>
+</body>
+</html>

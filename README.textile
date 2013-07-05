@@ -1,0 +1,5 @@
+h1. TXP Magazine website
+
+TXP Magazine is a publication of the Textpattern project; serving the greater community of open source content management enthusiasts.
+
+h2. Currently under development

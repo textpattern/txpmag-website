@@ -1,0 +1,55 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Destry Wion (http://wion.com)
+  The Textpattern Development Team
+  Site: http://www.txpmag.com
+  Twitter: http://twitter.com/txpmag
+  Location: Everywhere
+
+/* THANKS */
+  Names (& URL):
+    Ralitza Dilovska (http://www.inkscar.de)
+    Kevin Potts (http://www.graphicpush.com)
+    Marie Poulin (http://www.mariepoulin.com)
+    Philipp Schilling (http://www.psgd.de)
+    Stephan Simonis (http://www.stephansimonis.com)
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Textpattern CMS, jQuery, Modernizr
+  Software: Panic Coda, CodeKit, Adobe Photoshop,
+    Adobe Illustrator, ImageOptim, ImageAlpha
+
+
+
+                .ttTTttx
+               xPXTTTTTtt-                     xppx
+             pPPTTTTTTTTXxx                  px    xp
+           .tPTTTTTTTTTTTTt-               .t-      .t-
+          xPXTTTTTTTTTTTTTp               px          xx
+        -tPTTTTTTTTTTTTTt                -x          -t
+      .tPTTTTTTTTTTTTTT.                -x         .t-
+     xtXTTTTTTTTTTTTTTTt-              xx         xx
+    PxTTTTTTTTTTTTTTTt..-t.          -t.     .pttx.
+    xxXTTTTTTTTTTTTTPpp.- px        xp     xXTt-
+     -tPTTTTTTTTxTTTXppp... xx    px     pTTx
+       xtPTTTTf   tTTTxp-... .t-.t.    .XTt.
+        .xxXX-     -XTTPxp.- ..Pp     tTX-
+                     tTTTtp--xt     pTTx
+                      -XTTXtt-    .PTP.
+                        xTTp     xTTTx
+                        pt     pTTTP-.t.
+                      .t-    .PTTTP-   xx
+                     xx     xTTTTTXp-.  .t.
+                   -t.    -XTx xTTTTt--.  px
+                 .t-    .PTP.   .tTTTTx--.. xp
+                xx     xTTp       .PTTTP--.  -t.
+              -t.    -XTt           pTTTTt.-.  px
+            .t-   ..PTX.              xTTTTp--.. xp
+           px    .xTTp                 .PTTTP----..t-
+         px.   .-XTt                     pTTTTx.p.. -t.
+        -p.    tTX-                        tTTTXp-p.. px
+         -xxppTT.                            -xTTP--.-p
