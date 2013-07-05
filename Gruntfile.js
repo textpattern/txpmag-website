@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     // project configuration
 
@@ -90,6 +91,36 @@ module.exports = function (grunt) {
             }
         },
 
+        jshint: {
+            files: ['Gruntfile.js'],
+            options: {
+                bitwise: true,
+                camelcase: true,
+                curly: true,
+                eqeqeq: true,
+                es3: true,
+                forin: true,
+                immed: true,
+                indent: 4,
+                latedef: true,
+                noarg: true,
+                noempty: true,
+                nonew: true,
+                quotmark: 'single',
+                undef: true,
+                unused: true,
+                strict: true,
+                trailing: true,
+                browser: true,
+                globals: {
+                    jQuery: true,
+                    Zepto: true,
+                    define: true,
+                    module: true
+                }
+            }
+        },
+
         uglify: {
             dist: {
                 options: {
@@ -117,9 +148,7 @@ module.exports = function (grunt) {
         },
     });
 
-    // register default tasks
+    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('default', ['watch']);
-
-    // register building tasks
     grunt.registerTask('build', ['compass', 'copy', 'concat', 'uglify']);
 };
