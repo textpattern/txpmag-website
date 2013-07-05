@@ -12,12 +12,9 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            sass: {
-                files: 'sass/{,**/}*.scss',
-                tasks: ['compass'],
-                options: {
-                    livereload: false
-                }
+            build: {
+                files: 'src/**',
+                tasks: ['build']
             }
         },
 
@@ -31,23 +28,22 @@ module.exports = function (grunt) {
         },
 
         copy: {
-            dist: {
-                files: {
-                    'js/polyfills/jquery.details.js': ['bower_components/jquery-details/jquery.details.js'],
-                    'js/polyfills/jquery.placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
-                    'js/polyfills/selectivizr.js': ['bower_components/selectivizr/selectivizr.js'],
-                    'js/vendor/google-code-prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
-                    'js/vendor/jquery/jquery.js': ['bower_components/jquery/jquery.js'],
-                }
+            main: {
+                files: [
+                    {expand: true, cwd: 'src/', src: ['img/**', 'fonts/**'], dest: 'build/'},
+                    {expand: true, cwd: 'src/', src: ['*'], dest: 'build/', filter: 'isFile'},
+                    {src: ['src/js/vendor/modernizr/modernizr.js'], dest: 'build/js/modernizr.min.js'},
+                    {src: ['src/js/vendor/flowplayer'], dest: 'build/js/flowplayer'},
+                    {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'build/js/selectivizr.min.js'},
+                    {src: ['bower_components/jquery/jquery.min.js'], dest: 'build/js/jquery.min.js'}
+                ]
             }
         },
 
         concat: {
             dist: {
                 files: {
-                    // concatenate jQuery UI
-                    'js/vendor/jquery-ui/jquery-ui.js': [
-                    // comment out any jQuery UI components that are not required
+                    'tmp/jquery-ui.js': [
                         'bower_components/jquery-ui/ui/jquery.ui.core.js',
                         'bower_components/jquery-ui/ui/jquery.ui.widget.js',
                         'bower_components/jquery-ui/ui/jquery.ui.mouse.js',
@@ -83,9 +79,10 @@ module.exports = function (grunt) {
                         'bower_components/jquery-ui/ui/jquery.ui.effect-slide.js',
                         'bower_components/jquery-ui/ui/jquery.ui.effect-transfer.js',
                     ],
+
                     // concatenate global scripts
-                    'js/plugins.js': [
-                        'js/ios-viewport-scaling-bug-fix.js',
+                    'tmp/plugins.js': [
+                        'src/js/ios-viewport-scaling-bug-fix.js',
                         'bower_components/jquery.cookie/jquery.cookie.js',
                         'bower_components/responsive-nav/responsive-nav.js',
                     ],
@@ -102,22 +99,18 @@ module.exports = function (grunt) {
 
                 files: [
                     {
-                        'js/main.min.js': ['js/main.js'],
-                        'js/plugins.min.js': ['js/plugins.js'],
-                        'js/polyfills/jquery.details.min.js': ['js/polyfills/jquery.details.js'],
-                        'js/polyfills/jquery.placeholder.min.js': ['js/polyfills/jquery.placeholder.js'],
-                        // Selectivizr current a problem with uglify, so we'll manually minify that one
-                        //'js/polyfills/jquery.selectivizr.min.js': ['js/polyfills/selectivizr.js'],
-                        'js/vendor/google-code-prettify/prettify.min.js': ['js/vendor/google-code-prettify/prettify.js'],
-                        'js/vendor/jquery/jquery.min.js': ['js/vendor/jquery/jquery.js'],
-                        'js/vendor/jquery-ui/jquery-ui.min.js': ['js/vendor/jquery-ui/jquery-ui.js'],
-                        'js/vendor/modernizr/modernizr.min.js': ['js/vendor/modernizr/modernizr.js'],
+                        'build/js/main.min.js': ['src/js/main.js'],
+                        'build/js/plugins.min.js': ['tmp/plugins.js'],
+                        'build/js/jquery.details.min.js': ['bower_components/jquery-details/jquery.details.js'],
+                        'build/js/jquery.placeholder.min.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
+                        'build/js/prettify.min.js': ['bower_components/google-code-prettify/src/prettify.js'],
+                        'build/js/jquery-ui.min.js': ['tmp/jquery-ui.js']
                     },
                     {
                         expand: true,
                         cwd: 'bower_components/google-code-prettify/src/',
                         src: 'lang-*.js',
-                        dest: 'js/vendor/google-code-prettify/'
+                        dest: 'build/js/'
                     },
                 ]
             }
@@ -128,5 +121,5 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['watch']);
 
     // register building tasks
-    grunt.registerTask('build', ['copy', 'concat', 'uglify']);
+    grunt.registerTask('build', ['compass', 'copy', 'concat', 'uglify']);
 };
