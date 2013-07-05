@@ -1,8 +1,9 @@
 /*! This example file is used to demonstrate all available jQuery UI components on the UI docs page */
 
-$(function ()
+require(['main'], function ()
 {
-
+require(['jquery', 'jqueryui'], function ($)
+{
 	// Draggable
 	$(".jquery-ui-draggable").draggable({
 		cursor: "move"
@@ -250,5 +251,5 @@ $(function ()
 
 	// Tooltips
 	$(".jquery-ui-tooltip").tooltip();
-
+});
 });

@@ -22,20 +22,14 @@
 
 <!-- CSS -->
 	<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/js/flowplayer/skin/minimalist.css">
 
-<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-
-<!-- jQuery UI -->
-	<link rel="stylesheet" href="/css/jquery-ui.css">
-	<script src="/js/jquery-ui.min.js"></script>
-
-<!-- Modernizr -->
-	<script src="/js/modernizr.min.js"></script>
+	<script src="/js/modernizr.js"></script>
 
 <!-- Fix IE8 -->
 	<!--[if lt IE 9]>
-		<script src="/js/selectivizr.min.js"></script>
+		<script src="/js/selectivizr.js"></script>
 		<link rel="stylesheet" href="/css/ie8.css">
 	<![endif]-->
 
@@ -52,7 +46,6 @@
 		.ui-menu { width: 150px; }
 		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
 	</style>
-	<script src="/js/jquery-ui-testing.js"></script>
 
 </head>
 
@@ -1395,17 +1388,7 @@
 		<p class="html5"><small><a href="http://www.w3.org/html/logo/" rel="external" title="HTML5 powered">HTML5 powered</a></small></p>
 	</footer>
 
-
-<!-- JavaScript at the bottom for fast page loading -->
-	<script src="/js/main.min.js"></script>
-
-<!-- Google Universal Analytics -->
-	<script>
-		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='//www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-26074605-2');ga('send','pageview');
-	</script>
+	<script data-main="/js/main.js" src="/js/require.js"></script>
+    <script src="/js/jquery-ui-testing.js"></script>
 </body>
 </html>
