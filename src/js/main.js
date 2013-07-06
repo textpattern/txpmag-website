@@ -66,8 +66,8 @@ require(['jquery', 'modernizr'], function ($, Modernizr)
             if ($(window).scrollTop() < 20)
             {
                 window.scrollTo(0, 1);
-    		}
-    	});
+            }
+        });
     }
 
     // Test for SVG support via Modernizr, if yes then replace PNGs with SVGs.
@@ -78,7 +78,7 @@ require(['jquery', 'modernizr'], function ($, Modernizr)
         {
             return $(this).attr('src').replace('.png', '.svg');
         });
-	}
+    }
 });
 
 // Responsive navigation.
@@ -105,14 +105,14 @@ require(['jquery', 'cookie'], function ($)
         var disclaimer = $('<aside id="cookie-disclaimer"><div class="container"><p><strong>This website uses cookies to enhance your experience.</strong> By continuing to use this website you agree to cookies being placed on your computer. If you wish to use this website but do not wish for cookies to be placed on your computer you can change the settings in your internet browser. <a href="#" data-action="close">Close</a>.</p></div></aside>');
         $('body').prepend(disclaimer);
         disclaimer.show();
-		$.cookie('acceptedCookies', 1, {expires: 1461});
+        $.cookie('acceptedCookies', 1, {expires: 1461});
 
-		disclaimer.find('a').click(function (e)
+        disclaimer.find('a').click(function (e)
         {
             e.preventDefault();
-			disclaimer.slideUp('fast');
-		});
-	}
+            disclaimer.slideUp('fast');
+        });
+    }
 });
 
 // Flowplayer.
@@ -128,22 +128,22 @@ require(['jquery', 'flowplayer'], function ($)
 // Google+ '+1' button.
 window.___gcfg = {lang: 'en-GB'};
 (function () {
-	var po = document.createElement('script');
-	po.async = true;
-	po.src = 'https://apis.google.com/js/plusone.js';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(po, s);
+    var po = document.createElement('script');
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
 })();
 
 // Twitter 'tweet' button.
 !function (d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (!d.getElementById(id)) {
-		js = d.createElement(s);
-		js.id = id;
-		js.src = 'https://platform.twitter.com/widgets.js';
-		fjs.parentNode.insertBefore(js, fjs);
-	}
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
 }
 (document, 'script', 'twitter-wjs');
 
