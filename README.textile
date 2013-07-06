@@ -40,4 +40,4 @@ $ bower install
 
 bc. $ grunt [task]
 
-Where the @[task]@ is either @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
+Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
