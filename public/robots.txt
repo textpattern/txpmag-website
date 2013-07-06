@@ -1,4 +1,4 @@
-# robotstxt.org/
-
 User-agent: *
-Disallow: /guide
+Disallow: /guide/
+Disallow: /docs/
+Disallow: /mockups/
