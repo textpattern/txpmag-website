@@ -14,9 +14,14 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         watch: {
-            build: {
-                files: 'src/**',
-                tasks: ['build']
+            sass: {
+                files: 'src/sass/**',
+                tasks: ['compass']
+            },
+
+            js: {
+                files: 'src/*.js',
+                tasks: ['copy', 'uglify']
             }
         },
 
