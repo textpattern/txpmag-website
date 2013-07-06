@@ -32,12 +32,10 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['img/**', 'fonts/**'], dest: 'build/'},
-                    {expand: true, cwd: 'src/', src: ['*'], dest: 'build/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/js/', src: ['flowplayer/**'], dest: 'build/js/'},
-                    {src: ['src/js/jquery-ui-testing.js'], dest: 'build/js/jquery-ui-testing.js'},
-                    {src: ['src/js/modernizr.js'], dest: 'build/js/modernizr.js'},
-                    {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'build/js/selectivizr.js'}
+                    {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
+                    {expand: true, cwd: 'src/js/', src: ['flowplayer/**'], dest: 'public/js/'},
+                    {src: ['src/js/modernizr.js'], dest: 'public/js/modernizr.js'},
+                    {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'public/js/selectivizr.js'}
                 ]
             }
         },
@@ -81,19 +79,19 @@ module.exports = function (grunt) {
 
                 files: [
                     {
-                        'build/js/main.js': ['src/js/main.js'],
-                        'build/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
-                        'build/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
-                        'build/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
-                        'build/js/require.js': ['bower_components/requirejs/require.js'],
-                        'build/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
-                        'build/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js']
+                        'public/js/main.js': ['src/js/main.js'],
+                        'public/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
+                        'public/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
+                        'public/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
+                        'public/js/require.js': ['bower_components/requirejs/require.js'],
+                        'public/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
+                        'public/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js']
                     },
                     {
                         expand: true,
                         cwd: 'bower_components/google-code-prettify/src/',
                         src: 'lang-*.js',
-                        dest: 'build/js/'
+                        dest: 'public/js/'
                     }
                 ]
             }

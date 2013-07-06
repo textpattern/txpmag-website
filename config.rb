@@ -10,7 +10,7 @@ http_path = "/"
 project_path = "src"
 
 css_dir = "css"
-css_path = "build/css"
+css_path = "public/css"
 
 sass_dir = "sass"
 sass_path = "src/sass"
