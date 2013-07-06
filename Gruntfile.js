@@ -20,8 +20,8 @@ module.exports = function (grunt) {
             },
 
             js: {
-                files: 'src/*.js',
-                tasks: ['copy', 'uglify']
+                files: 'src/js/*.js',
+                tasks: ['jshint', 'copy', 'uglify']
             }
         },
 
