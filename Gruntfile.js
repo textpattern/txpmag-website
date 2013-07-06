@@ -38,15 +38,14 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/js/', src: ['flowplayer/**'], dest: 'public/js/'},
-                    {src: ['src/js/modernizr.js'], dest: 'public/js/modernizr.js'},
+                    {expand: true, cwd: 'src/js/libs/', src: ['**'], dest: 'public/js/'},
                     {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'public/js/selectivizr.js'}
                 ]
             }
         },
 
         jshint: {
-            files: ['Gruntfile.js', 'src/js/main.js'],
+            files: ['Gruntfile.js', 'src/js/*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
