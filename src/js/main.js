@@ -1,141 +1,141 @@
-requirejs.config({
-    paths:
-    {
-        'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
-        'jqueryui': '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min',
-        'flowplayer': '/js/flowplayer/flowplayer.min'
-    },
-    shim:
-    {
-        'details': ['jquery'],
-        'placeholder': ['jquery'],
-        'flowplayer': ['jquery'],
-        'cookie': ['jquery'],
-        'jqueryui': ['jquery']
-    }
-});
-
-define('modernizr', function ()
+(function ()
 {
-    return window.Modernizr;
-});
+    'use strict';
 
-require(['jquery', 'jqueryui'], function ($)
-{
-    // Any jQuery UI implementations go here.
-});
-
-require(['jquery', 'details'], function ($)
-{
-    $('details').details();
-    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
-});
-
-require(['jquery', 'placeholder'], function ($)
-{
-    $('input, textarea').placeholder();
-});
-
-require(['prettify'], function ()
-{
-    prettyPrint();
-});
-
-// Hack-Fix for the iOS orientationchange zoom bug (NOTE: fixed in iOS 6).
-
-require(['jquery'], function ($)
-{
-    var meta = $('meta[name=viewport]'), scales = [1, 1], fix = function ()
-    {
-        meta.attr('content', 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1]);
-    };
-
-    fix();
-    scales = [.25, 1.6];
-    $(document).one('gesturestart', fix);
-});
-
-require(['jquery', 'modernizr'], function ($, Modernizr)
-{
-    // Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking)
-
-    if (Modernizr.touch && !window.location.hash)
-    {
-        $(window).load(function ()
+    requirejs.config({
+        paths:
         {
-            if ($(window).scrollTop() < 20)
+            'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
+            'jqueryui': '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min',
+            'flowplayer': '/js/flowplayer/flowplayer.min'
+        },
+        shim:
+        {
+            'details': ['jquery'],
+            'placeholder': ['jquery'],
+            'flowplayer': ['jquery'],
+            'cookie': ['jquery'],
+            'jqueryui': ['jquery']
+        }
+    });
+
+    define('modernizr', function ()
+    {
+        return window.Modernizr;
+    });
+
+    require(['jquery', 'details'], function ($)
+    {
+        $('details').details();
+        $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    });
+
+    require(['jquery', 'placeholder'], function ($)
+    {
+        $('input, textarea').placeholder();
+    });
+
+    require(['prettify'], function ()
+    {
+        prettyPrint();
+    });
+
+    // Hack-Fix for the iOS orientationchange zoom bug (NOTE: fixed in iOS 6).
+
+    require(['jquery'], function ($)
+    {
+        var meta = $('meta[name=viewport]'), scales = [1, 1], fix = function ()
+        {
+            meta.attr('content', 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1]);
+        };
+
+        fix();
+        scales = [0.25, 1.6];
+        $(document).one('gesturestart', fix);
+    });
+
+    require(['jquery', 'modernizr'], function ($, Modernizr)
+    {
+        // Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking)
+
+        if (Modernizr.touch && !window.location.hash)
+        {
+            $(window).load(function ()
             {
-                window.scrollTo(0, 1);
-            }
-        });
-    }
+                if ($(window).scrollTop() < 20)
+                {
+                    window.scrollTo(0, 1);
+                }
+            });
+        }
 
-    // Test for SVG support via Modernizr, if yes then replace PNGs with SVGs.
+        // Test for SVG support via Modernizr, if yes then replace PNGs with SVGs.
 
-    if (Modernizr.svg)
-    {
-        $('img.svg').attr('src', function ()
+        if (Modernizr.svg)
         {
-            return $(this).attr('src').replace('.png', '.svg');
-        });
-    }
-});
-
-// Responsive navigation.
-
-require(['responsivenav'], function ()
-{
-    responsiveNav("#nav", {
-        animate: true,
-        transition: 400,
-        label: "Menu",
-        insert: "before",
-        customToggle: "",
-        openPos: "relative",
-        jsClass: "js"
+            $('img.svg').attr('src', function ()
+            {
+                return $(this).attr('src').replace('.png', '.svg');
+            });
+        }
     });
-});
 
-// EU-cookie disclaimer.
+    // Responsive navigation.
 
-require(['jquery', 'cookie'], function ($)
-{
-    if ($.cookie('acceptedCookies') != 1)
+    require(['responsivenav'], function ()
     {
-        var disclaimer = $('<aside id="cookie-disclaimer"><div class="container"><p><strong>This website uses cookies to enhance your experience.</strong> By continuing to use this website you agree to cookies being placed on your computer. If you wish to use this website but do not wish for cookies to be placed on your computer you can change the settings in your internet browser. <a href="#" data-action="close">Close</a>.</p></div></aside>');
-        $('body').prepend(disclaimer);
-        disclaimer.show();
-        $.cookie('acceptedCookies', 1, {expires: 1461});
-
-        disclaimer.find('a').click(function (e)
-        {
-            e.preventDefault();
-            disclaimer.slideUp('fast');
+        responsiveNav('#nav', {
+            animate: true,
+            transition: 400,
+            label: 'Menu',
+            insert: 'before',
+            customToggle: '',
+            openPos: 'relative',
+            jsClass: 'js'
         });
-    }
-});
-
-// Flowplayer.
-
-require(['jquery', 'flowplayer'], function ($)
-{
-    $('.videoplayer').flowplayer({
-        splash: true,
-        ratio: 0.417
     });
-});
 
-// Social buttons.
+    // EU-cookie disclaimer.
 
-window.___gcfg = {lang: 'en-GB'};
-require(['https://apis.google.com/js/plusone.js']);
-require(['https://platform.twitter.com/widgets.js']);
-require(['https://assets.pinterest.com/js/pinit.js']);
+    require(['jquery', 'cookie'], function ($)
+    {
+        if ($.cookie('acceptedCookies') === undefined)
+        {
+            var disclaimer = $('<aside id="cookie-disclaimer"><div class="container"><p><strong>This website uses cookies to enhance your experience.</strong> By continuing to use this website you agree to cookies being placed on your computer. If you wish to use this website but do not wish for cookies to be placed on your computer you can change the settings in your internet browser. <a href="#" data-action="close">Close</a>.</p></div></aside>');
+            $('body').prepend(disclaimer);
+            disclaimer.show();
+            $.cookie('acceptedCookies', 1, {expires: 1461});
 
-// Analytics.
+            disclaimer.find('a').click(function (e)
+            {
+                e.preventDefault();
+                disclaimer.slideUp('fast');
+            });
+        }
+    });
 
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-26074605-2']);
-_gaq.push(['_setDomainName', 'none']);
-_gaq.push(['_trackPageview']);
-require(['https://www.google-analytics.com/ga.js']);
+    // Flowplayer.
+
+    require(['jquery', 'flowplayer'], function ($)
+    {
+        $('.videoplayer').flowplayer({
+            splash: true,
+            ratio: 0.417
+        });
+    });
+
+    // Social buttons.
+
+    window.___gcfg = {lang: 'en-GB'};
+    require(['https://apis.google.com/js/plusone.js']);
+    require(['https://platform.twitter.com/widgets.js']);
+    require(['https://assets.pinterest.com/js/pinit.js']);
+
+    // Analytics.
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26074605-2']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_trackPageview']);
+    require(['https://www.google-analytics.com/ga.js']);
+})();

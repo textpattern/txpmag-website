@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         },
 
         jshint: {
-            files: ['Gruntfile.js'],
+            files: ['Gruntfile.js', 'src/js/main.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -70,7 +70,11 @@ module.exports = function (grunt) {
                     jQuery: true,
                     Zepto: true,
                     define: true,
-                    module: true
+                    module: true,
+                    require: true,
+                    requirejs: true,
+                    responsiveNav: true,
+                    prettyPrint: true
                 }
             }
         },
