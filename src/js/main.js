@@ -125,27 +125,12 @@ require(['jquery', 'flowplayer'], function ($)
     });
 });
 
-// Google+ '+1' button.
-window.___gcfg = {lang: 'en-GB'};
-(function () {
-    var po = document.createElement('script');
-    po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-})();
+// Social buttons.
 
-// Twitter 'tweet' button.
-!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}
-(document, 'script', 'twitter-wjs');
+window.___gcfg = {lang: 'en-GB'};
+require(['https://apis.google.com/js/plusone.js']);
+require(['https://platform.twitter.com/widgets.js']);
+require(['https://assets.pinterest.com/js/pinit.js']);
 
 // Analytics.
 
@@ -153,4 +138,4 @@ var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-26074605-2']);
 _gaq.push(['_setDomainName', 'none']);
 _gaq.push(['_trackPageview']);
-require(['http://www.google-analytics.com/ga.js']);
+require(['https://www.google-analytics.com/ga.js']);
