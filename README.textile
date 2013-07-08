@@ -13,6 +13,7 @@ Building this repository requires:
 * "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
 * "Bower":http://bower.io/ >=0.10.0
+* "SVN":http://subversion.tigris.org/
 
 Environment must consist of:
 
