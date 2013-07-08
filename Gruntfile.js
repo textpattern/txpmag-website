@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-shell');
 
     // project configuration
 
@@ -103,6 +104,26 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+
+        shell: {
+            setup: {
+                command: [
+                    'mkdir -pv tmp',
+                    'cd tmp',
+                    'rm -Rf dev',
+                    'echo "Downloading Textpattern via SVN..."',
+                    'svn export http://textpattern.googlecode.com/svn/development/4.x dev',
+                    'rm -f dev/.gitignore',
+                    'cp -rf dev/ ../public/',
+                    'echo "Removing trash..."',
+                    'cd ..',
+                    'rm -Rf tmp'
+                ].join('&&'),
+                options: {
+                    stdout: true
+                }
+            }
         }
     });
 
@@ -110,4 +131,5 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['jshint', 'compass', 'copy', 'uglify']);
     grunt.registerTask('travis', ['jshint']);
+    grunt.registerTask('setup', ['shell:setup']);
 };
