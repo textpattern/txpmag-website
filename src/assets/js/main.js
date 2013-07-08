@@ -7,7 +7,7 @@
         {
             'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
             'jqueryui': '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min',
-            'flowplayer': '/js/flowplayer/flowplayer.min'
+            'flowplayer': '/assets/js/flowplayer/flowplayer.min'
         },
         shim:
         {

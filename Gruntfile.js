@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             },
 
             js: {
-                files: 'src/js/*.js',
+                files: 'src/assets/js/*.js',
                 tasks: ['jshint', 'copy', 'uglify']
             }
         },
@@ -38,8 +38,8 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/js/libs/', src: ['**'], dest: 'public/js/'},
-                    {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'public/js/selectivizr.js'}
+                    {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'},
+                    {src: ['bower_components/selectivizr/selectivizr.js'], dest: 'public/assets/js/selectivizr.js'}
                 ]
             }
         },
@@ -87,19 +87,19 @@ module.exports = function (grunt) {
 
                 files: [
                     {
-                        'public/js/main.js': ['src/js/main.js'],
-                        'public/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
-                        'public/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
-                        'public/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
-                        'public/js/require.js': ['bower_components/requirejs/require.js'],
-                        'public/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
-                        'public/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js']
+                        'public/assets/js/main.js': ['src/assets/js/main.js'],
+                        'public/assets/js/details.js': ['bower_components/jquery-details/jquery.details.js'],
+                        'public/assets/js/placeholder.js': ['bower_components/jquery-placeholder/jquery.placeholder.js'],
+                        'public/assets/js/prettify.js': ['bower_components/google-code-prettify/src/prettify.js'],
+                        'public/assets/js/require.js': ['bower_components/requirejs/require.js'],
+                        'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
+                        'public/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js']
                     },
                     {
                         expand: true,
                         cwd: 'bower_components/google-code-prettify/src/',
                         src: 'lang-*.js',
-                        dest: 'public/js/'
+                        dest: 'public/assets/js/'
                     }
                 ]
             }

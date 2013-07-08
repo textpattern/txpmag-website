@@ -9,20 +9,20 @@ require "singularitygs"
 http_path = "/"
 project_path = "src"
 
-css_dir = "css"
-css_path = "public/css"
+css_dir = "assets/css"
+css_path = "public/assets/css"
 
-sass_dir = "sass"
-sass_path = "src/sass"
+sass_dir = "assets/sass"
+sass_path = "src/assets/sass"
 
-images_dir = "img"
-images_path = "src/img"
+images_dir = "assets/img"
+images_path = "src/assets/img"
 
-fonts_dir = "fonts"
-fonts_path = "src/fonts"
+fonts_dir = "assets/fonts"
+fonts_path = "src/assets/fonts"
 
-javascripts_dir = "js"
-javascripts_path = "src/js"
+javascripts_dir = "assets/js"
+javascripts_path = "src/assets/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
