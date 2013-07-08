@@ -6,23 +6,13 @@ require "singularitygs"
 
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path = "../"
 project_path = "src"
 
-css_dir = "assets/css"
-css_path = "public/assets/css"
-
-sass_dir = "assets/sass"
 sass_path = "src/assets/sass"
-
-images_dir = "assets/img"
-images_path = "src/assets/img"
-
-fonts_dir = "assets/fonts"
-fonts_path = "src/assets/fonts"
-
-javascripts_dir = "assets/js"
-javascripts_path = "src/assets/js"
+css_path = "public/assets/css"
+images_dir = "img"
+fonts_dir = "fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

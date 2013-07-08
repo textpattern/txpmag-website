@@ -9,28 +9,28 @@
 
 // Source Sans Pro (also available from Google Fonts API)
 
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-light.woff", "/fonts/sourcesanspro-light.ttf"), "/fonts/sourcesanspro-light.eot", 100, normal);
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-light-italic.woff", "/fonts/sourcesanspro-light-italic.ttf"), "/fonts/sourcesanspro-light-italic.eot", 100, italic);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-light.woff", "sourcesanspro-light.ttf"), "sourcesanspro-light.eot", 100, normal);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-light-italic.woff", "sourcesanspro-light-italic.ttf"), "sourcesanspro-light-italic.eot", 100, italic);
 
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-regular.woff", "/fonts/sourcesanspro-regular.ttf"), "/fonts/sourcesanspro-regular.eot", normal, normal);
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-italic.woff", "/fonts/sourcesanspro-italic.ttf"), "/fonts/sourcesanspro-italic.eot", normal, italic);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-regular.woff", "sourcesanspro-regular.ttf"), "sourcesanspro-regular.eot", normal, normal);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-italic.woff", "sourcesanspro-italic.ttf"), "sourcesanspro-italic.eot", normal, italic);
 
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-bold.woff", "/fonts/sourcesanspro-bold.ttf"), "/fonts/sourcesanspro-bold.eot", bold, normal);
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-bold-italic.woff", "/fonts/sourcesanspro-bold-italic.ttf"), "/fonts/sourcesanspro-bold-italic.eot", bold, italic);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-bold.woff", "sourcesanspro-bold.ttf"), "sourcesanspro-bold.eot", bold, normal);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-bold-italic.woff", "sourcesanspro-bold-italic.ttf"), "sourcesanspro-bold-italic.eot", bold, italic);
 
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-black.woff", "/fonts/sourcesanspro-black.ttf"), "/fonts/sourcesanspro-black.eot", 900, normal);
-@include font-face("Source Sans Pro", font-files("/fonts/sourcesanspro-black-italic.woff", "/fonts/sourcesanspro-black-italic.ttf"), "/fonts/sourcesanspro-black-italic.eot", 900, italic);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-black.woff", "sourcesanspro-black.ttf"), "sourcesanspro-black.eot", 900, normal);
+@include font-face("Source Sans Pro", font-files("sourcesanspro-black-italic.woff", "sourcesanspro-black-italic.ttf"), "sourcesanspro-black-italic.eot", 900, italic);
 
 
 // PT Serif (also available from Google Fonts API)
 
-@include font-face("PT Serif", font-files("/fonts/pt-serif-regular.woff", "/fonts/pt-serif-regular.ttf"), "/fonts/pt-serif-regular.eot", normal, normal);
-@include font-face("PT Serif", font-files("/fonts/pt-serif-italic.woff", "/fonts/pt-serif-italic.ttf"), "/fonts/pt-serif-italic.eot", normal, italic);
+@include font-face("PT Serif", font-files("pt-serif-regular.woff", "pt-serif-regular.ttf"), "pt-serif-regular.eot", normal, normal);
+@include font-face("PT Serif", font-files("pt-serif-italic.woff", "pt-serif-italic.ttf"), "pt-serif-italic.eot", normal, italic);
 
-@include font-face("PT Serif", font-files("/fonts/pt-serif-bold.woff", "/fonts/pt-serif-bold.ttf"), "/fonts/pt-serif-bold.eot", bold, normal);
-@include font-face("PT Serif", font-files("/fonts/pt-serif-bold-italic.woff", "/fonts/pt-serif-bold-italic.ttf"), "/fonts/pt-serif-bold-italic.eot", bold, italic);
+@include font-face("PT Serif", font-files("pt-serif-bold.woff", "pt-serif-bold.ttf"), "pt-serif-bold.eot", bold, normal);
+@include font-face("PT Serif", font-files("pt-serif-bold-italic.woff", "pt-serif-bold-italic.ttf"), "pt-serif-bold-italic.eot", bold, italic);
 
 
 // Cousine (also available from Google Fonts API)
 
-@include font-face("Cousine", font-files("/fonts/cousine-regular.woff", "/fonts/cousine-regular.ttf"), "/fonts/cousine-regular.eot", normal, normal);
+@include font-face("Cousine", font-files("cousine-regular.woff", "cousine-regular.ttf"), "cousine-regular.eot", normal, normal);

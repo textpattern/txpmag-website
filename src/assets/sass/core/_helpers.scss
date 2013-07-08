@@ -36,10 +36,10 @@
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
 	.no-svg &,
 	.no-js & {
-		background-image: url('/img/style/' + $imgfilename + '.' + $imgtype);
+		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
 	}
 	.svg & {
-		background-image: url('/img/style/' + $imgfilename + '.svg');
+		background-image: url('../img/' + $imgfilename + '.svg');
 		-webkit-background-size: $imgwidth $imgheight;
 		   -moz-background-size: $imgwidth $imgheight;
 		     -o-background-size: $imgwidth $imgheight;
@@ -52,7 +52,7 @@
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
 	$filename: $hdfile + '.' + $hdtype;
 	$hdfilename: $hdfile + '@2x.' + $hdtype;
-	background-image: url('/img/style/' + $filename);
+	background-image: url('../img/' + $filename);
 	@media print,
 		(-webkit-min-device-pixel-ratio: 2),
 		(min--moz-device-pixel-ratio: 2),
@@ -60,7 +60,7 @@
 		(min-device-pixel-ratio: 2),
 		(min-resolution: 192dpi),
 		(min-resolution: 2dppx) {
-		background-image: url('/img/style/' + $hdfilename) !important;
+		background-image: url('../img/' + $hdfilename) !important;
 		-webkit-background-size: $hdwidth $hdheight;
 		        background-size: $hdwidth $hdheight;
 	}
