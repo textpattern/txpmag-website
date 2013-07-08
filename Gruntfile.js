@@ -115,7 +115,7 @@ module.exports = function (grunt) {
                     'echo "Downloading Textpattern via SVN..."',
                     'svn export http://textpattern.googlecode.com/svn/development/4.x dev',
 
-                    'echo "Cleaning up downloaded package..."',
+                    'echo "Cleaning up the downloaded package..."',
                     'cd dev',
                     'rm -f .gitignore',
                     'rm -Rf sites',
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
                     'rm -f LICENSE.txt',
                     'rm -f README.txt',
 
-                    'echo "Removing current installation..."',
+                    'echo "Removing the current installation..."',
                     'cd ../../public',
                     'mkdir -pv files',
                     'mkdir -pv images',
