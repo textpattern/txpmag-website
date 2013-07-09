@@ -21,8 +21,11 @@ Environment must consist of:
 * PHP >=5.3
 * MySQL >=5
 * Textpattern CMS 4.6.0-dev
+* Unix-like OS, e.g. Linux or Mac OS
 
-h2. Building
+h2. Setup
+
+h3. Installing required tools
 
 The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. This creates few dependencies in addition to your normal PHP required by Textpattern. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bunder with gem and the rest with npm:
 
@@ -30,7 +33,9 @@ bc. $ gem install bundler
 $ npm install -g grunt-cli
 $ npm install -g bower
 
-Consult the tools' documentation for more instructions.
+Consult the tools' documentation for more instructions. Outside from these the project will also require the normal git, svn, Apache, MySQL and PHP. All requirements should be installed globally so that they can be found from your path.
+
+h3. Installing dependencies
 
 After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
 
@@ -39,8 +44,20 @@ $ npm install
 $ bundle install
 $ bower install
 
-*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems, and *bower* manages client-side scripts. After you have installed all dependencies, you will be able to run tasks using Grunt:
+*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems, and *bower* manages client-side scripts.
+
+h3. Installing Textpattern
+
+Once you have Grunt installed, installing and updating Textpattern is easy. To setup or update Textpattern run:
+
+bc. $ grunt setup
+
+This will download the latest development version of Textpattern CMS and places it to the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface. Further updates can be run with the same command and are automatic.
+
+h2. Building
+
+This repository hosts sources and needs to be build before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
 
 bc. $ grunt [task]
 
-Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
+Where the @[task]@ is either @test@, @build@, @setup@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
