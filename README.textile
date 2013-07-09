@@ -33,7 +33,7 @@ bc. $ gem install bundler
 $ npm install -g grunt-cli
 $ npm install -g bower
 
-Consult the tools' documentation for more instructions. Outside from these the project will also require the normal git, svn, Apache, MySQL and PHP. All requirements should be installed globally so that they can be found from your path.
+Consult the tools' documentation for more instructions. Outside from these the project will also require the normal git, svn, Apache, MySQL and PHP. All requirements must be added to your path variable.
 
 h3. Installing dependencies
 
