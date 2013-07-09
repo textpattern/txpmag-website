@@ -52,6 +52,8 @@ echo "Moving in the new installation...\n";
 `rm -f public/index.php`;
 `rm -Rf public/rpc`;
 `cp -rf tmp/dev/ public/`;
+`mkdir -p -m 755 public/files`;
+`mkdir -p -m 755 public/images`;
 
 echo "Removing trash...\n";
 `rm -Rf tmp`;
