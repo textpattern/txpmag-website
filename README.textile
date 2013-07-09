@@ -33,7 +33,7 @@ bc. $ gem install bundler
 $ npm install -g grunt-cli
 $ npm install -g bower
 
-Consult the tools' documentation for more instructions. Outside from these the project will also require the normal git, svn, Apache, MySQL and PHP. All requirements must be added to your path variable.
+Consult the tools' documentation for more instructions. Outside from these, the project will also require the normal git, svn, Apache, MySQL and PHP. All requirements must be added to your path variable.
 
 h3. Installing dependencies
 
@@ -52,11 +52,11 @@ Once you have Grunt installed, installing and updating Textpattern is easy. To s
 
 bc. $ grunt setup
 
-This will download the latest development version of Textpattern CMS and places it to the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface. Further updates can be run with the same command and are automatic.
+This will download the latest development version of Textpattern CMS and place it in the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface. Further updates can be run with the same command, and are automatic.
 
 h2. Building
 
-This repository hosts sources and needs to be build before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
 
 bc. $ grunt [task]
 
