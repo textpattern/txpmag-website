@@ -109,40 +109,7 @@ module.exports = function (grunt) {
         shell: {
             setup: {
                 command: [
-                    'mkdir -pv tmp',
-                    'cd tmp',
-                    'rm -Rf dev',
-                    'echo "Downloading Textpattern via SVN..."',
-                    'svn export http://textpattern.googlecode.com/svn/development/4.x dev',
-
-                    'echo "Cleaning up the downloaded package..."',
-                    'cd dev',
-                    'rm -f .gitignore',
-                    'rm -Rf sites',
-                    'rm -Rf images',
-                    'rm -Rf files',
-                    'rm -Rf js',
-                    'rm -f HISTORY.txt',
-                    'rm -f LICENSE-LESSER.txt',
-                    'rm -f LICENSE.txt',
-                    'rm -f README.txt',
-
-                    'echo "Removing the current installation..."',
-                    'cd ../../public',
-                    'mkdir -pv files',
-                    'mkdir -pv images',
-                    'rm -Rf rpc',
-                    'rm -Rf textpattern',
-                    'rm -f .htaccess',
-                    'rm -f css.php',
-                    'rm -f index.php',
-
-                    'echo "Moving in the new installation..."',
-                    'cd ..',
-                    'cp -rf tmp/dev/ public/',
-
-                    'echo "Removing trash..."',
-                    'rm -Rf tmp'
+                    'php src/setup/setup.php'
                 ].join('&&'),
                 options: {
                     stdout: true
