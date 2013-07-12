@@ -1,0 +1,153 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "e6ea5d2f98cd3fb4ff027c5fc41cb266",
+    "packages": [
+        {
+            "name": "rah/rah_flat",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/rah_flat.git",
+                "reference": "a65414f78bef9a242f913663ce365ced6e383be7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/rah_flat/zipball/a65414f78bef9a242f913663ce365ced6e383be7",
+                "reference": "a65414f78bef9a242f913663ce365ced6e383be7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "textpattern/installer": "*",
+                "textpattern/lock": ">=4.6.0,4.6.*-dev"
+            },
+            "type": "textpattern-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jukka Svahn",
+                    "homepage": "http://rahforum.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Textpattern CMS templates as flat files",
+            "homepage": "https://github.com/gocom/rah_flat",
+            "keywords": [
+                "flat",
+                "plugin",
+                "template",
+                "textpattern"
+            ],
+            "time": "2013-07-11 09:53:08"
+        },
+        {
+            "name": "textpattern/installer",
+            "version": "1.0.4",
+            "target-dir": "Textpattern/Composer/Installer",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/textpattern-installer.git",
+                "reference": "1.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/textpattern-installer/zipball/1.0.4",
+                "reference": "1.0.4",
+                "shasum": ""
+            },
+            "require": {
+                "textpattern/lock": ">=4.5.0"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": [
+                    "Textpattern\\Composer\\Installer\\Installer\\Manifest",
+                    "Textpattern\\Composer\\Installer\\Installer\\Package",
+                    "Textpattern\\Composer\\Installer\\Installer\\AdminTheme"
+                ]
+            },
+            "autoload": {
+                "psr-0": {
+                    "Textpattern\\Composer\\Installer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jukka Svahn",
+                    "homepage": "http://rahforum.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Textpattern plugin and theme installer",
+            "homepage": "https://github.com/gocom/textpattern-installer",
+            "keywords": [
+                "installer",
+                "plugin",
+                "textpattern",
+                "theme",
+                "txp"
+            ],
+            "time": "2013-05-12 18:55:45"
+        },
+        {
+            "name": "textpattern/lock",
+            "version": "4.6.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/textpattern-lock.git",
+                "reference": "5f0913e462a5e28df2cbb8424a47d9b56b4270b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/textpattern-lock/zipball/5f0913e462a5e28df2cbb8424a47d9b56b4270b0",
+                "reference": "5f0913e462a5e28df2cbb8424a47d9b56b4270b0",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "Lock your Textpattern CMS version or define package dependencies",
+            "homepage": "http://textpattern.com",
+            "keywords": [
+                "core",
+                "meta",
+                "textpattern"
+            ],
+            "time": "2013-05-03 19:41:16"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "textpattern/lock": 20,
+        "rah/rah_flat": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

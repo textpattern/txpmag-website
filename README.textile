@@ -13,6 +13,7 @@ Building this repository requires:
 * "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
 * "Bower":http://bower.io/ >=0.10.0
+* "Composer":http://getcomposer.org/
 * "SVN":http://subversion.tigris.org/
 
 Environment must consist of:
@@ -27,7 +28,7 @@ h2. Setup
 
 h3. Installing required tools
 
-The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. This creates few dependencies in addition to your normal PHP required by Textpattern. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bunder with gem and the rest with npm:
+The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. This creates few dependencies in addition to your normal PHP required by Textpattern. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node, Ruby and "Composer":http://getcomposer.org/ using their installers, Bunder with gem and the rest with npm:
 
 bc. $ gem install bundler
 $ npm install -g grunt-cli
@@ -53,6 +54,12 @@ Once you have Grunt installed, installing and updating Textpattern is easy. To s
 bc. $ grunt setup
 
 This will download the latest development version of Textpattern CMS and place it in the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface. Further updates can be run with the same command, and are automatic.
+
+h3. Installing plugins
+
+After you have installed Textpattern, you can install plugins the Textpattern installation will be using. Plugins can be installed using Composer:
+
+bc. $ composer install
 
 h2. Building
 
