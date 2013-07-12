@@ -40,7 +40,7 @@
         prettyPrint();
     });
 
-    // Hack-Fix for the iOS orientationchange zoom bug (NOTE: fixed in iOS 6).
+    // Hack-fix for the iOS orientationchange zoom bug (NOTE: fixed in iOS 6).
 
     require(['jquery'], function ($)
     {
@@ -56,7 +56,7 @@
 
     require(['jquery', 'modernizr'], function ($, Modernizr)
     {
-        // Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking)
+        // Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
 
         if (Modernizr.touch && !window.location.hash)
         {
@@ -127,9 +127,7 @@
     // Social buttons.
 
     window.___gcfg = {lang: 'en-GB'};
-    require(['https://apis.google.com/js/plusone.js']);
     require(['https://platform.twitter.com/widgets.js']);
-    require(['https://assets.pinterest.com/js/pinit.js']);
 
     // Analytics.
 
@@ -138,4 +136,5 @@
     _gaq.push(['_setDomainName', 'none']);
     _gaq.push(['_trackPageview']);
     require(['https://www.google-analytics.com/ga.js']);
+
 })();
