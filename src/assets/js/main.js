@@ -119,12 +119,20 @@
 
     // Flowplayer.
 
-    require(['jquery', 'flowplayer'], function ($)
+    require(['jquery'], function ($)
     {
-        $('.videoplayer').flowplayer({
-            splash: true,
-            ratio: 0.417
-        });
+        var player = $('.videoplayer');
+
+        if (player.length)
+        {
+            require(['flowplayer'], function ()
+            {
+                player.flowplayer({
+                    splash: true,
+                    ratio: 0.417
+                });
+            });
+        }
     });
 
     // Disqus.
