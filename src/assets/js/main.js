@@ -42,16 +42,19 @@
 
     // Hack-fix for the iOS orientationchange zoom bug (NOTE: fixed in iOS 6).
 
-    require(['jquery'], function ($)
+    require(['jquery', 'modernizr'], function ($, Modernizr)
     {
-        var meta = $('meta[name=viewport]'), scales = [1, 1], fix = function ()
+        if (Modernizr.touch)
         {
-            meta.attr('content', 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1]);
-        };
+            var meta = $('meta[name=viewport]'), scales = [1, 1], fix = function ()
+            {
+                meta.attr('content', 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1]);
+            };
 
-        fix();
-        scales = [0.25, 1.6];
-        $(document).one('gesturestart', fix);
+            fix();
+            scales = [0.25, 1.6];
+            $(document).one('gesturestart', fix);
+        }
     });
 
     require(['jquery', 'modernizr'], function ($, Modernizr)
