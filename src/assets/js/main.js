@@ -108,7 +108,11 @@
             disclaimer.find('a').click(function (e)
             {
                 e.preventDefault();
-                disclaimer.slideUp('fast');
+
+                disclaimer.slideUp('fast', function ()
+                {
+                    disclaimer.remove();
+                });
             });
         }
     });
