@@ -130,7 +130,7 @@
     {
         if ($('#disqus_thread').length)
         {
-            require(['http://txpmag.disqus.com/embed.js']);
+            require(['//txpmag.disqus.com/embed.js']);
         }
     });
 
