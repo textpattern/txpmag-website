@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+<head>
+
+<title><txp:page_title /></title>
+<txp:output_form form="head_meta" />
+<txp:output_form form="head_link" />
+<txp:output_form form="head_js" />
+<txp:output_form form="head_old_ie" />
+
+</head>
+<body>
+
+<div class="wrapper">
+
+<txp:output_form form="body_old_ie" />
+<txp:output_form form="body_header" />
+<txp:output_form form="body_nav" />
+<txp:output_form form="body_content_primary" />
+
+</div><!-- /.wrapper -->
+
+<txp:output_form form="body_content_secondary" />
+<txp:output_form form="body_footer" />
+<txp:output_form form="body_js" />
+
+</body>
+</html>
