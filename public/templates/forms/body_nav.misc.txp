@@ -1,0 +1,10 @@
+<div class="nav-container">
+    <nav role="navigation" id="nav" aria-label="Site navigation">
+        <ul>
+            <li><a href="#">Issues</a></li>
+            <li><a href="#">Columns</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">People</a></li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,11 @@
+<footer role="contentinfo">
+    <p class="legal">
+        <small>
+            <a href="/terms/copyright-policy">Copyright</a> 2007-2013 TXP.
+            <a href="#">Credits</a>.
+            <a href="/terms/privacy-policy">Privacy</a>.
+            <a href="http://txpmag.com/humans.txt">Colophon</a>.
+        </small>
+    </p>
+    <p class="html5"><small><a rel="external" href="http://www.w3.org/html/logo/" title="HTML5 powered">HTML5 powered</a></small></p>
+</footer>
