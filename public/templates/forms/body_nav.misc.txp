@@ -1,10 +1,10 @@
 <div class="nav-container">
     <nav role="navigation" id="nav" aria-label="Site navigation">
         <ul>
-            <li><a href="#">Issues</a></li>
-            <li><a href="#">Columns</a></li>
-            <li><a href="#">Topics</a></li>
-            <li><a href="#">People</a></li>
+            <li><a href="http://txpmag.com/issues/">Issues</a></li>
+            <li><a href="http://txpmag.com/columns/">Columns</a></li>
+            <li><a href="http://txpmag.com/topics/">Topics</a></li>
+            <li><a href="http://txpmag.com/people/">People</a></li>
         </ul>
     </nav>
 </div>
