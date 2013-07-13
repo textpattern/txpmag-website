@@ -1,7 +1,7 @@
 <!-- Disqus comments -->
 <div id="disqus_thread"></div>
 <script>
-    var disqus_shortname = 'txpmag'; // Shortname is accurate.
+    var disqus_shortname = 'txpmag';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
