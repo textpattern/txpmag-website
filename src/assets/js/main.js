@@ -147,7 +147,6 @@
 
     // Social buttons.
 
-    window.___gcfg = {lang: 'en-GB'};
     require(['https://platform.twitter.com/widgets.js']);
 
     // Analytics.
