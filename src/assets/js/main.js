@@ -124,6 +124,16 @@
         });
     });
 
+    // Disqus.
+
+    require(['jquery'], function ($)
+    {
+        if ($('#disqus_thread').length)
+        {
+            require(['http://txpmag.disqus.com/embed.js']);
+        }
+    });
+
     // Social buttons.
 
     window.___gcfg = {lang: 'en-GB'};
