@@ -147,7 +147,13 @@
 
     // Social buttons.
 
-    require(['https://platform.twitter.com/widgets.js']);
+    require(['jquery'], function ()
+    {
+        if ($('.twitter-share-button').length)
+        {
+            require(['https://platform.twitter.com/widgets.js']);
+        }
+    });
 
     // Analytics.
 
