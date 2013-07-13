@@ -3,16 +3,12 @@
     <section role="region" class="layout--span-1-8">
         <h4>About</h4>
         <p>TXP Magazine is a publication of the Textpattern project. Content targets a range of interests within the web publishing and design arena. Article <a href="#">contributions</a> are welcome, as are enquiries about <a href="#">advertorials</a>. Editorial roles are often available too. <a href="#">Join the team!</a></p>
-
-        <nav role="navigation">
-            <h4>Social channels</h4>
-            <ul class="social-channels">
-                <li><a rel="external" class="twitter" href="https://twitter.com/txpmag" title="Follow us on Twitter">Twitter</a></li>
-                <li><a rel="external" class="googleplus" href="https://plus.google.com/u/0/b/102240548936231123918" title="Follow us on Google+">Google+</a></li>
-            </ul>
-        </nav>
+        <h4>Social channels</h4>
+        <ul class="social-channels">
+            <li><a rel="external" class="twitter" href="https://twitter.com/txpmag" title="Follow us on Twitter">Twitter</a></li>
+            <li><a rel="external" class="googleplus" href="https://plus.google.com/u/0/b/102240548936231123918" title="Follow us on Google+">Google+</a></li>
+        </ul>
     </section>
-
 
     <section role="region" class="layout--span-9-12 host-details">
         <h4 class="accessibility">Host details</h4>
