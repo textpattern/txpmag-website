@@ -147,7 +147,7 @@
 
     // Social buttons.
 
-    require(['jquery'], function ()
+    require(['jquery'], function ($)
     {
         if ($('.twitter-share-button').length)
         {
