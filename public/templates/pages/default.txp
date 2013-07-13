@@ -2,6 +2,7 @@
 <html lang="en-gb" class="no-js">
 <head>
 
+<txp:output_form form="context" />
 <title><txp:page_title /></title>
 <txp:output_form form="head_meta" />
 <txp:output_form form="head_link" />
