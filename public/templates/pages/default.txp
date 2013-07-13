@@ -2,11 +2,7 @@
 <html lang="en-gb" class="no-js">
 <head>
     <txp:output_form form="context" />
-    <title><txp:page_title /></title>
-    <txp:output_form form="head_meta" />
-    <txp:output_form form="head_link" />
-    <txp:output_form form="head_js" />
-    <txp:output_form form="head_old_ie" />
+    <txp:output_form form="head" />
 </head>
 <body>
     <div class="wrapper">
