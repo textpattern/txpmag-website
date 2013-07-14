@@ -63,7 +63,7 @@
 
         if (Modernizr.touch && !window.location.hash)
         {
-            $(window).load(function ()
+            $(window).on('load', function ()
             {
                 if ($(window).scrollTop() < 20)
                 {
@@ -108,7 +108,7 @@
             $('body').prepend(disclaimer);
             $.cookie('acceptedCookies', 1, {expires: 1461});
 
-            disclaimer.find('a').click(function (e)
+            disclaimer.find('a').on('click', function (e)
             {
                 e.preventDefault();
 
