@@ -24,15 +24,30 @@
         return window.Modernizr;
     });
 
-    require(['jquery', 'details'], function ($)
+    require(['jquery'], function ($)
     {
-        $('details').details();
-        $('html').addClass($.fn.details.support ? 'details' : 'no-details');
-    });
+        var details = $('details'), placeholder = $('textarea[placeholder], input[placeholder]');
 
-    require(['jquery', 'placeholder'], function ($)
-    {
-        $('input, textarea').placeholder();
+        // Details polyfill.
+
+        if (details.length)
+        {
+            require(['details'], function ()
+            {
+                details.details();
+                $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            });
+        }
+
+        // Placeholder polyfill.
+
+        if (placeholder.length)
+        {
+            require(['placeholder'], function ()
+            {
+                placeholder.placeholder();
+            });
+        }
     });
 
     require(['prettify'], function ()
