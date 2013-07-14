@@ -26,7 +26,7 @@
 
     require(['jquery'], function ($)
     {
-        var details = $('details'), placeholder = $('textarea[placeholder], input[placeholder]');
+        var details = $('details'), placeholder = $('textarea[placeholder], input[placeholder]'), code = $('.prettyprint');
 
         // Details polyfill.
 
@@ -48,11 +48,16 @@
                 placeholder.placeholder();
             });
         }
-    });
 
-    require(['prettify'], function ()
-    {
-        prettyPrint();
+        // Syntax highlighting.
+
+        if (code.length)
+        {
+            require(['prettify'], function ()
+            {
+                prettyPrint();
+            });
+        }
     });
 
     // Hack-fix for the iOS orientationchange zoom bug (NOTE: fixed in iOS 6).
