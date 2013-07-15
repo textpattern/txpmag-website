@@ -1,5 +1,20 @@
+<!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" rel="external">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
 <header role="banner" itemscope itemtype="http://schema.org/Organization">
     <h1 itemprop="name" class="accessibility">TXP</h1>
     <p class="publication-masthead"><a rel="home" itemprop="url" href="<txp:site_url />" title="Go to the TXP Magazine homepage"><img itemprop="logo" src="/assets/img/txp.png" alt="TXP"></a></p>
     <p class="publication-issue">№ <txp:variable name="issue" /></p>
 </header>
+
+<div class="nav-container">
+    <nav role="navigation" id="nav" aria-label="Site navigation">
+        <ul>
+            <li><a href="<txp:site_url />issues/">Issues</a></li>
+            <li><a href="<txp:site_url />columns/">Columns</a></li>
+            <li><a href="<txp:site_url />topics/">Topics</a></li>
+            <li><a href="<txp:site_url />people/">People</a></li>
+        </ul>
+    </nav>
+</div>
