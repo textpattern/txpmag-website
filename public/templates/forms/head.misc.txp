@@ -38,6 +38,5 @@
 <script src="<txp:variable name="assets_url" />js/modernizr.js"></script>
 
 <!--[if lt IE 9]>
-    <script src="<txp:variable name="assets_url" />js/selectivizr.js"></script>
     <link rel="stylesheet" href="<txp:variable name="assets_url" />css/ie8.css">
 <![endif]-->
