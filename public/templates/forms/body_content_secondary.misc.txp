@@ -2,7 +2,7 @@
 
     <section role="region" class="layout--span-1-8">
         <h4>About</h4>
-        <p>TXP Magazine is a publication of the Textpattern project. Content targets a range of interests within the web publishing and design arena. Article <a href="http://txpmag.com/contribute/write-for-us">contributions</a> are welcome, as are enquiries about <a href="http://txpmag.com/advertise">advertorials</a>. Editorial roles are often available too. <a href="http://txpmag.com/contribute/team-openings">Join the team!</a></p>
+        <p>TXP Magazine is a publication of the Textpattern project. Content targets a range of interests within the web publishing and design arena. Article <a href="<txp:site_url />contribute/write-for-us">contributions</a> are welcome, as are enquiries about <a href="<txp:site_url />advertise">advertorials</a>. Editorial roles are often available too. <a href="<txp:site_url />contribute/team-openings">Join the team!</a></p>
         <h4>Social channels</h4>
         <ul class="social-channels">
             <li><a rel="external" class="twitter" href="https://twitter.com/txpmag" title="Follow us on Twitter">Twitter</a></li>
@@ -12,7 +12,7 @@
 
     <section role="region" class="layout--span-9-12 host-details">
         <h4 class="accessibility">Host details</h4>
-        <p><img class="svg" src="/assets/img/textpattern-network-white.png" alt="Textpattern Network"></p>
+        <p><img class="svg" src="<txp:site_url />assets/img/textpattern-network-white.png" alt="Textpattern Network"></p>
         <p>
             <small>
                 Kindly hosted by<br>
