@@ -1,5 +1,15 @@
 <txp:hide>
 ==========
+Assets location. Allows serving assets from COOKIE-less domain, letting us cache files on users' end.
+==========
+</txp:hide>
+
+<txp:if_variable name="assets_url"><txp:else />
+    <txp:variable name="assets_url" value='<txp:site_url />assets/' />
+</txp:if_variable>
+
+<txp:hide>
+==========
 Lists of sections that:
 * have article content in them (in the order they should appear in lists)
 * are aggregates (list-of-other-sections/categories)

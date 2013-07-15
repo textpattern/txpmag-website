@@ -10,4 +10,4 @@
     <p class="html5"><small><a rel="external" href="http://www.w3.org/html/logo/" title="HTML5 powered">HTML5 powered</a></small></p>
 </footer>
 
-<script data-main="/assets/js/main.js" src="/assets/js/require.js"></script>
+<script data-main="<txp:variable name="assets_url" />js/main.js" src="<txp:variable name="assets_url" />js/require.js"></script>
