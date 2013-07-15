@@ -77,23 +77,10 @@
         }
     });
 
+    // Test for SVG support via Modernizr, if yes then replace PNGs with SVGs.
+
     require(['jquery', 'modernizr'], function ($, Modernizr)
     {
-        // Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
-
-        if (Modernizr.touch && !window.location.hash)
-        {
-            $(window).on('load', function ()
-            {
-                if ($(window).scrollTop() < 20)
-                {
-                    window.scrollTo(0, 1);
-                }
-            });
-        }
-
-        // Test for SVG support via Modernizr, if yes then replace PNGs with SVGs.
-
         if (Modernizr.svg)
         {
             $('img.svg').attr('src', function ()
