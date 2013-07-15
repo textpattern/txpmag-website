@@ -1,21 +1,20 @@
-<txp:hide>
-==========
+<txp:variable name="omit">
+
+<!--
 Assets location. Allows serving assets from COOKIE-less domain, letting us cache files on users' end.
-==========
-</txp:hide>
+-->
 
 <txp:if_variable name="assets_url"><txp:else />
     <txp:variable name="assets_url" value='<txp:site_url />assets/' />
 </txp:if_variable>
 
-<txp:hide>
-==========
+
+<!--
 Lists of sections that:
 * have article content in them (in the order they should appear in lists)
 * are aggregates (list-of-other-sections/categories)
 * have advertising content (first empty item indicates front page)
-==========
-</txp:hide>
+-->
 
 <txp:variable name="column_sections">from-the-editor, community-spotlight, site-watch, extensionalism, independents-frontline, hope-for-the-future, meaningful-labour</txp:variable>
 <txp:variable name="aggregate_sections">columns, exhibit, issues, topics</txp:variable>
@@ -28,12 +27,9 @@ Lists of sections that:
 </txp:php>
 
 
-
-<txp:hide>
-==========
+<!--
 Can use these to test if value="1" in templates
-==========
-</txp:hide>
+-->
 
 <txp:variable name="is_column"><txp:if_section name='<txp:variable name="column_sections" />'>1<txp:else />0</txp:if_section></txp:variable>
 <txp:variable name="is_aggregate"><txp:if_section name='<txp:variable name="aggregate_sections" />'>1<txp:else />0</txp:if_section></txp:variable>
@@ -42,15 +38,12 @@ Can use these to test if value="1" in templates
 <txp:variable name="has_feed"><txp:php>global $pretext; echo safe_field('in_rss', 'txp_section', "name='".doSlash($pretext['s'])."'");</txp:php></txp:variable>
 
 
-
-<txp:hide>
-==========
+<!--
 Determine the Mag Issue context. It's either:
 a) From the URL (/issues/N that has passed the gbp_permanent_link CF check)
 b) From the current individual article's "Issue" custom field
 c) From the Issue CF of the most recent past live article in the mag content
-==========
-</txp:hide>
+-->
 
 <txp:variable name="issue" value="0" />
 <txp:php>
@@ -136,11 +129,9 @@ function issue_info($iss = '0')
 
 
 
-<txp:hide>
-==========
+<!--
 No issue found: get latest Issue CF from latest article
-==========
-</txp:hide>
+-->
 
 <txp:if_variable name="issue" value="0">
     <txp:php>
@@ -152,11 +143,9 @@ No issue found: get latest Issue CF from latest article
 
 
 
-<txp:hide>
-==========
+<!--
 Create the Month/Year of Issue
-==========
-</txp:hide>
+-->
 
 <txp:php>
     global $variable;
@@ -165,3 +154,5 @@ Create the Month/Year of Issue
     $variable['issue_month'] = date('M', $when);
     $variable['issue_year'] = date('Y', $when);
 </txp:php>
+
+</txp:variable>
