@@ -8,7 +8,7 @@
 
 <!-- Windows 8 stuff specific to tiles -->
 <meta name="msapplication-tilecolor" content="#ffffff">
-<meta name="msapplication-tileimage" content="/assets/img/site.png">
+<meta name="msapplication-tileimage" content="<txp:site_url />assets/img/site.png">
 
 <!-- Open Graph - required for Facebook API -->
 <meta property="og:title" content="TXP - new magazine design">
@@ -31,13 +31,13 @@
 
 <!-- CSS -->
 
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/jquery-ui.css">
-<link rel="stylesheet" href="/assets/js/flowplayer/skin/minimalist.css">
+<link rel="stylesheet" href="<txp:site_url />assets/css/style.css">
+<link rel="stylesheet" href="<txp:site_url />assets/css/jquery-ui.css">
+<link rel="stylesheet" href="<txp:site_url />assets/js/flowplayer/skin/minimalist.css">
+
+<script src="<txp:site_url />assets/js/modernizr.js"></script>
 
 <!--[if lt IE 9]>
-    <script src="/assets/js/selectivizr.js"></script>
-    <link rel="stylesheet" href="/assets/css/ie8.css">
+    <script src="<txp:site_url />assets/js/selectivizr.js"></script>
+    <link rel="stylesheet" href="<txp:site_url />assets/css/ie8.css">
 <![endif]-->
-
-<script src="/assets/js/modernizr.js"></script>

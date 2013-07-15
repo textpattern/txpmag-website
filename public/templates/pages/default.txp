@@ -6,6 +6,7 @@
 </head>
 <body>
     <div class="wrapper">
+
         <txp:output_form form="body_old_ie" />
         <txp:output_form form="body_header" />
         <txp:output_form form="body_nav" />
