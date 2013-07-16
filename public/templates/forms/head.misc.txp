@@ -31,10 +31,10 @@
 
 <!-- CSS -->
 
-<link rel="stylesheet" href="<txp:variable name="assets_url" />css/main.css">
+<link rel="stylesheet" href="<txp:output_form form="asset">css/main.css</txp:output_form>">
 
-<script src="<txp:variable name="assets_url" />js/modernizr.js"></script>
+<script src="<txp:output_form form="asset">js/modernizr.js</txp:output_form>"></script>
 
 <!--[if lt IE 9]>
-    <link rel="stylesheet" href="<txp:variable name="assets_url" />css/ie8.css">
+    <link rel="stylesheet" href="<txp:output_form form="asset">css/ie8.css</txp:output_form>">
 <![endif]-->
