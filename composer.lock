@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_beacon.git",
-                "reference": "4a7ec569f4bc998e3dfd110b5dea4949ee464ff4"
+                "reference": "fe1b94406e41054816d9af84081f5fcb5f382794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_beacon/zipball/4a7ec569f4bc998e3dfd110b5dea4949ee464ff4",
-                "reference": "4a7ec569f4bc998e3dfd110b5dea4949ee464ff4",
+                "url": "https://api.github.com/repos/gocom/rah_beacon/zipball/fe1b94406e41054816d9af84081f5fcb5f382794",
+                "reference": "fe1b94406e41054816d9af84081f5fcb5f382794",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +44,7 @@
                 "template",
                 "textpattern"
             ],
-            "time": "2013-07-12 13:55:58"
+            "time": "2013-07-16 12:44:35"
         },
         {
             "name": "rah/rah_flat",
