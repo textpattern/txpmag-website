@@ -8,6 +8,6 @@
 </ifModule>
 
 <IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteRule ^(js|css)/([a-z]+).([0-9]+).(js|css)$ $1/$2.$4 [L]
+    RewriteEngine On
+    RewriteRule ^(js|css)/([a-z]+).([0-9]+).(js|css)$ $1/$2.$4 [L]
 </IfModule>
