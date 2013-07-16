@@ -40,13 +40,20 @@ h3. Setting up Apache virtual host
 
 The @public/@ directory is intended to be set as the server's document root. You can do this by adding a new virtual host to your httpd.conf. Along the lines of:
 
-bc. <VirtualHost *:80>
+bc.. <VirtualHost *:80>
     VirtualHost "/absolute/path/to/txpmag-website/public"
     ServerName www.txpmag.test
     ServerAlias txpmag.test
 </VirtualHost>
 
-On a local development server, after this you can use your hosts file to point the development domain to correct location (e.g. back to home), run a local DNS server that resolves .test TLDs, or use a "xip.io":http://xip.io/ domain.
+# Serve static client-side assets from a different domain.
+
+<VirtualHost *:80>
+    VirtualHost "/absolute/path/to/txpmag-website/public/assets"
+    ServerName assets.txpmag.test
+</VirtualHost>
+
+p. On a local development server, after this you can use your hosts file to point the development domain to correct location (e.g. back to home), run a local DNS server that resolves .test TLDs, or use a "xip.io":http://xip.io/ domain.
 
 h3. Installing dependencies
 
