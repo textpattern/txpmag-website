@@ -31,9 +31,7 @@
 
 <!-- CSS -->
 
-<link rel="stylesheet" href="<txp:variable name="assets_url" />css/style.css">
-<link rel="stylesheet" href="<txp:variable name="assets_url" />css/jquery-ui.css">
-<link rel="stylesheet" href="<txp:variable name="assets_url" />js/flowplayer/skin/minimalist.css">
+<link rel="stylesheet" href="<txp:variable name="assets_url" />css/main.css">
 
 <script src="<txp:variable name="assets_url" />js/modernizr.js"></script>
 

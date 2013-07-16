@@ -8,6 +8,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // project configuration
 
@@ -17,7 +18,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: 'src/sass/**',
-                tasks: ['compass']
+                tasks: ['sass']
             },
 
             js: {
@@ -36,10 +37,17 @@ module.exports = function (grunt) {
         },
 
         copy: {
-            main: {
+            js: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'public/', filter: 'isFile'},
                     {expand: true, cwd: 'src/assets/js/libs/', src: ['**'], dest: 'public/assets/js/'}
+                ]
+            },
+
+            css: {
+                files: [
+                    {expand: true, cwd: 'tmp/assets/css/', src: ['ie8.css'], dest: 'public/assets/css/'},
+                    {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'}
                 ]
             }
         },
@@ -74,6 +82,18 @@ module.exports = function (grunt) {
                     requirejs: true,
                     responsiveNav: true,
                     prettyPrint: true
+                }
+            }
+        },
+
+        cssmin: {
+            main: {
+                files: {
+                    'public/assets/css/main.css': [
+                        'tmp/assets/css/style.css',
+                        'tmp/assets/css/jquery-ui.css',
+                        'src/assets/js/libs/flowplayer/skin/minimalist.css'
+                    ]
                 }
             }
         },
@@ -118,8 +138,9 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'compass', 'copy', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:js', 'uglify']);
     grunt.registerTask('travis', ['jshint']);
     grunt.registerTask('setup', ['shell:setup']);
 };
