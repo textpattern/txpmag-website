@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+<head>
+    <txp:output_form form="context" />
+    <txp:output_form form="head">404</txp:output_form>
+</head>
+<body>
+    <div class="wrapper">
+
+        <txp:output_form form="body_header" />
+        <p>404, page not found.</p>
+
+    </div><!-- /.wrapper -->
+
+    <txp:output_form form="body_content_secondary" />
+    <txp:output_form form="body_footer" />
+</body>
+</html>

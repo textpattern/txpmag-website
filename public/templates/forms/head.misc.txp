@@ -1,5 +1,10 @@
 <meta charset="utf-8">
-<title><txp:page_title /></title>
+
+<txp:if_yield>
+    <title><txp:yield /></title>
+<txp:else />
+    <title><txp:page_title /></title>
+</txp:if_yield>
 
 <meta name="description" content="TXP is the international magazine of the Textpattern project. With spotlight interviews, regular columns, plugins, people, swag store, the commmunity, and a healthy dose of editorial excellence, it is the best place to discover the world of Textpattern CMS.">
 <meta name="generator" content="Textpattern CMS">
