@@ -72,7 +72,7 @@ Once you have Grunt installed, installing and updating Textpattern is easy. To s
 
 bc. $ grunt setup
 
-This will download the latest development version of Textpattern CMS and place it in the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface. Further updates can be run with the same command, and are automatic.
+This will download the latest development version of Textpattern CMS and place it in the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface, and use "this as your config.php template":https://github.com/textpattern/txpmag-website/blob/master/src/setup/config.dist.php. Further updates can be run with the same command, and are automatic.
 
 h3. Installing plugins
 
