@@ -54,6 +54,7 @@ echo "Moving in the new installation...\n";
 `cp -rf tmp/dev/ public/`;
 `mkdir -p -m 755 public/files`;
 `mkdir -p -m 755 public/images`;
+`mkdir -p -m 755 cache`;
 
 echo "Removing trash...\n";
 `rm -Rf tmp`;

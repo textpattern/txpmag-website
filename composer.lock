@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3728d8636384aa3ab2e36f780cfff316",
+    "hash": "963fa7ababec2993b0b8aa4a983693a0",
     "packages": [
         {
             "name": "rah/rah_beacon",
@@ -45,6 +45,55 @@
                 "textpattern"
             ],
             "time": "2013-07-16 12:44:35"
+        },
+        {
+            "name": "rah/rah_cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/rah_cache.git",
+                "reference": "8633da236694859753db44857b5a30511f1c7f52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/8633da236694859753db44857b5a30511f1c7f52",
+                "reference": "8633da236694859753db44857b5a30511f1c7f52",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "textpattern/installer": "*",
+                "textpattern/lock": ">=4.5.0,<4.7.0"
+            },
+            "type": "textpattern-plugin",
+            "autoload": {
+                "psr-0": {
+                    "Rah_Cache_": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jukka Svahn",
+                    "homepage": "http://rahforum.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Flat full-page caching plugin for Textpattern CMS",
+            "homepage": "https://github.com/gocom/rah_cache",
+            "keywords": [
+                "cache",
+                "flat",
+                "page",
+                "performance",
+                "plugin",
+                "speed",
+                "textpattern"
+            ],
+            "time": "2013-07-16 14:09:41"
         },
         {
             "name": "rah/rah_flat",
@@ -184,7 +233,8 @@
     "stability-flags": {
         "textpattern/lock": 20,
         "rah/rah_flat": 20,
-        "rah/rah_beacon": 20
+        "rah/rah_beacon": 20,
+        "rah/rah_cache": 20
     },
     "platform": [
 
