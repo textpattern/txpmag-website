@@ -1,5 +1,5 @@
 <txp:variable name="assets_url" /><txp:php>
-    $file = parse('<txp:yield />');
+    $file = parse('<txp:variable name="name" />');
     $path = pathinfo($file);
     $time = filemtime(txpath . '/../assets/' . $file);
     echo $path['dirname'] . '/' . $path['filename'] . '.' . $time . '.' . $path['extension'];
