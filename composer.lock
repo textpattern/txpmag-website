@@ -3,8 +3,49 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e6ea5d2f98cd3fb4ff027c5fc41cb266",
+    "hash": "3728d8636384aa3ab2e36f780cfff316",
     "packages": [
+        {
+            "name": "rah/rah_beacon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/rah_beacon.git",
+                "reference": "4a7ec569f4bc998e3dfd110b5dea4949ee464ff4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/rah_beacon/zipball/4a7ec569f4bc998e3dfd110b5dea4949ee464ff4",
+                "reference": "4a7ec569f4bc998e3dfd110b5dea4949ee464ff4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "textpattern/installer": "*",
+                "textpattern/lock": ">=4.6.0,4.6.*-dev"
+            },
+            "type": "textpattern-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jukka Svahn",
+                    "homepage": "http://rahforum.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create dynamic alias templates tags from Textpattern CMS' form partials",
+            "homepage": "https://github.com/gocom/rah_beacon",
+            "keywords": [
+                "plugin",
+                "tag",
+                "template",
+                "textpattern"
+            ],
+            "time": "2013-07-12 13:55:58"
+        },
         {
             "name": "rah/rah_flat",
             "version": "dev-master",
@@ -142,7 +183,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "textpattern/lock": 20,
-        "rah/rah_flat": 20
+        "rah/rah_flat": 20,
+        "rah/rah_beacon": 20
     },
     "platform": [
 
