@@ -1,0 +1,10 @@
+{
+    "name": "issues",
+    "title": "Issues",
+    "page": "default",
+    "css": "default",
+    "is_default": true,
+    "in_rss": true,
+    "on_frontpage": false,
+    "searchable": true
+}
