@@ -8,7 +8,12 @@
     <div class="wrapper">
 
         <txp:output_form form="body_header" />
-        <p>503, under maintenance</p>
+
+        <div class="container">
+            <main role="main" aria-label="Main content">
+                <p>503, under maintenance</p>
+            </main>
+        </div><!-- /.container -->
 
     </div><!-- /.wrapper -->
 
