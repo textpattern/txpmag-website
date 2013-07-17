@@ -42,7 +42,7 @@
         <nav role="navigation" class="paginator" aria-label="Article navigation">
             <txp:if_variable name="next" value="">
             <txp:else />
-                <a rel="prev" href="<txp:newer />" title="Go to previous page" aria-label="Go to previous page">&#8592; Previous</a>
+                <a rel="prev" href="<txp:newer />" title="Go to previous page" aria-label="Go to previous page">&#8592; Prev</a>
             </txp:if_variable>
             <txp:if_variable name="prev" value="">
             <txp:else />
