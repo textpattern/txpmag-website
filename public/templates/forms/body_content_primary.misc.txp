@@ -1,1 +1,7 @@
-<p>PLACEHOLDER</p>
+<div class="container">
+    <main role="main" aria-label="Main content">
+
+        <p>PLACEHOLDER</p>
+
+    </main>
+</div><!-- /.container -->
