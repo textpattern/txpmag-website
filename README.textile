@@ -80,6 +80,8 @@ After you have installed Textpattern, you can install plugins the Textpattern in
 
 bc. $ composer install
 
+A 'cache' directory is installed to the root by the 'rah_cache' plugin, make sure that directory is 755 writable.
+
 h2. Building
 
 This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
