@@ -169,7 +169,3 @@ figcaption {
         font-weight: normal;
     }
 }
-
-article [itemprop="description"] {
-    @include adjust-font-size-to(18px, 1.08);
-}
