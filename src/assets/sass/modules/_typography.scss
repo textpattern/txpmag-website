@@ -160,3 +160,7 @@ figcaption {
 	margin-top: .5em;
 	font-style: italic;
 }
+
+article [itemprop="description"] {
+    @include adjust-font-size-to(18px, 1.08);
+}
