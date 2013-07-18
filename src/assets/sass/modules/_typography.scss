@@ -161,6 +161,15 @@ figcaption {
 	font-style: italic;
 }
 
+.article-publishing-details {
+    font-weight: bold;
+
+    time:before {
+        content: "\272D \0020";
+        font-weight: normal;
+    }
+}
+
 article [itemprop="description"] {
     @include adjust-font-size-to(18px, 1.08);
 }

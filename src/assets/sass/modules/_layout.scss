@@ -114,7 +114,6 @@ footer {
 	}
 }
 
-/* address differences between Firefox and other browsers */
 hr {
 	@include box-sizing(content-box);
     @include svg-graphic(hr, png, 240px, 24px);

@@ -2,7 +2,7 @@
     <h1 itemprop="name"><txp:title /></h1>
 
     <p class="article-publishing-details">
-        <a rel="author" href="#">TO BE DONE</a>
+        by <a rel="author" href="#">TO BE DONE</a>
         <time datetime="<txp:posted format='iso8601' />" itemprop="datePublished"><txp:posted /></time>
     </p>
 
