@@ -117,8 +117,10 @@ footer {
 /* address differences between Firefox and other browsers */
 hr {
 	@include box-sizing(content-box);
+    @include svg-graphic(hr, png, 240px, 24px);
 
 	border: 0; // remove the default `hr` border
-	border-bottom: 1px solid $color-border;
-	height: 0;
+	height: 24px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
