@@ -101,18 +101,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_flat.git",
-                "reference": "61dba71796047fdca27d69c2557cec35dd174f82"
+                "reference": "3a22eb4258faafd207efac2195f464a4fd2f9326"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_flat/zipball/61dba71796047fdca27d69c2557cec35dd174f82",
-                "reference": "61dba71796047fdca27d69c2557cec35dd174f82",
+                "url": "https://api.github.com/repos/gocom/rah_flat/zipball/3a22eb4258faafd207efac2195f464a4fd2f9326",
+                "reference": "3a22eb4258faafd207efac2195f464a4fd2f9326",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.0",
                 "textpattern/installer": "*",
-                "textpattern/lock": ">=4.6.0,4.6.*-dev"
+                "textpattern/lock": ">=4.5.0,<4.7.0"
             },
             "type": "textpattern-plugin",
             "notification-url": "https://packagist.org/downloads/",
@@ -134,7 +134,7 @@
                 "template",
                 "textpattern"
             ],
-            "time": "2013-07-16 11:53:22"
+            "time": "2013-07-18 19:39:35"
         },
         {
             "name": "textpattern/installer",
