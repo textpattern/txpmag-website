@@ -12,11 +12,14 @@ $txpcfg['dbcharset'] = 'utf8';
 
 // Configures rah_cache. Add this after you have installed Textpattern *and* rah_cache.
 
-include txpath . '/../../vendor/rah/rah_cache/src/Rah/Cache/Handler.php';
+if (!class_exists('Rah_Cache_Handler'))
+{
+    include txpath . '/../../vendor/rah/rah_cache/src/Rah/Cache/Handler.php';
 
-new Rah_Cache_Handler(
-    array(
-        'path' => txpath . '/../../cache',
-        'skip' => array('file_download/')
-    )
-);
+    new Rah_Cache_Handler(
+        array(
+            'path' => txpath . '/../../cache',
+            'skip' => array('file_download/')
+        )
+    );
+}
