@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_cache.git",
-                "reference": "8633da236694859753db44857b5a30511f1c7f52"
+                "reference": "32a695186d794439ce69ebe3a87a659864e3f494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/8633da236694859753db44857b5a30511f1c7f52",
-                "reference": "8633da236694859753db44857b5a30511f1c7f52",
+                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/32a695186d794439ce69ebe3a87a659864e3f494",
+                "reference": "32a695186d794439ce69ebe3a87a659864e3f494",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
                 "speed",
                 "textpattern"
             ],
-            "time": "2013-07-16 14:09:41"
+            "time": "2013-07-20 21:32:17"
         },
         {
             "name": "rah/rah_flat",

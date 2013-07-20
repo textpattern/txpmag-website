@@ -16,10 +16,13 @@ if (!class_exists('Rah_Cache_Handler'))
 {
     include txpath . '/../../vendor/rah/rah_cache/src/Rah/Cache/Handler.php';
 
-    new Rah_Cache_Handler(
-        array(
-            'path' => txpath . '/../../cache',
-            'skip' => array('file_download/')
-        )
-    );
+    class TXPMag_Cache_Config extends Rah_Cache_Config
+    {
+        public function __construct()
+        {
+            $this->directory = txpath . '/../../cache';
+        }
+    }
+
+    new Rah_Cache_Handler(new TXPMag_Cache_Config);
 }
