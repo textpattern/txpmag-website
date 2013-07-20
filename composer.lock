@@ -101,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_flat.git",
-                "reference": "3a22eb4258faafd207efac2195f464a4fd2f9326"
+                "reference": "700cb0f04fcd7a609b192ed71dc0d13d3f5d2311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_flat/zipball/3a22eb4258faafd207efac2195f464a4fd2f9326",
-                "reference": "3a22eb4258faafd207efac2195f464a4fd2f9326",
+                "url": "https://api.github.com/repos/gocom/rah_flat/zipball/700cb0f04fcd7a609b192ed71dc0d13d3f5d2311",
+                "reference": "700cb0f04fcd7a609b192ed71dc0d13d3f5d2311",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "template",
                 "textpattern"
             ],
-            "time": "2013-07-18 19:39:35"
+            "time": "2013-07-20 21:11:30"
         },
         {
             "name": "textpattern/installer",
