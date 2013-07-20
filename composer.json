@@ -3,6 +3,6 @@
         "textpattern/lock": "4.6.*@dev",
         "rah/rah_flat": "*@dev",
         "rah/rah_beacon": "*@dev",
-        "rah/rah_cache": "*@dev"
+        "rah/rah_cache": "*"
     }
 }

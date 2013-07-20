@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "963fa7ababec2993b0b8aa4a983693a0",
+    "hash": "237aad1744d5a212df6573b4f025de30",
     "packages": [
         {
             "name": "rah/rah_beacon",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_beacon.git",
-                "reference": "fe1b94406e41054816d9af84081f5fcb5f382794"
+                "reference": "f39b201a665738eafe4735a7340c30eb0a49834f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_beacon/zipball/fe1b94406e41054816d9af84081f5fcb5f382794",
-                "reference": "fe1b94406e41054816d9af84081f5fcb5f382794",
+                "url": "https://api.github.com/repos/gocom/rah_beacon/zipball/f39b201a665738eafe4735a7340c30eb0a49834f",
+                "reference": "f39b201a665738eafe4735a7340c30eb0a49834f",
                 "shasum": ""
             },
             "require": {
@@ -44,20 +44,20 @@
                 "template",
                 "textpattern"
             ],
-            "time": "2013-07-16 12:44:35"
+            "time": "2013-07-16 17:48:01"
         },
         {
             "name": "rah/rah_cache",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_cache.git",
-                "reference": "32a695186d794439ce69ebe3a87a659864e3f494"
+                "reference": "0.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/32a695186d794439ce69ebe3a87a659864e3f494",
-                "reference": "32a695186d794439ce69ebe3a87a659864e3f494",
+                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/0.1.0",
+                "reference": "0.1.0",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
                 "speed",
                 "textpattern"
             ],
-            "time": "2013-07-20 21:32:17"
+            "time": "2013-07-20 22:20:00"
         },
         {
             "name": "rah/rah_flat",
@@ -233,8 +233,7 @@
     "stability-flags": {
         "textpattern/lock": 20,
         "rah/rah_flat": 20,
-        "rah/rah_beacon": 20,
-        "rah/rah_cache": 20
+        "rah/rah_beacon": 20
     },
     "platform": [
 
