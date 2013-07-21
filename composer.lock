@@ -3,8 +3,91 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "237aad1744d5a212df6573b4f025de30",
+    "hash": "d8ad4cb4edb618ed0e7d93af588cfde3",
     "packages": [
+        {
+            "name": "mrclay/minify",
+            "version": "2.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrclay/minify.git",
+                "reference": "2.1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrclay/minify/zipball/2.1.6",
+                "reference": "2.1.6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=5.2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "min/lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Clay",
+                    "email": "steve@mrclay.org",
+                    "homepage": "http://www.mrclay.org/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Minify is a PHP5 app that helps you follow several rules for client-side performance. It combines multiple CSS or Javascript files, removes unnecessary whitespace and comments, and serves them with gzip encoding and optimal client-side cache headers",
+            "homepage": "http://code.google.com/p/minify/",
+            "time": "2013-07-20 02:46:02"
+        },
+        {
+            "name": "rah/rah_autoload",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/rah_autoload.git",
+                "reference": "0.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/rah_autoload/zipball/0.2.1",
+                "reference": "0.2.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "textpattern/installer": "*",
+                "textpattern/lock": ">=4.5.0"
+            },
+            "type": "textpattern-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jukka Svahn",
+                    "homepage": "http://rahforum.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Loads Composer generated autoload files in Textpattern CMS",
+            "homepage": "https://github.com/gocom/rah_autoload",
+            "keywords": [
+                "autoload",
+                "dependency",
+                "inject",
+                "loader",
+                "plugin",
+                "textpattern"
+            ],
+            "time": "2013-05-20 11:13:13"
+        },
         {
             "name": "rah/rah_beacon",
             "version": "dev-master",
@@ -48,16 +131,16 @@
         },
         {
             "name": "rah/rah_cache",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_cache.git",
-                "reference": "0.1.0"
+                "reference": "0.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/0.1.0",
-                "reference": "0.1.0",
+                "url": "https://api.github.com/repos/gocom/rah_cache/zipball/0.2.0",
+                "reference": "0.2.0",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +176,54 @@
                 "speed",
                 "textpattern"
             ],
-            "time": "2013-07-20 22:20:00"
+            "time": "2013-07-21 13:50:11"
+        },
+        {
+            "name": "rah/rah_cache_minify",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gocom/rah_cache_minify.git",
+                "reference": "0.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gocom/rah_cache_minify/zipball/0.1.0",
+                "reference": "0.1.0",
+                "shasum": ""
+            },
+            "require": {
+                "mrclay/minify": "2.1.6",
+                "php": ">=5.2.0",
+                "rah/rah_autoload": "*",
+                "rah/rah_cache": "0.2.*",
+                "textpattern/installer": "*",
+                "textpattern/lock": ">=4.5.0,<4.7.0"
+            },
+            "type": "textpattern-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jukka Svahn",
+                    "homepage": "http://rahforum.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Minify module for rah_cache",
+            "homepage": "https://github.com/gocom/rah_cache_minify",
+            "keywords": [
+                "cache",
+                "compress",
+                "html",
+                "minify",
+                "page",
+                "plugin",
+                "textpattern"
+            ],
+            "time": "2013-07-21 14:10:08"
         },
         {
             "name": "rah/rah_flat",
