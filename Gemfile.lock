@@ -11,7 +11,7 @@ GEM
       sass (~> 3.2.5)
     listen (0.7.3)
     sass (3.2.9)
-    singularitygs (1.0.8)
+    singularitygs (1.1.1)
       breakpoint (>= 2.0.1)
       compass (>= 0.12.2)
       sass (>= 3.2.1)
@@ -21,4 +21,4 @@ PLATFORMS
 
 DEPENDENCIES
   compass (= 0.13.alpha.4)
-  singularitygs (= 1.0.8)
+  singularitygs (= 1.1.1)
