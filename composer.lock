@@ -180,16 +180,16 @@
         },
         {
             "name": "rah/rah_cache_minify",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocom/rah_cache_minify.git",
-                "reference": "0.1.0"
+                "reference": "0.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocom/rah_cache_minify/zipball/0.1.0",
-                "reference": "0.1.0",
+                "url": "https://api.github.com/repos/gocom/rah_cache_minify/zipball/0.1.1",
+                "reference": "0.1.1",
                 "shasum": ""
             },
             "require": {
@@ -223,7 +223,7 @@
                 "plugin",
                 "textpattern"
             ],
-            "time": "2013-07-21 14:10:08"
+            "time": "2013-07-21 14:20:45"
         },
         {
             "name": "rah/rah_flat",
