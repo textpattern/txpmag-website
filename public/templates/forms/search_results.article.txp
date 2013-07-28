@@ -27,7 +27,7 @@
                     <p><txp:search_result_excerpt /></p>
                 </txp:if_excerpt>
 
-                <p class="footnote">Published <time datetime="<txp:posted format='iso8601' />" itemprop="datePublished"><txp:posted /></time></p>
+                <p class="footnote">Published <time datetime="<txp:posted format="iso8601" />" itemprop="datePublished"><txp:posted /></time></p>
             </li>
         </txp:article>
 
