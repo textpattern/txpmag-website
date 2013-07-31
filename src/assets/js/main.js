@@ -153,7 +153,7 @@
         WebFont.load({
             google:
             {
-                families: ['PT+Serif:400,700,400italic,700italic:latin', 'Cousine::latin', 'Source+Sans+Pro:200,400,600,700,200italic,400italic,600italic,700italic:latin']
+                families: ['PT+Serif:400,700,400italic,700italic:latin', 'Cousine::latin']
             }
         });
     });
