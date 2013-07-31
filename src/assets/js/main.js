@@ -27,7 +27,7 @@
 
     require(['jquery'], function ($)
     {
-        var details = $('details'), placeholder = $('textarea[placeholder], input[placeholder]'), code = $('.prettyprint');
+        var details = $('details'), placeholder = $('textarea[placeholder], input[placeholder]'), code = $('pre code');
 
         // Details polyfill.
 
@@ -54,6 +54,8 @@
 
         if (code.length)
         {
+            code.parent().addClass('prettyprint');
+
             require(['prettify'], function ()
             {
                 prettyPrint();
