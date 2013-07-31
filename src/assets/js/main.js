@@ -7,7 +7,7 @@
         {
             'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
             'jqueryui': '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min',
-            'webfont' : '//ajax.googleapis.com/ajax/libs/webfont/1.4.6/webfont',
+            'webfont' : '//ajax.googleapis.com/ajax/libs/webfont/1.4.8/webfont',
             'flowplayer': 'flowplayer/flowplayer.min'
         },
         shim:
