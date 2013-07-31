@@ -174,7 +174,7 @@
     {
         if ($('.twitter-share-button').length)
         {
-            require(['https://platform.twitter.com/widgets.js']);
+            require(['//platform.twitter.com/widgets.js']);
         }
     });
 
@@ -185,6 +185,6 @@
     _gaq.push(['_setDomainName', 'none']);
     _gaq.push(['_gat._anonymizeIp']);
     _gaq.push(['_trackPageview']);
-    require(['https://www.google-analytics.com/ga.js']);
+    require(['//www.google-analytics.com/ga.js']);
 
 })();
