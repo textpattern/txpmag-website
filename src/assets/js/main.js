@@ -183,6 +183,7 @@
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-26074605-2']);
     _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_gat._anonymizeIp']);
     _gaq.push(['_trackPageview']);
     require(['https://www.google-analytics.com/ga.js']);
 
