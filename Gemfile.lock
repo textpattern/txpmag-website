@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    breakpoint (2.0.5)
+    breakpoint (2.0.6)
       compass (>= 0.12.1)
       sass (>= 3.2.0)
     chunky_png (1.2.8)
@@ -11,7 +11,7 @@ GEM
       sass (~> 3.2.5)
     listen (0.7.3)
     sass (3.2.10)
-    singularitygs (1.1.1)
+    singularitygs (1.1.2)
       breakpoint (>= 2.0.1)
       compass (>= 0.12.2)
       sass (>= 3.2.1)
@@ -21,4 +21,4 @@ PLATFORMS
 
 DEPENDENCIES
   compass (= 0.13.alpha.4)
-  singularitygs (= 1.1.1)
+  singularitygs (= 1.1.2)
