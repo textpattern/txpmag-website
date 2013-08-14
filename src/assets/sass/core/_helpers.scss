@@ -17,53 +17,53 @@
 // example: @include debugmessage("Mobile landscape media query fired");
 
 @mixin debugmessage($message, $color: rgba(255, 255, 0, .75)) {
-	&::before {
-		content: $message;
-		font-weight: bold;
-		display: block;
-		text-align: center;
-		background: #{$color};
-		position: absolute;
-		right: 0;
-		left: 0;
-		top: 0;
-		z-index: 9999;
-	}
+    &::before {
+        content: $message;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        background: #{$color};
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+    }
 }
 
 // SVG images with fallback for older browsers (via Modernizr)
-		
+        
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
-	.no-svg &,
-	.no-js & {
-		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
-	}
-	.svg & {
-		background-image: url('../img/' + $imgfilename + '.svg');
-		-webkit-background-size: $imgwidth $imgheight;
-		   -moz-background-size: $imgwidth $imgheight;
-		     -o-background-size: $imgwidth $imgheight;
-		        background-size: $imgwidth $imgheight;
-	}
+    .no-svg &,
+    .no-js & {
+        background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+    }
+    .svg & {
+        background-image: url('../img/' + $imgfilename + '.svg');
+        -webkit-background-size: $imgwidth $imgheight;
+           -moz-background-size: $imgwidth $imgheight;
+             -o-background-size: $imgwidth $imgheight;
+                background-size: $imgwidth $imgheight;
+    }
 }
 
 // higher resolution images for high resolution displays
-		
+        
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
-	$filename: $hdfile + '.' + $hdtype;
-	$hdfilename: $hdfile + '@2x.' + $hdtype;
-	background-image: url('../img/' + $filename);
-	@media print,
-		(-webkit-min-device-pixel-ratio: 2),
-		(min--moz-device-pixel-ratio: 2),
-		(-o-min-device-pixel-ratio: 2/1),
-		(min-device-pixel-ratio: 2),
-		(min-resolution: 192dpi),
-		(min-resolution: 2dppx) {
-		background-image: url('../img/' + $hdfilename) !important;
-		-webkit-background-size: $hdwidth $hdheight;
-		        background-size: $hdwidth $hdheight;
-	}
+    $filename: $hdfile + '.' + $hdtype;
+    $hdfilename: $hdfile + '@2x.' + $hdtype;
+    background-image: url('../img/' + $filename);
+    @media print,
+        (-webkit-min-device-pixel-ratio: 2),
+        (min--moz-device-pixel-ratio: 2),
+        (-o-min-device-pixel-ratio: 2/1),
+        (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('../img/' + $hdfilename) !important;
+        -webkit-background-size: $hdwidth $hdheight;
+                background-size: $hdwidth $hdheight;
+    }
 }
 
 // standard gradients
@@ -80,19 +80,19 @@
 // sticky positioning
 
 @mixin position-sticky {
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
 }
 
 // on-hover highlights
 
 @mixin hover-brightness {
-	-webkit-filter: brightness(.1);
-	   -moz-filter: brightness(.1);
-	    -ms-filter: brightness(.1);
-	     -o-filter: brightness(.1);
-	        filter: brightness(.1);
+    -webkit-filter: brightness(.1);
+       -moz-filter: brightness(.1);
+        -ms-filter: brightness(.1);
+         -o-filter: brightness(.1);
+            filter: brightness(.1);
 }

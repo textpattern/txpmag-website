@@ -13,54 +13,54 @@
 .warning,
 .error,
 .information {
-	@include border-radius(.25em); // 4px / 16px
+    @include border-radius(.25em); // 4px / 16px
 
-	padding: 0 .25em; // 4px / 16px
+    padding: 0 .25em; // 4px / 16px
 }
 
 .success {
-	color: $color-success-text;
-	background: $color-success-background;
+    color: $color-success-text;
+    background: $color-success-background;
 }
 
 .warning {
-	color: $color-warning-text;
-	background: $color-warning-background;
+    color: $color-warning-text;
+    background: $color-warning-background;
 }
 
 .error {
-	color: $color-error-text;
-	background: $color-error-background;
+    color: $color-error-text;
+    background: $color-error-background;
 }
 
 .information {
-	color: $color-info-text;
-	background: $color-info-background;
+    color: $color-info-text;
+    background: $color-info-background;
 }
 
 .highlight {
-	background: $color-highlight-box;
+    background: $color-highlight-box;
 }
 
 /* alert boxes */
 
 .alert-block {
-	border: 1px solid;
-	padding: .5em 1em;
+    border: 1px solid;
+    padding: .5em 1em;
 
-	&.success {
-		border-color: $color-success-border;
-	}
+    &.success {
+        border-color: $color-success-border;
+    }
 
-	&.warning {
-		border-color: $color-warning-border;
-	}
+    &.warning {
+        border-color: $color-warning-border;
+    }
 
-	&.error {
-		border-color: $color-error-border;
-	}
+    &.error {
+        border-color: $color-error-border;
+    }
 
-	&.information {
-		border-color: $color-info-border;
-	}
+    &.information {
+        border-color: $color-info-border;
+    }
 }

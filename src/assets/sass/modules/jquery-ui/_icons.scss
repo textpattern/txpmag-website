@@ -10,19 +10,19 @@
 /* states and images */
 
 .ui-icon {
-	@include svg-graphic(ui-icon-sprite-333333, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-333333, png, 256px, 272px);
 
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	text-indent: -9999px;
-	overflow: hidden;
-	background-repeat: no-repeat;
-	vertical-align: middle;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    vertical-align: middle;
 }
 
 .ui-state-default .ui-icon {
-	@include svg-graphic(ui-icon-sprite-555555, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-555555, png, 256px, 272px);
 }
 
 .ui-widget-content .ui-icon,
@@ -30,26 +30,26 @@
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-state-active .ui-icon {
-	@include svg-graphic(ui-icon-sprite-333333, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-333333, png, 256px, 272px);
 }
 
 .success .ui-icon {
-	@include svg-graphic(ui-icon-sprite-success, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-success, png, 256px, 272px);
 }
 
 .ui-state-highlight .ui-icon,
 .warning .ui-icon {
-	@include svg-graphic(ui-icon-sprite-warning, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-warning, png, 256px, 272px);
 }
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon,
 .error .ui-icon {
-	@include svg-graphic(ui-icon-sprite-error, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-error, png, 256px, 272px);
 }
 
 .information .ui-icon {
-	@include svg-graphic(ui-icon-sprite-info, png, 256px, 272px);
+    @include svg-graphic(ui-icon-sprite-info, png, 256px, 272px);
 }
 
 /* positioning */

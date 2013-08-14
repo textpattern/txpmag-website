@@ -8,70 +8,70 @@
    ========================================================================== */
 
 a {
-	text-decoration: none;
-	color: $color-link;
-	background: transparent; // remove the gray background color from active links in IE10
+    text-decoration: none;
+    color: $color-link;
+    background: transparent; // remove the gray background color from active links in IE10
 
-	// improve readability when focused and also mouse hovered in all browsers
-	&:hover,
-	&:active {
-		outline: 0;
-		text-decoration: underline;
-		color: $color-link-hover;
-	}
+    // improve readability when focused and also mouse hovered in all browsers
+    &:hover,
+    &:active {
+        outline: 0;
+        text-decoration: underline;
+        color: $color-link-hover;
+    }
 
-	&:focus {
-		outline: thin dotted $color-link-hover;
-	}
+    &:focus {
+        outline: thin dotted $color-link-hover;
+    }
 
-	&:visited {
-		color: $color-link-visited;
-	}
+    &:visited {
+        color: $color-link-visited;
+    }
 
-	header & {
-		@include border-radius(.125em);
+    header & {
+        @include border-radius(.125em);
 
-		color: $color-text;
+        color: $color-text;
 
-		&:hover,
-		&:active {
-			background: darken($color-background-box, 6%);
-		}
-	}
+        &:hover,
+        &:active {
+            background: darken($color-background-box, 6%);
+        }
+    }
 }
 
 [role="main"] h1 a {
-	color: $color-text;
-	@include border-radius(.125em);
+    color: $color-text;
+    @include border-radius(.125em);
 
-	&:visited {
-		color: $color-text;
-	}
+    &:visited {
+        color: $color-text;
+    }
 
-	&:hover,
-	&:active {
-		text-decoration: none;
-		color: $color-text;
-		background: darken($color-background-box, 3%);
-	}
+    &:hover,
+    &:active {
+        text-decoration: none;
+        color: $color-text;
+        background: darken($color-background-box, 3%);
+    }
 }
 
 [role="complementary"] a,
 footer a {
-	color: #c7dbfa;
+    color: #c7dbfa;
 
-	&:hover,
-	&:active {
-		color: #e3edfc;
-	}
+    &:hover,
+    &:active {
+        color: #e3edfc;
+    }
 
-	&:focus {
-		outline: thin dotted #e3edfc;
-	}
+    &:focus {
+        outline: thin dotted #e3edfc;
+    }
 
-	&:visited {
-		color: #c7dbfa;
-	}
+    &:visited {
+        color: #c7dbfa;
+    }
 }
 
 /* only target phone numbers you want clickable and stop mobile phones from linking other
@@ -79,13 +79,13 @@ footer a {
    to apply to the numbers you require linked and styled */
 a[href^="tel"],
 a[href^="sms"] {
-	color: $color-text;
-	pointer-events: none;
-	cursor: default;
+    color: $color-text;
+    pointer-events: none;
+    cursor: default;
 
-	[itemprop="telephone"] & {
-		color: $color-link;
-		pointer-events: auto;
-		cursor: pointer;
-	}
+    [itemprop="telephone"] & {
+        color: $color-link;
+        pointer-events: auto;
+        cursor: pointer;
+    }
 }

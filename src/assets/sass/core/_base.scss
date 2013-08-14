@@ -16,32 +16,32 @@ main,
 nav,
 section,
 summary {
-	display: block;
+    display: block;
 }
 
 /* correct `<summary>` not showing as clickable */
 summary {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 /* summary styling for polyfill */
 .no-details details {
-	> summary:before {
-		float: left;
-		width: 20px;
-		content: "► ";
-	}
+    > summary:before {
+        float: left;
+        width: 20px;
+        content: "► ";
+    }
 
-	&.open > summary:before {
-		content: "▼ ";
-	}
+    &.open > summary:before {
+        content: "▼ ";
+    }
 }
 
 /* address `[hidden]` styling not present in IE8-9.
    hide the `template` element in IE, Safari, and Firefox < 22 */
 [hidden],
 template {
-	display: none;
+    display: none;
 }
 
 
@@ -55,5 +55,5 @@ footer,
 .clearfix,
 .container,
 .paginator {
-	@include pie-clearfix;
+    @include pie-clearfix;
 }

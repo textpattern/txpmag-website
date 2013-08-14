@@ -9,80 +9,80 @@
 
 /* allow overflow scroll on tables */
 .tabular-data {
-	overflow-x: auto;
-	margin-bottom: 1em;
+    overflow-x: auto;
+    margin-bottom: 1em;
 }
 
 /* consistent tables */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
 }
 
 caption {
-	font-style: italic;
-	text-align: left;
-	margin-bottom: .5em;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: .5em;
 }
 
 th,
 td {
-	/* make table cells align top and left by default */
-	vertical-align: top;
-	text-align: left;
-	padding: .25em 0 .25em .5em;
+    /* make table cells align top and left by default */
+    vertical-align: top;
+    text-align: left;
+    padding: .25em 0 .25em .5em;
 
-	&:first-child {
-		padding-left: 0;
-	}
+    &:first-child {
+        padding-left: 0;
+    }
 }
 
 tfoot {
-	th,
-	td {
-		padding: .325em 0 .325em .6153846em;
-	}
+    th,
+    td {
+        padding: .325em 0 .325em .6153846em;
+    }
 
-	&:first-child {
-		padding-left: 0;
-	}
+    &:first-child {
+        padding-left: 0;
+    }
 }
 
 /* cell alignments */
 
 [rowspan] {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .numerical {
-	text-align: right;
+    text-align: right;
 }
 
 /* bordered tables */
 .table--bordered {
-	th,
-	td {
-		border-bottom: 1px solid $color-border;
+    th,
+    td {
+        border-bottom: 1px solid $color-border;
 
-		&:empty {
-			border: 0;
-		}
-	}
+        &:empty {
+            border: 0;
+        }
+    }
 
-	thead tr:last-child {
-		th,
-		td {
-			border-bottom: 2px solid $color-border;
-		}
-	}
+    thead tr:last-child {
+        th,
+        td {
+            border-bottom: 2px solid $color-border;
+        }
+    }
 
-	tfoot tr:last-child {
-		th,
-		td {
-			border-bottom: 0;
-		}
-	}
+    tfoot tr:last-child {
+        th,
+        td {
+            border-bottom: 0;
+        }
+    }
 }
 
 /* set widths of `col` elements using classes whose numbers represent a percentage
@@ -96,7 +96,7 @@ tfoot {
        <col class="t10">
        <col>
      </colgroup>
-	 ..etc..
+     ..etc..
 */
 
 .t5  { width: 5%; }

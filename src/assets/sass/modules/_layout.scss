@@ -8,118 +8,118 @@
    ========================================================================== */
 
 html {
-	-webkit-tap-highlight-color: rgba($color-link-hover, .5);
-	/* always force scrollbar padding so we don't get 'jumping' */
-	overflow-y: scroll;
-	/* prevent iOS text size adjust after orientation change, without disabling user zoom */
-	-webkit-text-size-adjust: 100%;
-	/* as above, for Windows Phone */
-	-ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba($color-link-hover, .5);
+    /* always force scrollbar padding so we don't get 'jumping' */
+    overflow-y: scroll;
+    /* prevent iOS text size adjust after orientation change, without disabling user zoom */
+    -webkit-text-size-adjust: 100%;
+    /* as above, for Windows Phone */
+    -ms-text-size-adjust: 100%;
 }
 
 body {
-	margin: 0;
-	color: $color-text-inverse;
-	background-color: $color-text;
+    margin: 0;
+    color: $color-text-inverse;
+    background-color: $color-text;
 }
 
 .wrapper {
-	@include hires-graphic(footer-separator, png, 16px, 8px);
+    @include hires-graphic(footer-separator, png, 16px, 8px);
 
-	padding: 1px 0 1em;
-	color: $color-text;
-	background-color: $color-background;
-	background-position: bottom;
-	background-repeat: repeat-x;
+    padding: 1px 0 1em;
+    color: $color-text;
+    background-color: $color-background;
+    background-position: bottom;
+    background-repeat: repeat-x;
 }
 
 .container,
 footer {
-	margin: 0 auto;
-	width: 90%;
-	max-width: $container-max-width;
+    margin: 0 auto;
+    width: 90%;
+    max-width: $container-max-width;
 }
 
 header {
-	margin: 5% auto;
-	border: .25em solid $color-text;
-	width: 8em;
-	text-align: center;
+    margin: 5% auto;
+    border: .25em solid $color-text;
+    width: 8em;
+    text-align: center;
 
-	@include breakpoint($breakpoint-2) {
-		margin: 1.75em auto;
-	}
+    @include breakpoint($breakpoint-2) {
+        margin: 1.75em auto;
+    }
 }
 
 .publication-masthead {
-	margin: 0;
-	padding: .75em .75em .5em;
-	height: 3em;
+    margin: 0;
+    padding: .75em .75em .5em;
+    height: 3em;
 }
 
 .publication-issue {
-	@include adjust-font-size-to(32px, 1.6666667);
+    @include adjust-font-size-to(32px, 1.6666667);
 
-	margin: 0;
-	padding: .25em .25em 0;
-	color: $color-text-inverse;
-	background-color: $color-text;
-	font-style: italic;
-	font-weight: bold;
+    margin: 0;
+    padding: .25em .25em 0;
+    color: $color-text-inverse;
+    background-color: $color-text;
+    font-style: italic;
+    font-weight: bold;
 }
 
 footer {
-	clear: both;
-	position: relative;
+    clear: both;
+    position: relative;
 }
 
 .host-details {
-	@include breakpoint($breakpoint-2) {
-		margin-top: 1.5em;
-		text-align: center;
-	}
+    @include breakpoint($breakpoint-2) {
+        margin-top: 1.5em;
+        text-align: center;
+    }
 }
 
 .legal {
-	margin-right: 48px;
+    margin-right: 48px;
 }
 
 .html5 {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 
-	a {
-		@include hide-text;
-		@include svg-graphic(html5, png, 32px, 32px);
+    a {
+        @include hide-text;
+        @include svg-graphic(html5, png, 32px, 32px);
 
-		display: block;
-		width: 32px;
-		height: 32px;
+        display: block;
+        width: 32px;
+        height: 32px;
 
-		&:hover {
-			@include hover-brightness;
-		}
-	}
+        &:hover {
+            @include hover-brightness;
+        }
+    }
 }
 
 .section {
-	margin-top: 2em;
+    margin-top: 2em;
 
-	&:before {
-		display: block; 
-		content: ""; 
-		height: 2em; 
-		margin: -2em 0 0; 
-	}
+    &:before {
+        display: block; 
+        content: ""; 
+        height: 2em; 
+        margin: -2em 0 0; 
+    }
 }
 
 hr {
-	@include box-sizing(content-box);
+    @include box-sizing(content-box);
     @include svg-graphic(hr, png, 240px, 24px);
 
-	border: 0; // remove the default `hr` border
-	height: 24px;
+    border: 0; // remove the default `hr` border
+    height: 24px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }

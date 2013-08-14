@@ -9,24 +9,24 @@
 
 .breadcrumbs,
 .breadcrumbs--path {
-	@include adjust-font-size-to(12px, .75);
+    @include adjust-font-size-to(12px, .75);
 
-	list-style: none;
-	padding: 0 .3333333em;
-	background-color: $color-background-box;
+    list-style: none;
+    padding: 0 .3333333em;
+    background-color: $color-background-box;
 
-	li {
-		display: inline-block;
-	}
+    li {
+        display: inline-block;
+    }
 }
 
 /* simple breadcrumb styling to apply to (ordered) lists */
 .breadcrumbs > li + li:before {
-	content:"\00BB" "\00A0";
+    content:"\00BB" "\00A0";
 }
 
 
 /* path-like breadcrumb styling */
 .breadcrumbs--path > li + li:before {
-	content:"\002F" "\00A0";
+    content:"\002F" "\00A0";
 }
