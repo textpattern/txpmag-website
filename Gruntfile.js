@@ -47,6 +47,7 @@ module.exports = function (grunt) {
             css: {
                 files: [
                     {expand: true, cwd: 'tmp/assets/css/', src: ['ie8.css'], dest: 'public/assets/css/'},
+                    {expand: true, cwd: 'tmp/assets/css/', src: ['jquery-ui.css'], dest: 'public/assets/css/'},
                     {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'}
                 ]
             }
