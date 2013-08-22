@@ -46,7 +46,6 @@ module.exports = function (grunt) {
 
             css: {
                 files: [
-                    {expand: true, cwd: 'tmp/assets/css/', src: ['ie8.css'], dest: 'public/assets/css/'},
                     {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'}
                 ]
             }
@@ -93,7 +92,8 @@ module.exports = function (grunt) {
                         'tmp/assets/css/style.css',
                         'tmp/assets/css/jquery-ui.css',
                         'src/assets/js/libs/flowplayer/skin/minimalist.css'
-                    ]
+                    ],
+                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css']
                 }
             }
         },
