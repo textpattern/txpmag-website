@@ -32,9 +32,9 @@
 </txp:if_section>
 
 <!-- CSS -->
-
 <link rel="stylesheet" href="<txp:asset name="css/main.css" />">
 
+<!-- Modernizr -->
 <script src="<txp:asset name="js/modernizr.js" />"></script>
 
 <!--[if lt IE 9]>
