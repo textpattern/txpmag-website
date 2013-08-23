@@ -7,9 +7,9 @@
 
         <txp:if_search_results>
             <txp:if_search_results max="200">
-                <p><txp:search_result_count /> articles found matching your search request &#8216;<txp:search_term />&#8217;&#8230;</p>
+                <p><txp:search_result_count /> articles found matching your search request <q><txp:search_term /></q></p>
             <txp:else />
-                <p>It seems like you are looking for a very common search term, maybe try a more specific phrase than &#8216;<txp:search_term />&#8217;.</p>
+                <p>It seems like you are looking for a very common search term, maybe try a more specific phrase than <q><txp:search_term /></q>.</p>
             </txp:if_search_results>
         <txp:else />
             <p>Sorry, no results found matching your search request.</p>
@@ -40,11 +40,11 @@
         <nav role="navigation" class="paginator" aria-label="Article navigation">
             <txp:if_variable name="next" value="">
             <txp:else />
-                <a rel="prev" href="<txp:newer />" title="Go to previous page" aria-label="Go to previous page">&#8592; Prev</a>
+                <a rel="prev" href="<txp:newer />" title="Go to previous page" aria-label="Go to previous page">← Prev</a>
             </txp:if_variable>
             <txp:if_variable name="prev" value="">
             <txp:else />
-                <a rel="next" href="<txp:older />" title="Go to next page" aria-label="Go to next page">Next &#8594;</a>
+                <a rel="next" href="<txp:older />" title="Go to next page" aria-label="Go to next page">Next →</a>
             </txp:if_variable>
         </nav>
     </txp:if_search_results>
