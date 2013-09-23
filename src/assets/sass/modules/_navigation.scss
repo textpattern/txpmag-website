@@ -12,7 +12,7 @@
     border-bottom: 1px solid $color-border;
 }
 
-#nav {
+.nav-collapse {
     text-align: center;
     text-transform: uppercase;
 
@@ -84,7 +84,7 @@
     }
 }
 
-#nav-toggle {
+.nav-toggle {
     @include hide-text;
     @include svg-graphic(hamburger, png, 32px, 32px);
 

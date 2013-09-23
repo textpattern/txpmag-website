@@ -97,7 +97,7 @@
 
     require(['responsivenav'], function ()
     {
-        responsiveNav('#nav', {
+        responsiveNav('.nav-collapse', {
             animate: true,
             transition: 400,
             label: 'Menu',
