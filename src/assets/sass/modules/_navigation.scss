@@ -68,6 +68,7 @@
         }
 
         &:active {
+            color: darken($color-text, 10%);
             background-color: #c7dbfa;
             text-decoration: none;
         }
@@ -88,8 +89,7 @@
     @include hide-text;
     @include svg-graphic(hamburger, png, 32px, 32px);
 
-    /* disables the default bubble shown when you touch and hold a touch target */
-    -webkit-touch-callout: none;
+    -webkit-touch-callout: none; // disables the default bubble shown when you touch and hold a touch target
     position: absolute;
     top: -33px;
     right: 5%;
