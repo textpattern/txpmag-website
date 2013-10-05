@@ -73,19 +73,3 @@ footer a {
         color: #c7dbfa;
     }
 }
-
-/* only target phone numbers you want clickable and stop mobile phones from linking other
-   numbers that look like, but are not phone numbers - use attribute `itemprop="telephone"`
-   to apply to the numbers you require linked and styled */
-a[href^="tel"],
-a[href^="sms"] {
-    color: $color-text;
-    pointer-events: none;
-    cursor: default;
-
-    [itemprop="telephone"] & {
-        color: $color-link;
-        pointer-events: auto;
-        cursor: pointer;
-    }
-}
