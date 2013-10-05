@@ -12,4 +12,8 @@
     padding: 1px 0;
     color: $color-text;
     background-color: $color-background-box;
+
+    p {
+        @include adjust-font-size-to(12px, .75);
+    }
 }
