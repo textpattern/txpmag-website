@@ -74,13 +74,18 @@ footer {
 }
 
 .host-details {
+    display: none;
+    margin-top: 1.5em;
+    text-align: center;
+
     @include breakpoint($breakpoint-2) {
-        margin-top: 1.5em;
-        text-align: center;
+        display: block;
     }
 }
 
 .legal {
+    @include adjust-font-size-to(12px, .75);
+
     margin-right: 48px;
 }
 

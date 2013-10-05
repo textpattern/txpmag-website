@@ -1,13 +1,11 @@
 <footer role="contentinfo">
     <p class="legal">
-        <small>
-            <a href="<txp:site_url />terms/copyright-policy">Copyright</a> 2007–<txp:php>echo date('Y');</txp:php> TXP.
-            <a href="<txp:site_url />contribute/credits">Credits</a>.
-            <a href="<txp:site_url />terms/privacy-policy">Privacy</a>.
-            <a href="<txp:site_url />humans.txt">Colophon</a>.
-        </small>
+        <a href="<txp:site_url />terms/copyright-policy">Copyright</a> 2007–<txp:php>echo date('Y');</txp:php> TXP.
+        <a href="<txp:site_url />contribute/credits">Credits</a>.
+        <a href="<txp:site_url />terms/privacy-policy">Privacy</a>.
+        <a href="<txp:site_url />humans.txt">Colophon</a>.
     </p>
-    <p class="html5"><small><a rel="external" href="http://www.w3.org/html/logo/" title="HTML5 powered">HTML5 powered</a></small></p>
+    <p class="html5"><a rel="external" href="http://www.w3.org/html/logo/" title="HTML5 powered">HTML5 powered</a></p>
 </footer>
 
 <script data-main="<txp:asset name="js/main.js" />" src="<txp:asset name="js/require.js" />"></script>
