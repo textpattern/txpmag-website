@@ -16,7 +16,7 @@
 <meta property="og:title" content="<txp:variable name="title" />">
 <meta property="og:type" content="website">
 <meta property="og:url" content="<txp:site_url />">
-<meta property="og:image" content="<txp:variable name="assets_url" />img/windows-site-tile/square.png">
+<meta property="og:image" content="/square.png">
 <meta property="og:description" content="TXP is the international magazine of the Textpattern project. With spotlight interviews, regular columns, plugins, people, swag store, the commmunity, and a healthy dose of editorial excellence, it is the best place to discover the world of Textpattern CMS.">
 
 <!-- Canonical URL -->
