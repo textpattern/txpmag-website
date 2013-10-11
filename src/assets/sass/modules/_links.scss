@@ -29,7 +29,7 @@ a {
     }
 
     header & {
-        @include border-radius(.125em);
+        @include border-radius($default-border-radius / 4);
 
         color: $color-text;
 
@@ -42,7 +42,7 @@ a {
 
 [role="main"] h1 a {
     color: $color-text;
-    @include border-radius(.125em);
+    @include border-radius($default-border-radius / 4);
 
     &:visited {
         color: $color-text;

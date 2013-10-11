@@ -61,9 +61,9 @@ blockquote {
     @include adjust-font-size-to(18px, 1.08);
 
     font-style: italic;
-    margin: .8888889em 0; // 16px / 18px
+    margin: 0.8888889em 0; // 16px / 18px
     border-left: 3px solid $color-border;
-    padding: 0 0 0 .8888889em;
+    padding: 0 0 0 0.8888889em;
 }
 
 /* set consistent quote types */
@@ -85,9 +85,9 @@ dfn[title] {
 
 mark,
 var {
-    @include border-radius(.25em); // 4px / 16px
+    @include border-radius($default-border-radius / 2); // 4px / 16px
 
-    padding: 0 .25em; // 0 4px
+    padding: 0 0.25em; // 0 4px
     color: $color-text;
     background: $color-highlight-box;
 }
@@ -102,17 +102,17 @@ samp {
 code,
 kbd,
 samp {
-    @include adjust-font-size-to(14px, .875);
-    @include border-radius(.28571428571429em); // 4px / 14px
+    @include adjust-font-size-to(14px, 0.875);
+    @include border-radius(0.2857143em); // 4px / 14px
 
     border: 1px solid lighten($color-border, 9%);
-    padding: .07142857142857em .21428571428571em; // 2px / 14px + 3px / 14px
+    padding: 0.07142857142857em 0.21428571428571em; // 2px / 14px + 3px / 14px
     background: $color-background-box;
 }
 
 pre {
-    @include adjust-font-size-to(14px, .875);
-    @include border-radius(.57142857142857em); // 8px / 14px
+    @include adjust-font-size-to(14px, 0.875);
+    @include border-radius(0.5714286em); // 8px / 14px
 
     overflow-x: auto;
     border: 1px solid lighten($color-border, 9%);
@@ -137,17 +137,17 @@ sup {
     vertical-align: baseline;
 }
 sup {
-    top: -.5em;
+    top: -0.5em;
 }
 sub {
-    bottom: -.25em;
+    bottom: -0.25em;
 }
 
 small,
 figcaption,
 tfoot,
 .footnote {
-    @include adjust-font-size-to(12px, .75);
+    @include adjust-font-size-to(12px, 0.75);
 }
 
 figcaption,
@@ -157,7 +157,7 @@ tfoot,
 }
 
 figcaption {
-    margin-top: .5em;
+    margin-top: 0.5em;
     font-style: italic;
 }
 
