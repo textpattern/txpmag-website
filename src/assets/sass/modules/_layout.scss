@@ -24,7 +24,7 @@ body {
 }
 
 .wrapper {
-    @include hires-graphic(footer-separator, png, 16px, 8px);
+    @include hires-graphic(/txpmag/footer-separator, png, 16px, 8px);
 
     padding: 1px 0 1em;
     color: $color-text;
@@ -96,7 +96,7 @@ footer {
 
     a {
         @include hide-text;
-        @include svg-graphic(html5, png, 32px, 32px);
+        @include svg-graphic(/branding/misc/html5-inverse, png, 32px, 32px);
 
         display: block;
         width: 32px;
@@ -110,7 +110,7 @@ footer {
 
 hr {
     @include box-sizing(content-box);
-    @include svg-graphic(hr, png, 240px, 24px);
+    @include svg-graphic(/txpmag/hr, png, 240px, 24px);
 
     border: 0; // remove the default `hr` border
     height: 24px;

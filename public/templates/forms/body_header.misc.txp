@@ -4,7 +4,7 @@
 
 <header role="banner" itemscope itemtype="http://schema.org/Organization">
     <h1 itemprop="name" class="accessibility">TXP</h1>
-    <p class="publication-masthead"><a rel="home" itemprop="url" href="<txp:site_url />" title="Go to the TXP Magazine homepage"><img itemprop="logo" src="<txp:variable name="assets_url" />img/txp.png" alt="TXP"></a></p>
+    <p class="publication-masthead"><a rel="home" itemprop="url" href="<txp:site_url />" title="Go to the TXP Magazine homepage"><img itemprop="logo" src="<txp:variable name="assets_url" />img/txpmag/txp.png" alt="TXP"></a></p>
     <p class="publication-issue">№ <txp:variable name="issue" /></p>
 </header>
 

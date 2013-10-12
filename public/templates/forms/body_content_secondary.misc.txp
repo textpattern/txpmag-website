@@ -12,11 +12,11 @@
 
     <section role="region" class="layout--span-9-12 host-details">
         <h4 class="accessibility">Host details</h4>
-        <p><img class="svg" src="<txp:variable name="assets_url" />img/textpattern-network-white.png" alt="Textpattern Network"></p>
+        <p><img class="svg" src="<txp:variable name="assets_url" />img/branding/textpattern-network/textpattern-network-white.png" alt="Textpattern Network"></p>
         <p>
             <small>
                 Kindly hosted by<br>
-                <a href="http://joyent.com/" rel="external" title="Go to the Joyent website"><img class="svg" src="<txp:variable name="assets_url" />img/joyent-white.png" alt="Joyent"></a>
+                <a href="http://joyent.com/" rel="external" title="Go to the Joyent website"><img class="svg" src="<txp:variable name="assets_url" />img/branding/misc/joyent-inverse.png" alt="Joyent"></a>
             </small>
         </p>
     </section>
