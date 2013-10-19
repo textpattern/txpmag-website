@@ -77,6 +77,11 @@ footer {
     }
 }
 
+.joyent {
+    display: inline-block;
+    line-height: 1;
+}
+
 .legal {
     @include adjust-font-size-to(12px, 0.75);
 

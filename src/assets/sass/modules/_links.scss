@@ -23,14 +23,7 @@ a {
     }
 
     header & {
-        @include border-radius($default-border-radius / 4);
-
-        color: $color-text;
-
-        &:hover,
-        &:active {
-            background: darken($color-background-box, 6%);
-        }
+        display: inline-block;
     }
 }
 
