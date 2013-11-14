@@ -10,8 +10,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    // project configuration
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
