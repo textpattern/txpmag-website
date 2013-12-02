@@ -160,11 +160,11 @@
 
     // Analytics.
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-26074605-2']);
-    _gaq.push(['_setDomainName', 'none']);
-    _gaq.push(['_gat._anonymizeIp']);
-    _gaq.push(['_trackPageview']);
+    window._gaq = window._gaq || [];
+    window._gaq.push(['_setAccount', 'UA-26074605-2']);
+    window._gaq.push(['_setDomainName', 'none']);
+    window._gaq.push(['_gat._anonymizeIp']);
+    window._gaq.push(['_trackPageview']);
     require(['//www.google-analytics.com/ga.js']);
 
 })();
