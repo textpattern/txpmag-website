@@ -5,7 +5,6 @@
         <a href="<txp:site_url />terms/privacy-policy">Privacy</a>.
         <a href="<txp:site_url />humans.txt">Colophon</a>.
     </p>
-    <p class="html5"><a rel="external" href="http://www.w3.org/html/logo/" title="HTML5 powered">HTML5 powered</a></p>
 </footer>
 
 <script data-main="<txp:asset name="js/main.js" />" src="<txp:asset name="js/require.js" />"></script>
