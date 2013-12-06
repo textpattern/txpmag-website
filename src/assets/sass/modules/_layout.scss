@@ -62,6 +62,10 @@ header {
     font-weight: bold;
 }
 
+article {
+    word-wrap: break-word;
+}
+
 .host-details {
     display: none;
     margin-top: 1em;
