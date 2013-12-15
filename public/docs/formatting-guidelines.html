@@ -66,7 +66,7 @@
 
                 <article role="article" itemscope itemtype="http://schema.org/Article">
                     <h1 itemprop="name">Presentation style guide for TXP Magazine article contributions</h1>
-                    
+
                     <div itemprop="description">
                         <p>Use this guide when formatting content for magazine publication. We use Textile whenever possible (or at least convenient), so guides are written to demonstrate Textile use, along with the specific selectors and attributes, as needed. When Textile can’t be used (e.g. syntax doesn’t exist for a given style) we use straight HTML5, and also when it’s perhaps more intuitive to do so (complex tables, for example, can be confusing with Textile). <strong>Note:</strong> If you’re looking for guides about writing and editing copy, you want the <a href="https://docs.google.com/document/d/16Qwzg3YSQoOdrLMvnQvZQaSJ811wYKsb-ZZ7A9zwN8s/edit">Textpattern editorial style guide</a>.</p>
                     </div>
@@ -104,11 +104,11 @@
                         <h3>Headers</h3>
                         <p>Magazine articles use markup headers <code>h1</code> to <code>h4</code>, and <code>h1</code> is only used on titles automatically, so you will only ever use headers <code>h2</code> through <code>h4</code> in your body copy. We avoid using <code>h5</code> and <code>h6</code> as an editorial rule.</p>
                         <h3>Paragraphs</h3>
-                        <p>A nice thing about Textpattern’s use of Textile is you don’t have to explicitly use Textile’s paragraph syntax (<code>p.</code>); you simply write your text, and the CMS will add <code>p</code> tags automatically.</p> 
+                        <p>A nice thing about Textpattern’s use of Textile is you don’t have to explicitly use Textile’s paragraph syntax (<code>p.</code>); you simply write your text, and the CMS will add <code>p</code> tags automatically.</p>
                         <p>There are two exceptions. First is when needing to use a selector on the paragraph (described next). The other time is when it follows a multi-paragraph blockquote (described later under Blockquotes).</p>
                         <h4>Custom paragraphs (via presentational selectors)</h4>
                         <p>If you’re not familiar with HTML markup, selectors are <code>id</code> and <code>class</code> attributes for HTML tags that can be used to tie presentational CSS styling to content with custom attribute values. For magazine articles, there are only a few situations requiring custom paragraph styles, and thus Textile paragraph notation at all.</p>
-                        <h4 id="interviews">Question–answer interviews and other author–subject conversations</h4>  
+                        <h4 id="interviews">Question–answer interviews and other author–subject conversations</h4>
                         <p>The <cite>W3C specs for HTML5</cite> make clear that <a href="http://www.w3.org/TR/html5/grouping-content.html#the-blockquote-element">blockquotes are not appropriate for marking up back-and-forth conversations</a>, which question–answer interviews are when the conversation directly alternates between interviewer and interviewee. The <cite>W3C specs for conversations</cite> <a href="http://www.w3.org/TR/html5/links.html#conversations">recommend using styled paragraphs instead</a>:</p>
                         <blockquote cite="http://www.w3.org/TR/html5/links.html#conversations">
                             <p>This specification does not define a specific element for marking up conversations, meeting minutes, chat transcripts, dialogues in screenplays, instant message logs, and other situations where different players take turns in discourse.</p>
@@ -139,7 +139,7 @@ Another regular paragraph.</pre>
 &lt;/blockquote&gt;</code></pre>
                         <p>And render as formatted content like…</p>
                         <blockquote><p>Start of the blockquote paragraph...</p></blockquote>
-                        <p>Blockquotes are visually styled exactly like the custom paragraphs (<code>p(answer).</code>) described earlier. We want the uniformity in presentation while abiding by the W3C’s recommendations for distinguishing between blockquotes and regular non-cited conversations. The difference is under the surface—machine-readable semantics—and important for text-reading technology.</p> 
+                        <p>Blockquotes are visually styled exactly like the custom paragraphs (<code>p(answer).</code>) described earlier. We want the uniformity in presentation while abiding by the W3C’s recommendations for distinguishing between blockquotes and regular non-cited conversations. The difference is under the surface—machine-readable semantics—and important for text-reading technology.</p>
                         <h4>Multi-paragraph blockquotes</h4>
                         <p>For multi-paragraph blockquotes (<code>bq..</code>), you <em>do</em> need to use the <code>p.</code> on the paragraph immediately following the blockquote to escape the paragraph from the blockquote code. (This is the second situation when the Textile syntax for paragraphs must be used in Textpattern, as mentioned at the start of the Paragraphs section.)</p>
                         <p>Here’s a typical structure for a multi-paragraph blockquote using Textile…</p>
@@ -408,7 +408,7 @@ Second blockquote paragraph.</pre>
                         <p>Next is an image targeted to 35% (cropped at 280px wide) and floated left. It uses the same left float class, of course, but the width class changes accordingly (<code>class="w35 imgleft"</code>).</p>
                         <p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). Let’s say that again. All images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%).</p>
                         <a href="#" title="Title text"><img class="w25 imgright" src="img/demo175.jpg" alt="Alt text"></a>
-                        <p>This last image is the smallest targeted width at 25% (cropped at 175px wide). To change things up and see the full range of class options, we’ll put <b>a link on it</b> and float it right (<code>class="w25 imgright"</code>).</p> 
+                        <p>This last image is the smallest targeted width at 25% (cropped at 175px wide). To change things up and see the full range of class options, we’ll put <b>a link on it</b> and float it right (<code>class="w25 imgright"</code>).</p>
                         <p>Remember that all images and videos in the website are <code>max-width:100%;</code> for flexibility and accommodation of responsive design, so parent containers are what control a given desired image/video width in layout, except when they are at their maximum width already (100%). <strong>Images/video width and height attribute values should <em>never</em> be used.</strong></p>
                         <h3>Figure</h3>
                         <figure class="w25 imgleft">
@@ -496,7 +496,7 @@ Second blockquote paragraph.</pre>
                     </div>
 
                     <div class="g-plus" data-href="https://plus.google.com/102240548936231123918" data-width="250" data-height="69" data-theme="light"></div>
-            
+
                     <div class="slab u skyscraper">
                         <p>Advertisement</p>
                         <a href="#"><img src="img/txp-skyscraper-160x600.png"></a>
@@ -543,7 +543,7 @@ Second blockquote paragraph.</pre>
 
     </div><!-- /role="complementary" -->
 
-    
+
 <!-- Footer -->
     <footer role="contentinfo">
         <p class="legal">
