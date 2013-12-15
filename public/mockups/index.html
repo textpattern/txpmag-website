@@ -69,11 +69,7 @@
                     <h1 itemprop="name">Article title</h1>
 
                     <p class="article-publishing-details">
-                        by
-                        <span itemprop="author" itemscope itemtype="http://schema.org/Person" class="vcard">
-                            <a rel="author" href="#" class="url"><span itemprop="name" class="fn n">Kevin Potts</span></a>
-                            <img src="#" itemprop="image" class="photo" alt="Kevin Potts photo">
-                        </span>
+                        by <a rel="author" href="#">Kevin Potts</a>
                         <time datetime="2013-05-28T10:43:39Z" itemprop="datePublished">28 May 2013</time>
                     </p>
 
@@ -98,7 +94,16 @@
                         </p>
                     </aside>
 
-               </article>
+                    <section itemprop="author" itemscope itemtype="http://schema.org/Person" class="vcard">
+                        <img src="#" itemprop="image" alt="Kevin Potts photo" class="photo">
+                        <h3 itemprop="name" class="fn n">Kevin Potts</h3>
+                        <div itemprop="description">
+                            <p>I am a Jersey-born, Philadelphia-educated web nerd currently wasting his prime years away in the cultural flatline that is The American Midwest. I embraced the web back in 1995 when a text editor and Netscape Navigator Gold were the only tools needed to publish HTML. I found Textpattern in 2005(ish) while seeking a replacement for Movable Type to drive my blog, <a rel="external" href="http://www.graphicpush.com/">graphicpush</a>.</p>
+                        </div>
+                        <p><a itemprop="url" href="#" class="url">Full biography</a>.</p>
+                    </section>
+
+                </article>
 
 
             </main>
