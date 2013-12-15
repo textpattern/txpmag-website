@@ -1,5 +1,5 @@
 <article role="article" itemscope itemtype="http://schema.org/Article">
-    <h1 itemprop="name"><txp:title /></h1>
+    <h1 itemprop="name headline"><txp:title /></h1>
 
     <p class="article-publishing-details">
         by <a rel="author" href="#">TO BE DONE</a>

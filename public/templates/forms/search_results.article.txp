@@ -17,7 +17,7 @@
 
         <txp:article limit="10" wraptag="ul" class="article-list">
             <li role="article" itemscope itemtype="http://schema.org/Article">
-                <h2 itemprop="name"><a href="<txp:permlink />" itemprop="url"><txp:title /></a></h2>
+                <h2 itemprop="name headline"><a href="<txp:permlink />" itemprop="url"><txp:title /></a></h2>
 
                 <txp:if_excerpt>
                     <div itemprop="description">
