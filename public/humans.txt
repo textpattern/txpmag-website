@@ -3,25 +3,30 @@
 
 
 /* TEAM */
-  Destry Wion (http://wion.com)
-  The Textpattern Development Team
-  Site: http://www.txpmag.com
-  Twitter: http://twitter.com/txpmag
-  Location: Everywhere
+    Destry Wion (http://wion.com)
+    The Textpattern Development Team
+    Site: http://www.txpmag.com
+    Twitter: http://twitter.com/txpmag
+    Location: Everywhere
 
 /* THANKS */
-  Names (& URL):
-    Ralitza Dilovska (http://www.inkscar.de)
-    Kevin Potts (http://www.graphicpush.com)
-    Marie Poulin (http://www.mariepoulin.com)
-    Philipp Schilling (http://www.psgd.de)
-    Stephan Simonis (http://www.stephansimonis.com)
+    Names (& URL):
+        Ralitza Dilovska (http://www.inkscar.de)
+        Kevin Potts (http://www.graphicpush.com)
+        Marie Poulin (http://www.mariepoulin.com)
+        Philipp Schilling (http://www.psgd.de)
+        Stephan Simonis (http://www.stephansimonis.com)
 
 /* SITE */
-  Standards: HTML5, CSS3
-  Components: Textpattern CMS, jQuery, Modernizr
-  Software: Panic Coda, CodeKit, Adobe Photoshop,
-    Adobe Illustrator, ImageOptim, ImageAlpha
+    Standards: HTML5, CSS3
+    Components: Textpattern CMS, jQuery, Require.js, Modernizr,
+        Google Code Prettify, jQuery.cookie, Responsive Nav
+    Software: Node.js, Grunt.js, Bower, Composer, Compass, git,
+        Panic Coda, Adobe Photoshop, Adobe Illustrator, ImageOptim,
+        ImageAlpha, grunt-contrib-compass, grunt-contrib-copy,
+        grunt-contrib-cssmin, grunt-contrib-jshint,
+        grunt-contrib-uglify, grunt-contrib-watch, grunt-shell
+    Source: https://github.com/textpattern/txpmag-website
 
 
 
