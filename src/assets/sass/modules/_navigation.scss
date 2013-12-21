@@ -17,9 +17,7 @@
         overflow: hidden;
 
         @include breakpoint($breakpoint-2) {
-            &.closed {
-                max-height: none;
-            }
+            max-height: none;
         }
     }
 
