@@ -72,27 +72,27 @@
 
         // show standard `<nav>` menu on larger screens
         .js & {
-            display: block;
+            max-height: none;
         }
     }
 
     li {
-        float: left;
-        border-right: solid 1px $color-gradient-border;
-        border-bottom: 0;
+        display: inline-block;
+        border-top: 0;
+    }
 
-        &:first-child {
-            border-left: solid 1px $color-gradient-border;
-        }
+    a {
+        @include adjust-font-size-to(20px, 1.1666667);
 
-        a {
-            padding: 0.5em 1em;
-        }
+        padding: 0.25em 1em 0.125em;
     }
 }
 
+.nav-toggle {
+    display: none;
+}
+
 /* PNG fallback for lack of SVG support */
-.nav-toggle,
 .social-channels a {
     background-image: url("../img/branding/misc/icon-sprite.png");
 }
