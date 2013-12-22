@@ -16,13 +16,15 @@
         display: block;
         width: 32px;
         height: 32px;
-
-        &.googleplus {
-            @include svg-graphic(branding/social-media/googleplus, png, 32px, 32px);
-        }
+        background-image: url("../img/branding/misc/icon-sprite.svg");
+        background-size: 160px 32px;
 
         &.twitter {
-            @include svg-graphic(branding/social-media/twitter, png, 32px, 32px);
+            background-position: -64px 0;
+        }
+
+        &.googleplus {
+            background-position: -96px 0;
         }
 
         //&:hover {

@@ -66,7 +66,7 @@
     @include grid-span(9, 4);
 }
 
-#nav {
+.nav-collapse {
     ul {
         width: 90%;
 
@@ -89,6 +89,16 @@
             padding: 0.5em 1em;
         }
     }
+}
+
+/* PNG fallback for lack of SVG support */
+.nav-toggle,
+.social-channels a {
+    background-image: url("../img/branding/misc/icon-sprite.png");
+}
+
+hr {
+    background-image: url("../img/com/hr.png");
 }
 
 
@@ -122,6 +132,46 @@
     .ui-slider-range {
         filter: inherit;
     }
+}
+
+.ui-icon,
+.ui-widget-content .ui-icon,
+.ui-widget-header .ui-icon,
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-state-active .ui-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-image: url("../img/branding/jquery-ui/ui-icon-sprite-333333.png");
+    background-size: 256px 272px;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("../img/branding/jquery-ui/ui-icon-sprite-555555.png");
+}
+
+.success .ui-icon {
+    background-image: url("../img/branding/jquery-ui/ui-icon-sprite-success.png");
+}
+
+.ui-state-highlight .ui-icon,
+.warning .ui-icon {
+    background-image: url("../img/branding/jquery-ui/ui-icon-sprite-warning.png");
+}
+
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon,
+.error .ui-icon {
+    background-image: url("../img/branding/jquery-ui/ui-icon-sprite-error.png");
+}
+
+.information .ui-icon {
+    background-image: url("../img/branding/jquery-ui/ui-icon-sprite-info.png");
 }
 
 
