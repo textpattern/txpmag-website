@@ -127,6 +127,10 @@ hr {
     filter: Alpha(Opacity=33);
 }
 
+.ui-widget-overlay {
+    background: url("../img/branding/misc/overlay-no-rgba.png");
+}
+
 .ui-slider.ui-state-disabled {
     .ui-slider-handle,
     .ui-slider-range {

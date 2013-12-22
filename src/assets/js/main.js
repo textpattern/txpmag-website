@@ -2,6 +2,8 @@
 {
     'use strict';
 
+    document.documentElement.className = 'js';
+
     requirejs.config({
         paths:
         {
@@ -11,6 +13,7 @@
         },
         shim:
         {
+            'autosize': ['jquery'],
             'details': ['jquery'],
             'placeholder': ['jquery'],
             'flowplayer': ['jquery'],
@@ -19,9 +22,26 @@
         }
     });
 
-    define('modernizr', function ()
+    define('feature', function ()
     {
-        return window.Modernizr;
+        return {
+            svg: function ()
+            {
+                return document.createElementNS || document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
+            }
+        };
+    });
+
+    define('track', function ()
+    {
+        return {
+            allow : navigator.doNotTrack !== 'yes' && navigator.doNotTrack !== '1' && navigator.doNotTrack !== 1
+        };
+    });
+
+    define('growfields', ['jquery', 'autosize'], function ($)
+    {
+        $('form textarea').autosize();
     });
 
     require(['jquery'], function ($)
@@ -62,12 +82,11 @@
         }
     });
 
-    // Test for SVG support via Modernizr, if no then replace SVGs with PNGs.
+    // If no SVG support, replace SVGs with PNGs.
 
-    require(['jquery', 'modernizr'], function ($, Modernizr)
+    require(['jquery', 'feature'], function ($, supports)
     {
-        if (!Modernizr.svg)
-        {
+        if (!supports.svg) {
             $('img.svg').attr('src', function ()
             {
                 return $(this).attr('src').replace('.svg', '.png');
@@ -145,13 +164,21 @@
         }
     });
 
-    // Analytics.
+    require(['track'], function(track)
+    {
+        if (track.allow) {
+            // Analytics.
 
-    window._gaq = window._gaq || [];
-    window._gaq.push(['_setAccount', 'UA-26074605-2']);
-    window._gaq.push(['_setDomainName', 'none']);
-    window._gaq.push(['_gat._anonymizeIp']);
-    window._gaq.push(['_trackPageview']);
-    require(['//www.google-analytics.com/ga.js']);
+            window._gaq = window._gaq || [];
+            window._gaq.push(['_setAccount', 'UA-26074605-2']);
+            window._gaq.push(['_setDomainName', 'none']);
+            window._gaq.push(['_gat._anonymizeIp']);
+            window._gaq.push(['_setVisitorCookieTimeout', 0]);
+            window._gaq.push(['_setSessionCookieTimeout', 0]);
+            window._gaq.push(['_setCampaignCookieTimeout', 0]);
+            window._gaq.push(['_trackPageview']);
+            require(['//www.google-analytics.com/ga.js']);
+        }
+    });
 
 })();

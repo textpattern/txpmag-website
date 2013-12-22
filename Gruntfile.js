@@ -7,7 +7,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-shell');
 
     grunt.initConfig({
@@ -122,6 +121,7 @@ module.exports = function (grunt) {
                         'public/assets/js/require.js': ['bower_components/requirejs/require.js'],
                         'public/assets/js/cookie.js': ['bower_components/jquery.cookie/jquery.cookie.js'],
                         'public/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
+                        'public/assets/js/autosize.js': ['bower_components/jquery-autosize/jquery.autosize.js'],
                         'public/assets/js/html5shiv.js': ['bower_components/html5shiv/dist/html5shiv.js']
                     },
                     {
@@ -132,36 +132,6 @@ module.exports = function (grunt) {
                     }
                 ]
             }
-        },
-
-        modernizr: {
-            'devFile': 'bower_components/modernizr/modernizr.js',
-            'outputFile': 'public/assets/js/modernizr.js',
-            'tests': [
-                'boxshadow',
-                'flexbox',
-                'rgba',
-                'svg',
-                'touch'
-            ],
-            'extra': {
-                'shiv': false,
-                'printshiv': false,
-                'load': false,
-                'mq': false,
-                'cssclasses': true
-            },
-            'extensibility': {
-                'addtest': false,
-                'prefixed': false,
-                'teststyles': true,
-                'testprops': true,
-                'testallprops': true,
-                'hasevents': false,
-                'prefixes': true,
-                'domprefixes': true
-            },
-            'parseFiles': false
         },
 
         shell: {
@@ -179,7 +149,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:img', 'copy:js', 'uglify', 'modernizr']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:img', 'copy:js', 'uglify']);
     grunt.registerTask('travis', ['jshint', 'compass']);
     grunt.registerTask('setup', ['shell:setup']);
 };

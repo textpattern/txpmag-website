@@ -46,9 +46,6 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
 <link rel="stylesheet" href="<txp:asset name="css/main.css" />">
 
-<!-- Modernizr -->
-<script src="<txp:asset name="js/modernizr.js" />"></script>
-
 <!--[if lt IE 9]>
     <script src="<txp:asset_name="js/html5shiv.js" />"></script>
     <link rel="stylesheet" href="<txp:asset name="css/ie8.css" />">
