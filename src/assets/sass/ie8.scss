@@ -67,13 +67,12 @@
 }
 
 .nav-collapse {
+    .js & {
+        max-height: none;
+    }
+
     ul {
         width: 90%;
-
-        // show standard `<nav>` menu on larger screens
-        .js & {
-            max-height: none;
-        }
     }
 
     li {
