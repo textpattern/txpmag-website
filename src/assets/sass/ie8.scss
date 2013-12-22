@@ -104,7 +104,7 @@ hr {
 
 
 /* ==========================================================================
-   jQuery UI opacity support
+   jQuery UI support
    ========================================================================== */
 
 .ui-helper-zfix {
@@ -144,15 +144,7 @@ hr {
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-state-active .ui-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    vertical-align: middle;
     background-image: url("../img/branding/jquery-ui/ui-icon-sprite-333333.png");
-    background-size: 256px 272px;
 }
 
 .ui-state-default .ui-icon {
