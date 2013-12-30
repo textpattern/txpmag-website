@@ -91,6 +91,11 @@
     display: none;
 }
 
+/* fallback for lack of box-shadow support */
+.a--img:focus {
+    outline: thin dotted $color-link-focus;
+}
+
 /* PNG fallback for lack of SVG support */
 .social-channels a {
     background-image: url("../img/branding/misc/icon-sprite.png");
