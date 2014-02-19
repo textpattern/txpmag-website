@@ -62,6 +62,7 @@ header {
     font-weight: bold;
 }
 
+/* prevent really, really long words from breaking layout */
 article {
     word-wrap: break-word;
 }
