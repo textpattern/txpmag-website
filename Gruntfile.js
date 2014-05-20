@@ -1,6 +1,8 @@
-module.exports = function (grunt) {
+module.exports = function (grunt)
+{
     'use strict';
 
+    // Load Grunt plugins.
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -12,18 +14,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        watch: {
-            sass: {
-                files: 'src/assets/sass/**',
-                tasks: ['sass']
-            },
-
-            js: {
-                files: 'src/assets/js/*.js',
-                tasks: ['jshint', 'copy', 'uglify']
-            }
-        },
-
+        // Use 'config.rb' file to configure Compass.
         compass: {
             dev: {
                 options: {
@@ -33,6 +24,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Copy files from `src/` and `bower_components/` to `public/`.
         copy: {
             img: {
                 files: [
@@ -51,6 +43,7 @@ module.exports = function (grunt) {
                 ]
             },
 
+            // Copy Flowplayer images to CSS folder (because Flowplayer's CSS expects relative path of `img/`).
             css: {
                 files: [
                     {expand: true, cwd: 'src/assets/js/libs/flowplayer/skin/img/', src: ['**'], dest: 'public/assets/css/img/'}
@@ -58,6 +51,21 @@ module.exports = function (grunt) {
             }
         },
 
+        // Concatenate, minify and copy CSS files to `public/assets/css/`.
+        cssmin: {
+            main: {
+                files: {
+                    'public/assets/css/main.css': [
+                        'tmp/assets/css/style.css',
+                        'tmp/assets/css/jquery-ui.css',
+                        'src/assets/js/libs/flowplayer/skin/minimalist.css'
+                    ],
+                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css']
+                }
+            }
+        },
+
+        // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
         jshint: {
             files: ['Gruntfile.js', 'src/assets/js/*.js'],
             options: {
@@ -92,21 +100,22 @@ module.exports = function (grunt) {
             }
         },
 
-        cssmin: {
-            main: {
-                files: {
-                    'public/assets/css/main.css': [
-                        'tmp/assets/css/style.css',
-                        'tmp/assets/css/jquery-ui.css',
-                        'src/assets/js/libs/flowplayer/skin/minimalist.css'
-                    ],
-                    'public/assets/css/ie8.css': ['tmp/assets/css/ie8.css']
+        // Run Textpattern setup script.
+        shell: {
+            setup: {
+                command: [
+                    'php src/setup/setup.php'
+                ].join('&&'),
+                options: {
+                    stdout: true
                 }
             }
         },
 
+        // Uglify and copy JavaScript files from `bower-components`, and also `main.js`, to `public/assets/js/`.
         uglify: {
             dist: {
+                // Preserve all comments that start with a bang (!) or include a closure compiler style.
                 options: {
                     preserveComments: 'some'
                 },
@@ -132,22 +141,25 @@ module.exports = function (grunt) {
             }
         },
 
-        shell: {
-            setup: {
-                command: [
-                    'php src/setup/setup.php'
-                ].join('&&'),
-                options: {
-                    stdout: true
-                }
+        // Directories watched and tasks performed by invoking `grunt watch`.
+        watch: {
+            sass: {
+                files: 'src/assets/sass/**',
+                tasks: ['sass']
+            },
+
+            js: {
+                files: 'src/assets/js/*.js',
+                tasks: ['jshint', 'copy', 'uglify']
             }
         }
     });
 
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
-    grunt.registerTask('default', ['watch']);
+    // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy:img', 'copy:js', 'uglify']);
-    grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('sass', ['compass', 'cssmin', 'copy:css']);
     grunt.registerTask('setup', ['shell:setup']);
+    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('travis', ['jshint', 'compass']);
 };
