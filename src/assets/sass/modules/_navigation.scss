@@ -104,7 +104,7 @@
 .nav-toggle {
     @include hide-text;
 
-    -webkit-touch-callout: none; // disables the default bubble shown when you touch and hold a touch target
+    -webkit-touch-callout: none; /* 1 */
     position: absolute;
     top: -33px;
     right: 5%;
