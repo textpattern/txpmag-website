@@ -1,11 +1,23 @@
 /* Typography
    ========================================================================== */
 
+/**
+ * Global font size and leading.
+ */
+
 @include establish-baseline;
+
+/**
+ * Global font and colour.
+ */
 
 body {
     font-family: $font-serif;
 }
+
+/**
+ * Harmonise size, style and vertical margin of headings.
+ */
 
 h1,
 h2,
@@ -18,85 +30,110 @@ h6 {
 }
 
 h1 {
-    @include adjust-font-size-to(40px, 2);
+    @include adjust-font-size-to(38px, 1.875); // 45px line height
 
-    margin: rhythm(1, 40px) 0;
+    margin: 0.6315789em 0; // 24px / 38px
 }
 
 h2 {
     @include adjust-font-size-to(32px, 1.6666667);
 
-    margin: rhythm(1, 32px) 0;
+    margin: 0.8em 0; // 24px / 30px
 }
 
 h3 {
-    @include adjust-font-size-to(24px, 1.3333333);
+    @include adjust-font-size-to(30px, 1.5833333); // 38px line height
 
-    margin: rhythm(1, 24px) 0;
+    margin: 1em 0; // 24px
 }
 
 h4 {
-    @include adjust-font-size-to(20px, 1.1666667);
+    @include adjust-font-size-to(20px, 1.1666667); // 28px line height
 
-    margin: 1.1em 0;
+    margin: 1em 0; // 20px
 }
 
 h5 {
-    @include adjust-font-size-to(18px, 1.08);
+    @include adjust-font-size-to(18px, 1.08); // 26px line height
 
-    margin: 1.1111111em 0;
+    margin: 1em 0; // 18px
 }
 
 h6 {
     @include adjust-font-size-to(16px, 1);
 
-    margin: 1em 0;
+    margin: 1em 0; // 16px
 }
 
-/* address style set to `bolder` in Firefox 4+, Safari, Chrome */
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
 b,
 strong {
     font-weight: bold;
 }
 
+/**
+ * Add vertical margin to addresses.
+ */
+
 address {
     margin: 1em 0;
 }
 
+/**
+ * Additional styling for blockquotes.
+ */
+
 blockquote {
-    @include adjust-font-size-to(18px, 1.08);
+    @include adjust-font-size-to(20px, 1.1666667);
 
     font-style: italic;
-    margin: 0.8888889em 0; // 16px / 18px
-    border-left: 4px solid $color-border;
-    padding: 0 0 0 0.8888889em;
+    margin: 0.8em 0; // 16px / 20px
+    text-align: center;
 }
 
-/* address styling not present in Safari, Chrome */
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
 dfn {
     font-style: italic;
 }
 
-/* address styling not present in IE 8-9, Safari5, Chrome */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
 abbr[title],
 dfn[title] {
     border-bottom: dotted 1px;
     cursor: help;
 }
 
+/**
+ * Address styling not present in IE 8/9.
+ */
+
 mark,
 var {
-    @include border-radius($default-border-radius / 2); // 4px / 16px
+    @include border-radius($default-border-radius / 2);
 
     padding: 0 0.25em; // 0 4px
     color: $color-text;
     background: $color-selected;
 }
 
+/**
+ * Harmonise size and style of computer text.
+ */
+
 pre,
 code,
 kbd,
 samp {
+    color: $color-text;
     font-family: $font-mono;
 }
 
@@ -111,16 +148,24 @@ samp {
     background: $color-background-box;
 }
 
+/**
+ * Additional stylng for preformatted text/code.
+ *
+ * 1. Don't wrap long words.
+ * 2. Contain overflow in all browsers.
+ * 3. Set tab size to 4 spaces.
+ */
+
 pre {
     @include adjust-font-size-to(14px, 0.875);
     @include border-radius(0.2857143em); // 4px / 14px
 
-    word-wrap: normal;
-    overflow-x: auto;
+    word-wrap: normal; /* 1 */
+    overflow-x: auto; /* 2 */
     border: 1px solid lighten($color-border, 9%);
     padding: 0.5714286em 1.1428571em; // 8px / 14px + 16px / 14px
     background: $color-background-box;
-    tab-size: 4; // set tab size to 4 spaces
+    tab-size: 4; /* 3 */
 
     code {
         font-size: 1em; // 14px
@@ -130,20 +175,30 @@ pre {
     }
 }
 
-/* prevent `<sub>` and `<sup>` affecting line height in all browsers */
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
 sub,
+sup.footnote, // override Textile class
 sup {
     @include adjust-font-size-to(10px, 0);
 
     position: relative;
     vertical-align: baseline;
 }
+
 sup {
     top: -0.5em;
 }
+
 sub {
     bottom: -0.25em;
 }
+
+/**
+ * Harmonise size and style of small text.
+ */
 
 small,
 figcaption,
@@ -159,7 +214,7 @@ tfoot,
 }
 
 figcaption {
-    margin-top: 0.5em;
+    margin: 0.5em 0;
     font-style: italic;
 }
 
