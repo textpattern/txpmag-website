@@ -66,6 +66,21 @@
     @include grid-span(9, 4);
 }
 
+/**
+ * Don't allow site to collapse smaller than large breakpoint.
+ */
+
+header,
+footer,
+.container,
+.nav-collapse ul {
+    min-width: $breakpoint-3;
+}
+
+/**
+ * Desktop version of navigation menu.
+ */
+
 .nav-collapse {
     .js & {
         max-height: none;
