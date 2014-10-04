@@ -10,6 +10,8 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * http://jqueryui.com/menu/
  *
+ * 1. Correct font size not being inherited in all browsers.
+ *
  * Example HTML:
  *
  * <ul class="ui-menu">
@@ -60,13 +62,16 @@
  */
 
 .ui-menu {
+    font-size: 100%; /* 1 */
+    @include adjust-font-size-to(14px, 0.875);
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: block;
     margin: 0;
     padding: 0;
-    outline: 0;
+    font-family: $font-sans-serif;
     list-style: none;
+    outline: 0;
 
     .ui-menu {
         position: absolute;
@@ -75,14 +80,19 @@
     .ui-menu-item {
         position: relative;
         margin: 0;
-        padding: 3px 1em 3px 0.4em;
+        padding: 3px 1em 3px 0.35714285714286em; // 5px / 14px
         cursor: pointer;
         /* support: IE 10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
     }
 
     .ui-menu-divider {
-        margin: 5px 0;
+        margin: 0.35714285714286em 0; // 5px / 14px
         border-width: 1px 0 0 0;
         height: 0;
         font-size: 0;
@@ -91,8 +101,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        margin: -1px;
-        background-color: $color-selected;
+        background-color: $color-selecting;
     }
 
     // left-aligned

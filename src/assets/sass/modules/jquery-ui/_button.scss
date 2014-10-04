@@ -26,7 +26,7 @@
     @include text-shadow($text-shadow-light);
     @include box-shadow($inset-highlighting);
     @include background-clip;
-    @include box-sizing(border-box);
+    @include box-sizing;
     @include gradient-linear($color-gradient-from, $color-gradient-to);
     @include transition(box-shadow 0.1s linear);
 
@@ -36,8 +36,8 @@
     overflow: visible; /* 3 */
     margin: 0 0.1em 0 0;
     border: solid 1px $color-gradient-border;
-    padding: 0.3571428em 0.7142857em; // 5px / 14px, 10px / 14px
-    height: 2.3571428em; // 33px / 14px
+    padding: 0.35714285714286em 0.71428571428571em; // 5px / 14px, 10px / 14px
+    height: 2.35714285714286em; // 33px / 14px
     font-family: $font-sans-serif;
     text-align: center;
     vertical-align: baseline;
@@ -263,12 +263,12 @@ button.ui-button-icons-only {
  * Example HTML:
  *
  * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
- * <label for="check" class="ui-button ui-button-text-only" aria-pressed="true">
+ * <label for="check" class="ui-button ui-button-text-only ui-state-active">
  *     <span class="ui-button-text">Toggle</span>
  * </label>
  */
 
-label[aria-pressed="true"] {
+label.ui-state-active {
     &.ui-button {
         @include gradient-linear($color-selected, $color-selecting);
 
