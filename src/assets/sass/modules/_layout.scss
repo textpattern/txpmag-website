@@ -27,6 +27,18 @@ body {
     background-color: $color-text;
 }
 
+/**
+ * Outer wrapper for main layouts.
+ *
+ * Example HTML:
+ *
+ * <div class="wrapper">
+ *     <div class="container">
+ *         Content
+ *     </div>
+ * </div>
+ */
+
 .wrapper {
     @include hires-graphic(txpmag/footer-separator, png, 16px, 8px);
 
@@ -37,12 +49,28 @@ body {
     background-repeat: repeat-x;
 }
 
+/**
+ * Wrapper for layouts, and for footer.
+ *
+ * Example HTML:
+ *
+ * <div class="wrapper">
+ *     <div class="container">
+ *         Content
+ *     </div>
+ * </div>
+ */
+
 .container,
 footer {
     margin: 0 auto;
     width: 90%;
     max-width: $container-max-width;
 }
+
+/**
+ * Additional styling for child content within `header`.
+ */
 
 header {
     margin: 5% auto;
@@ -55,11 +83,28 @@ header {
     }
 }
 
+/**
+ * Publication masthead styling.
+ *
+ * Example HTML:
+ *
+ * <p class="publication-masthead"><a><img></a></p>
+ */
+
+
 .publication-masthead {
     margin: 0;
     padding: 0.75em 0.75em 0.5em;
     height: 3em;
 }
+
+/**
+ * Publication issue no. styling.
+ *
+ * Example HTML:
+ *
+ * <p class="publication-issue">№ 5</p>
+ */
 
 .publication-issue {
     @include adjust-font-size-to(32px, 1.6666667);
@@ -80,6 +125,10 @@ article {
     word-wrap: break-word;
 }
 
+/**
+ * Secondary (complementary) content.
+ */
+
 .host-details {
     display: none;
     margin-top: 1em;
@@ -95,6 +144,10 @@ article {
     line-height: 1;
 }
 
+/**
+ * Additional styling for child content within `footer`.
+ */
+
 footer {
     clear: both;
     position: relative;
@@ -102,17 +155,4 @@ footer {
 
 .legal {
     @include adjust-font-size-to(12px, 0.75);
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-    @include box-sizing(content-box);
-
-    border: 0; // remove the default `hr` border
-    height: 24px;
-    background: url("../img/com/hr.svg") 50% 50% no-repeat;
-    background-size: 240px 24px;
 }

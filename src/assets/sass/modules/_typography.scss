@@ -218,6 +218,19 @@ figcaption {
     font-style: italic;
 }
 
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    @include box-sizing(content-box);
+
+    border: 0; // remove the default `hr` border
+    height: 24px;
+    background: url("../img/com/hr.svg") 50% 50% no-repeat;
+    background-size: 240px 24px;
+}
+
 .article-publishing-details {
     font-weight: bold;
 
