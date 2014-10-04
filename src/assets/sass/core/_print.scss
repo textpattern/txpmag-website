@@ -45,7 +45,6 @@ footer {
  * Hide unnecessary content from print.
  */
 
-footer,
 nav,
 audio,
 video,
@@ -63,34 +62,6 @@ form,
 
 a {
     text-decoration: none;
-}
-
-/**
- * Show URLs for certain links in print.
- */
-
-a[href]:after {
-    content: " (" attr(href) ")";
-}
-
-/**
- * Don't show URLs for certain links in print.
- */
-
-h1 a[href],
-h2 a[href],
-h3 a[href],
-h4 a[href],
-h5 a[href],
-h6 a[href],
-sup a[href],
-a[itemprop="discussionUrl"],
-a[rel="tag"],
-a[href^="#"],
-a[href^="javascript:"] {
-    &:after {
-        content: "";
-    }
 }
 
 /**
@@ -284,7 +255,7 @@ figcaption {
 
 ul {
     list-style: square;
-    margin: 0 0 8pt 1.8em;
+    padding: 0 0 8pt 1.8em;
 }
 
 /**
@@ -293,7 +264,7 @@ ul {
 
 ol {
     list-style: decimal;
-    margin: 0 0 8pt 1.8em;
+    padding: 0 0 8pt 1.8em;
 }
 
 /**
@@ -301,7 +272,7 @@ ol {
  */
 
 dl {
-    margin: 0 0 8pt 1.8em;
+    padding: 0 0 8pt 1.8em;
 }
 
 /**
