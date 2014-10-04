@@ -40,17 +40,9 @@
         }
 
         &:hover {
-            @include filter(#{"brightness(1.1)"}); // temporary workaround for Sass/Compass bug when using @include filter(brightness(1.1));
+            @include filter(#{"brightness(1.1)"}); // TODO: temporary workaround for Sass/Compass bug when using @include filter(brightness(1.1));
         }
     }
-}
-
-/**
- * Add margin to left of inline Twitter 'Tweet' buttons.
- */
-
-.twitter-tweet-button {
-    margin-left: 1em;
 }
 
 /**
@@ -58,7 +50,6 @@
  */
 
 .facebook-like-button {
-    margin-left: 1em;
     border: 0;
     height: 20px;
     overflow: hidden;
