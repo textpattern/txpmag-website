@@ -36,13 +36,13 @@ h1 {
 }
 
 h2 {
-    @include adjust-font-size-to(32px, 1.6666667);
+    @include adjust-font-size-to(30px, 1.5833333); // 38px line height
 
     margin: 0.8em 0; // 24px / 30px
 }
 
 h3 {
-    @include adjust-font-size-to(30px, 1.5833333); // 38px line height
+    @include adjust-font-size-to(24px, 1.3333333); // 32px line height
 
     margin: 1em 0; // 24px
 }
@@ -230,6 +230,17 @@ hr {
     background: url("../img/com/hr.svg") 50% 50% no-repeat;
     background-size: 240px 24px;
 }
+
+/**
+ * Article publishing details.
+ *
+ * Example HTML:
+ *
+ * <p class="article-publishing-details">
+ *     by <a>Kevin Potts</a>
+ *     <time>28 May 2013</time>
+ * </p>
+ */
 
 .article-publishing-details {
     font-weight: bold;
