@@ -23,6 +23,27 @@ span.spinner {
 }
 
 /**
+ * Spin an element.
+ *
+ * Example HTML:
+ *
+ * <span class="spin">Spinning!</span>
+ */
+
+.spin {
+    @include animation(spin 2s infinite linear);
+}
+
+@include keyframes(spin) {
+    from {
+        @include transform(rotate(0deg));
+    }
+    to {
+        @include transform(rotate(360deg));
+    }
+}
+
+/**
  * Hide text but still allow screen reader access.
  *
  * Example HTML:
