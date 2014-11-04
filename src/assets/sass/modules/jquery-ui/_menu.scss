@@ -23,7 +23,7 @@
  *     </li>
  *     <li class="ui-menu-item">
  *         <a>
- *             <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span>
+ *             <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
  *             Item 3
  *         </a>
  *         <ul class="ui-menu">
@@ -37,12 +37,12 @@
  *     </li>
  *     <li class="ui-menu-item">
  *         <a>
- *             <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span>
+ *             <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
  *             Item 4
  *         </a>
  *         <ul class="ui-menu">
  *             <li class="ui-menu-item">
- *                 <span class="ui-menu-icon ui-icon ui-icon-carat-1-e"></span>
+ *                 <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
  *                 <a>Item 4 subitem 1</a>
  *                 <ul class="ui-menu">
  *                     <li class="ui-menu-item">
@@ -63,7 +63,7 @@
 
 .ui-menu {
     font-size: 100%; /* 1 */
-    @include adjust-font-size-to(14px, 0.875);
+    @include adjust-font-size-to(16px, 0.91666666666667); // 22px line height.
     @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 
     display: block;
@@ -80,7 +80,7 @@
     .ui-menu-item {
         position: relative;
         margin: 0;
-        padding: 3px 1em 3px 0.35714285714286em; // 5px / 14px
+        padding: 0.25em 1em 0.25em 0.5em;
         cursor: pointer;
         /* support: IE 10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
@@ -92,7 +92,7 @@
     }
 
     .ui-menu-divider {
-        margin: 0.35714285714286em 0; // 5px / 14px
+        margin: 0.5em 0;
         border-width: 1px 0 0 0;
         height: 0;
         font-size: 0;
