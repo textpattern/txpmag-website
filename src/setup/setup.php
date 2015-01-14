@@ -3,12 +3,14 @@
 `mkdir -pv tmp`;
 chdir('tmp');
 
-echo "Downloading Textpattern via SVN...\n";
-`rm -Rf dev`;
-`svn export http://textpattern.googlecode.com/svn/development/4.x dev`;
+echo "Downloading Textpattern master from GitHub...\n";
+`rm -Rf textpattern`;
+`git clone --depth 1 https://github.com/textpattern/textpattern`;
 echo "Cleaning up the downloaded package...\n";
 
-chdir('dev');
+chdir('textpattern');
+
+`rm -Rf .git`;
 
 foreach (array_merge((array) glob('*'), array('.gitignore')) as $file)
 {
@@ -26,9 +28,9 @@ chdir('../../');
 if (file_exists('public/textpattern/config.php'))
 {
     echo "Keep existing config.php...\n";
-    copy('public/textpattern/config.php', 'tmp/dev/textpattern/config.php');
+    copy('public/textpattern/config.php', 'tmp/textpattern/textpattern/config.php');
     echo "Remove setup/...\n";
-    `rm -Rf 'tmp/dev/textpattern/setup'`;
+    `rm -Rf 'tmp/textpattern/textpattern/setup'`;
 }
 
 // Keep existing additional themes.
@@ -39,7 +41,7 @@ if (is_dir('public/textpattern/theme') && chdir('public/textpattern/theme'))
     {
         if (!in_array($file, array('classic', 'hive', 'remora', '.htaccess')))
         {
-            `cp -rf '{$file}/' ../../../tmp/dev/textpattern/theme/`;
+            `cp -rf '{$file}/' ../../../tmp/textpattern/textpattern/theme/`;
         }
     }
 
@@ -51,7 +53,7 @@ echo "Moving in the new installation...\n";
 `rm -f public/css.php`;
 `rm -f public/index.php`;
 `rm -Rf public/rpc`;
-`cp -rf tmp/dev/ public/`;
+`cp -rf tmp/textpattern/ public/`;
 `mkdir -p -m 755 public/files`;
 `mkdir -p -m 755 public/images`;
 `mkdir -p -m 755 cache`;
