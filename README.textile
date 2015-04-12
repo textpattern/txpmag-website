@@ -96,7 +96,7 @@ This repository hosts sources and needs to be built before it can be used. After
 
 bc. $ grunt [task]
 
-Where the @[task]@ is either @build@, @setup@, @test@ or @watch@.
+Where the @[task]@ is either @build@, @setup@, @test@, @updatedev@ or @watch@.
 
 * The @build@ task builds the project.
 * The @setup@ task installs the latest build of Textpattern master branch from GitHub.
