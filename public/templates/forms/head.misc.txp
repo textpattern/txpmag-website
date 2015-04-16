@@ -41,7 +41,7 @@
 </txp:if_section>
 
 <!-- CSS -->
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic">
 <link rel="stylesheet" href="<txp:asset name="css/main.css" />">
 
 <!--[if lt IE 9]>
