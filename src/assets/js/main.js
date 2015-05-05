@@ -4,17 +4,17 @@
 
     document.documentElement.className = 'js';
 
-    var jqueryVersion = '1.11.2';
+    var jqueryVersion = '1.11.3';
 
     if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-        jqueryVersion = '2.1.3';
+        jqueryVersion = '2.1.4';
     }
 
     requirejs.config({
         paths:
         {
             'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/'+jqueryVersion+'/jquery.min',
-            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min',
+            'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min',
             'flowplayer': 'flowplayer/flowplayer.min'
         },
         shim:
