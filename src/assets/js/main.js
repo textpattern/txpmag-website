@@ -46,22 +46,13 @@
 
     require(['jquery'], function ($)
     {
-        var details = $('details'),
-            code = $('pre code'),
+        var code = $('pre code'),
+            details = $('details'),
             fields = $('form textarea');
 
-        // Details polyfill.
-
-        if (details.length)
-        {
-            require(['details'], function ()
-            {
-                details.details();
-                $('html').addClass($.fn.details.support ? 'details' : 'no-details');
-            });
-        }
-
-        // Syntax highlighting.
+        // Syntax highlighting, via 'Google Code Prettify'.
+        // Automatically applies syntax highlighting to `pre code` HTML elements.
+        // More info - https://github.com/tcollard/google-code-prettify.
 
         if (code.length)
         {
@@ -73,7 +64,23 @@
             });
         }
 
-        // Auto-growing textareas.
+        // Details polyfill, via 'jQuery Details'.
+        // Adds `details` and `summary` HTML elements for unsupported browsers.
+        // More info - https://github.com/mathiasbynens/jquery-details.
+        // Browser support info - http://caniuse.com/#feat=details.
+
+        if (details.length)
+        {
+            require(['details'], function ()
+            {
+                details.details();
+                $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            });
+        }
+
+        // Auto-growing textareas, via 'Autosize'.
+        // Allows dynamic resizing of textarea height, so that it grows as based
+        // on visitor input. More info - https://github.com/jackmoore/autosize.
 
         if (fields.length) {
             require(['autosize'], function ()
@@ -95,7 +102,8 @@
         }
     });
 
-    // Responsive navigation.
+    // Responsive navigation menu, via 'Responsive Nav'.
+    // More info - https://github.com/viljamis/responsive-nav.js.
 
     require(['responsivenav'], function ()
     {
@@ -105,7 +113,8 @@
         });
     });
 
-    // EU-cookie disclaimer.
+    // EU-cookie disclaimer, via 'jquery.cookie'.
+    // More info - https://github.com/carhartl/jquery-cookie.
 
     require(['jquery', 'cookie'], function ($)
     {
@@ -127,7 +136,8 @@
         }
     });
 
-    // Flowplayer.
+    // HTML5 videos (with Flash fallback), via 'Flowplayer'.
+    // More info - https://github.com/flowplayer/flowplayer.
 
     require(['jquery'], function ($)
     {
@@ -168,7 +178,7 @@
     require(['track'], function(track)
     {
         if (track.allow) {
-            // Analytics.
+            // Google Analytics.
 
             window._gaq = window._gaq || [];
             window._gaq.push(['_setAccount', 'UA-26074605-2']);
