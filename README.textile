@@ -1,7 +1,5 @@
 h1. TXP Magazine website
 
-!https://travis-ci.org/textpattern/txpmag-website.svg?branch=master!:https://travis-ci.org/textpattern/txpmag-website
-
 TXP Magazine is a publication of the Textpattern project; serving the greater community of open source content management enthusiasts. *Currently under development.*
 
 h2. Minimum browser support
